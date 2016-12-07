@@ -1,0 +1,353 @@
+{
+
+"prefix" : {
+"prov" : "http://www.w3.org/ns/prov#",
+"rdt" : "http://rdatatracker.org/"
+},
+"activity":{
+
+"p1" : {
+"rdt:name" : "coerce.R",
+"rdt:type" : "Start",
+"rdt:elapsedTime" : "1.878",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "NA"
+} ,
+
+"p2" : {
+"rdt:name" : "x1 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "1.881",
+"rdt:duration" : "0.00299999999999923",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "2"
+} ,
+
+"p3" : {
+"rdt:name" : "x2 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "1.908",
+"rdt:duration" : "0.027000000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "3"
+} ,
+
+"p4" : {
+"rdt:name" : "x3 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "1.931",
+"rdt:duration" : "0.0229999999999997",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "4"
+} ,
+
+"p5" : {
+"rdt:name" : "y <- read.csv(\"../data/addme.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "1.96",
+"rdt:duration" : "0.0290000000000008",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "5"
+} ,
+
+"p6" : {
+"rdt:name" : "x1x3 <- cbind(x1, x3)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "1.998",
+"rdt:duration" : "0.0379999999999994",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "8"
+} ,
+
+"p7" : {
+"rdt:name" : "x1x2 <- cbind(x1, x2)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "2.049",
+"rdt:duration" : "0.0510000000000002",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "9"
+} ,
+
+"p8" : {
+"rdt:name" : "x1y <- cbind(x1, y)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "2.093",
+"rdt:duration" : "0.0439999999999996",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "10"
+} ,
+
+"p9" : {
+"rdt:name" : "apply(x1x3, 2, sum)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "2.138",
+"rdt:duration" : "0.0449999999999999",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "13"
+} ,
+
+"p10" : {
+"rdt:name" : "apply(x1x2, 2, sum)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "2.161",
+"rdt:duration" : "0.0229999999999997",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "14"
+} ,
+
+"p11" : {
+"rdt:name" : "tryCatch",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "2.185",
+"rdt:duration" : "0.024",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "15"
+} ,
+
+"environment" : {
+"rdt:name" : "environment",
+"rdt:architecture" : "x86_64",
+"rdt:operatingSystem" : "unix",
+"rdt:language" : "R",
+"rdt:rVersion" : "R version 3.3.1 (2016-06-21)",
+"rdt:script" : "/Users/hermes/Projects/HF/projects/Dprov/projects/coerce_example/src/coerce.R",
+"rdt:sourcedScripts" : "",
+"rdt:scriptTimeStamp" : "2016-09-19T09.37.38EDT",
+"rdt:workingDirectory" : "/Users/hermes/Projects/HF/projects/Dprov/projects/coerce_example/src",
+"rdt:ddgDirectory" : "./coerce_ddg",
+"rdt:ddgTimeStamp" : "2016-09-19T09.37.56EDT",
+"rdt:rdatatrackerVersion" : "2.24.1",
+"rdt:InstalledPackages": [
+	{"package":"RDataTracker", "version":"2.24.1"}]
+}},
+"entity":{
+
+"d1" : {
+"rdt:name" : "x1",
+"rdt:value" : "./coerce_ddg/data/1-x1.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d2" : {
+"rdt:name" : "x2",
+"rdt:value" : "./coerce_ddg/data/2-x2.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d3" : {
+"rdt:name" : "x3",
+"rdt:value" : "./coerce_ddg/data/3-x3.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d4" : {
+"rdt:name" : "addme.csv",
+"rdt:value" : "./coerce_ddg/data/4-addme.csv",
+"rdt:type" : "File",
+"rdt:scope" : "undefined",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d5" : {
+"rdt:name" : "y",
+"rdt:value" : "./coerce_ddg/data/5-y.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d6" : {
+"rdt:name" : "x1x3",
+"rdt:value" : "./coerce_ddg/data/6-x1x3.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d7" : {
+"rdt:name" : "x1x2",
+"rdt:value" : "./coerce_ddg/data/7-x1x2.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d8" : {
+"rdt:name" : "x1y",
+"rdt:value" : "./coerce_ddg/data/8-x1y.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d9" : {
+"rdt:name" : "error.msg",
+"rdt:value" : "\"Error in FUN(newX[, i], ...): invalid 'type' (character) of argument \"",
+"rdt:type" : "Exception",
+"rdt:scope" : "ddg.library",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+}},
+"wasInformedBy":{
+
+"e1" : {
+"prov:informant" : "p1",
+"prov:informed" : "p2"
+} ,
+
+"e3" : {
+"prov:informant" : "p2",
+"prov:informed" : "p3"
+} ,
+
+"e5" : {
+"prov:informant" : "p3",
+"prov:informed" : "p4"
+} ,
+
+"e7" : {
+"prov:informant" : "p4",
+"prov:informed" : "p5"
+} ,
+
+"e10" : {
+"prov:informant" : "p5",
+"prov:informed" : "p6"
+} ,
+
+"e14" : {
+"prov:informant" : "p6",
+"prov:informed" : "p7"
+} ,
+
+"e18" : {
+"prov:informant" : "p7",
+"prov:informed" : "p8"
+} ,
+
+"e22" : {
+"prov:informant" : "p8",
+"prov:informed" : "p9"
+} ,
+
+"e24" : {
+"prov:informant" : "p9",
+"prov:informed" : "p10"
+} ,
+
+"e26" : {
+"prov:informant" : "p10",
+"prov:informed" : "p11"
+}},
+"wasGeneratedBy":{
+
+"e2" : {
+"prov:entity" : "d1",
+"prov:activity" : "p2"
+} ,
+
+"e4" : {
+"prov:entity" : "d2",
+"prov:activity" : "p3"
+} ,
+
+"e6" : {
+"prov:entity" : "d3",
+"prov:activity" : "p4"
+} ,
+
+"e9" : {
+"prov:entity" : "d5",
+"prov:activity" : "p5"
+} ,
+
+"e13" : {
+"prov:entity" : "d6",
+"prov:activity" : "p6"
+} ,
+
+"e17" : {
+"prov:entity" : "d7",
+"prov:activity" : "p7"
+} ,
+
+"e21" : {
+"prov:entity" : "d8",
+"prov:activity" : "p8"
+} ,
+
+"e27" : {
+"prov:entity" : "d9",
+"prov:activity" : "p11"
+}},
+"used":{
+
+"e8" : {
+"prov:activity" : "p5",
+"prov:entity" : "d4"
+} ,
+
+"e11" : {
+"prov:activity" : "p6",
+"prov:entity" : "d1"
+} ,
+
+"e12" : {
+"prov:activity" : "p6",
+"prov:entity" : "d3"
+} ,
+
+"e15" : {
+"prov:activity" : "p7",
+"prov:entity" : "d1"
+} ,
+
+"e16" : {
+"prov:activity" : "p7",
+"prov:entity" : "d2"
+} ,
+
+"e19" : {
+"prov:activity" : "p8",
+"prov:entity" : "d1"
+} ,
+
+"e20" : {
+"prov:activity" : "p8",
+"prov:entity" : "d5"
+} ,
+
+"e23" : {
+"prov:activity" : "p9",
+"prov:entity" : "d6"
+} ,
+
+"e25" : {
+"prov:activity" : "p10",
+"prov:entity" : "d7"
+}}
+}

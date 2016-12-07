@@ -1,0 +1,21 @@
+Architecture="x86_64"
+OperatingSystem="unix"
+Language="R"
+LanguageVersion="R version 3.3.1 (2016-06-21)"
+RDataTrackerVersion="2.24.1"
+Script="/Users/hermes/Projects/HF/projects/Dprov/projects/coerce_example/src/coerce_bugged.R"
+SourcedScripts=""
+ProcessFileTimestamp="2016-09-19T14.21.30EDT"
+WorkingDirectory="/Users/hermes/Projects/HF/projects/Dprov/projects/coerce_example/src"
+DDGDirectory="./coerce_bugged_ddg"
+DateTime="2016-09-19T14.21.44EDT"
+InstalledPackages="RDataTracker 2.24.1"
+3
+Start p1 "1-coerce_bugged.R" Value="coerce_bugged.R" Time="2.886" Script="0" Line="NA";
+Operation p2 "2-for (i in 1:2) {    assign(paste0(\"x\", i), matrix(sample(1:1" Value="for (i in 1:2) {    assign(paste0(\"x\", i), matrix(sample(1:1" Time="2.892" Script="0" Line="1";
+CF p1 p2
+Operation p3 "3-tryCatch" Value="tryCatch" Time="2.895" Script="0" Line="1";
+CF p2 p3
+Exception d1 "1-error.msg" Value="\"Error in lvalue[[2]]: subscript out of bounds \"";
+DF p3 d1
+

@@ -1,0 +1,61 @@
+Architecture="x86_64"
+OperatingSystem="unix"
+Language="R"
+LanguageVersion="R version 3.3.1 (2016-06-21)"
+RDataTrackerVersion="2.24.1"
+Script="/Users/hermes/Projects/HF/projects/Dprov/projects/coerce_example/src/coerce.R"
+SourcedScripts=""
+ProcessFileTimestamp="2016-09-19T09.37.38EDT"
+WorkingDirectory="/Users/hermes/Projects/HF/projects/Dprov/projects/coerce_example/src"
+DDGDirectory="./coerce_ddg"
+DateTime="2016-09-19T09.37.56EDT"
+InstalledPackages="RDataTracker 2.24.1"
+11
+Start p1 "1-coerce.R" Value="coerce.R" Time="1.878" Script="0" Line="NA";
+Operation p2 "2-x1 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Value="x1 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Time="1.881" Script="0" Line="2";
+CF p1 p2
+Snapshot d1 "1-x1" Value="./coerce_ddg/data/1-x1.csv" Time="2016-09-19T09.37.56EDT";
+DF p2 d1
+Operation p3 "3-x2 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Value="x2 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Time="1.908" Script="0" Line="3";
+CF p2 p3
+Snapshot d2 "2-x2" Value="./coerce_ddg/data/2-x2.csv" Time="2016-09-19T09.37.56EDT";
+DF p3 d2
+Operation p4 "4-x3 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Value="x3 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Time="1.931" Script="0" Line="4";
+CF p3 p4
+Snapshot d3 "3-x3" Value="./coerce_ddg/data/3-x3.csv" Time="2016-09-19T09.37.56EDT";
+DF p4 d3
+Operation p5 "5-y <- read.csv(\"../data/addme.csv\")" Value="y <- read.csv(\"../data/addme.csv\")" Time="1.96" Script="0" Line="5";
+CF p4 p5
+File d4 "4-addme.csv" Value="./coerce_ddg/data/4-addme.csv" Time="2016-09-19T09.37.56EDT" Location="/Users/hermes/Projects/HF/projects/Dprov/projects/coerce_example/data/addme.csv";
+DF d4 p5
+Snapshot d5 "5-y" Value="./coerce_ddg/data/5-y.csv" Time="2016-09-19T09.37.57EDT";
+DF p5 d5
+Operation p6 "6-x1x3 <- cbind(x1, x3)" Value="x1x3 <- cbind(x1, x3)" Time="1.998" Script="0" Line="8";
+CF p5 p6
+DF d1 p6
+DF d3 p6
+Snapshot d6 "6-x1x3" Value="./coerce_ddg/data/6-x1x3.csv" Time="2016-09-19T09.37.57EDT";
+DF p6 d6
+Operation p7 "7-x1x2 <- cbind(x1, x2)" Value="x1x2 <- cbind(x1, x2)" Time="2.049" Script="0" Line="9";
+CF p6 p7
+DF d1 p7
+DF d2 p7
+Snapshot d7 "7-x1x2" Value="./coerce_ddg/data/7-x1x2.csv" Time="2016-09-19T09.37.57EDT";
+DF p7 d7
+Operation p8 "8-x1y <- cbind(x1, y)" Value="x1y <- cbind(x1, y)" Time="2.093" Script="0" Line="10";
+CF p7 p8
+DF d1 p8
+DF d5 p8
+Snapshot d8 "8-x1y" Value="./coerce_ddg/data/8-x1y.csv" Time="2016-09-19T09.37.57EDT";
+DF p8 d8
+Operation p9 "9-apply(x1x3, 2, sum)" Value="apply(x1x3, 2, sum)" Time="2.138" Script="0" Line="13";
+CF p8 p9
+DF d6 p9
+Operation p10 "10-apply(x1x2, 2, sum)" Value="apply(x1x2, 2, sum)" Time="2.161" Script="0" Line="14";
+CF p9 p10
+DF d7 p10
+Operation p11 "11-tryCatch" Value="tryCatch" Time="2.185" Script="0" Line="15";
+CF p10 p11
+Exception d9 "9-error.msg" Value="\"Error in FUN(newX[, i], ...): invalid 'type' (character) of argument \"";
+DF p11 d9
+

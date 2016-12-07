@@ -1,0 +1,82 @@
+{
+
+"prefix" : {
+"prov" : "http://www.w3.org/ns/prov#",
+"rdt" : "http://rdatatracker.org/"
+},
+"activity":{
+
+"p1" : {
+"rdt:name" : "coerce_bugged.R",
+"rdt:type" : "Start",
+"rdt:elapsedTime" : "2.886",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "NA"
+} ,
+
+"p2" : {
+"rdt:name" : "for (i in 1:2) {    assign(paste0(\"x\", i), matrix(sample(1:1",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "2.892",
+"rdt:duration" : "0.00599999999999934",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "1"
+} ,
+
+"p3" : {
+"rdt:name" : "tryCatch",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "2.895",
+"rdt:duration" : "0.00300000000000011",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "1"
+} ,
+
+"environment" : {
+"rdt:name" : "environment",
+"rdt:architecture" : "x86_64",
+"rdt:operatingSystem" : "unix",
+"rdt:language" : "R",
+"rdt:rVersion" : "R version 3.3.1 (2016-06-21)",
+"rdt:script" : "/Users/hermes/Projects/HF/projects/Dprov/projects/coerce_example/src/coerce_bugged.R",
+"rdt:sourcedScripts" : "",
+"rdt:scriptTimeStamp" : "2016-09-19T14.21.30EDT",
+"rdt:workingDirectory" : "/Users/hermes/Projects/HF/projects/Dprov/projects/coerce_example/src",
+"rdt:ddgDirectory" : "./coerce_bugged_ddg",
+"rdt:ddgTimeStamp" : "2016-09-19T14.21.44EDT",
+"rdt:rdatatrackerVersion" : "2.24.1",
+"rdt:InstalledPackages": [
+	{"package":"RDataTracker", "version":"2.24.1"}]
+}},
+"entity":{
+
+"d1" : {
+"rdt:name" : "error.msg",
+"rdt:value" : "\"Error in lvalue[[2]]: subscript out of bounds \"",
+"rdt:type" : "Exception",
+"rdt:scope" : "ddg.library",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+}},
+"wasInformedBy":{
+
+"e1" : {
+"prov:informant" : "p1",
+"prov:informed" : "p2"
+} ,
+
+"e2" : {
+"prov:informant" : "p2",
+"prov:informed" : "p3"
+}},
+"wasGeneratedBy":{
+
+"e3" : {
+"prov:entity" : "d1",
+"prov:activity" : "p3"
+}},
+"used":{
+}
+}
