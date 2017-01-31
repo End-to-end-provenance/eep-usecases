@@ -1,0 +1,11 @@
+library('devtools')
+install_github('End-to-end-provenance/RDataTracker',ref='Server')
+dir()
+setwd('../../src/')
+setwd('~
+')
+setwd('../../Dprov/projects/eep-usecases/src/')
+library(RDataATracker)
+library(RDataTracker)
+ddg.run('coerce.R')
+##-ddg-- Wed Jan  4 17:55:53 2017 ------##

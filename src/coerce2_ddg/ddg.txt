@@ -1,0 +1,38 @@
+Architecture="x86_64"
+OperatingSystem="unix"
+Language="R"
+LanguageVersion="R version 3.3.1 (2016-06-21)"
+RDataTrackerVersion="2.24.1"
+Script="/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src/coerce2.R"
+SourcedScripts=""
+ProcessFileTimestamp="2016-12-19T15.45.53EST"
+WorkingDirectory="/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src"
+DDGDirectory="./coerce2_ddg"
+DateTime="2017-01-04T17.57.05EST"
+InstalledPackages="devtools 1.12.0, RDataTracker 2.24.1"
+6
+Start p1 "1-coerce2.R" Value="coerce2.R" Time="7.177" Script="NA" Pos="NA";
+Operation p2 "2-y <- read.csv(\"../data/y.csv\", header = F)" Value="y <- read.csv(\"../data/y.csv\", header = F)" Time="7.181" Script="0" Pos="6,1,6,39";
+CF p1 p2
+File d1 "1-y.csv" Value="data/1-y.csv" Time="2017-01-04T17.57.05EST" Location="/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/data/y.csv";
+DF d1 p2
+Snapshot d2 "2-y" Value="data/2-y.csv" Time="2017-01-04T17.57.05EST";
+DF p2 d2
+Operation p3 "3-c(apply(y, 2, mode), apply(y, 2, class))" Value="c(apply(y, 2, mode), apply(y, 2, class))" Time="7.218" Script="0" Pos="8,1,8,35";
+CF p2 p3
+DF d2 p3
+Operation p4 "4-new.y <- matrix(c(1, 2, 3, 4, 5, \"l\", 2, 3, 4, 5), nrow = 5)" Value="new.y <- matrix(c(1, 2, 3, 4, 5, \"l\", 2, 3, 4, 5), nrow = 5)" Time="7.25" Script="0" Pos="10,1,10,48";
+CF p3 p4
+Snapshot d3 "3-new.y" Value="data/3-new.y.csv" Time="2017-01-04T17.57.05EST";
+DF p4 d3
+Operation p5 "5-y <- rbind(y, new.y)" Value="y <- rbind(y, new.y)" Time="7.271" Script="0" Pos="12,1,12,19";
+CF p4 p5
+DF d2 p5
+DF d3 p5
+Snapshot d4 "4-y" Value="data/4-y.csv" Time="2017-01-04T17.57.05EST";
+DF p5 d4
+Operation p6 "6-tryCatch" Value="tryCatch" Time="7.309" Script="NA" Pos="NA";
+CF p5 p6
+Exception d5 "5-error.msg" Value="\"Error in FUN(X[[i]], ...): only defined on a data frame with all numeric variables \"";
+DF p6 d5
+

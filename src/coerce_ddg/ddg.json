@@ -9,100 +9,122 @@
 "p1" : {
 "rdt:name" : "coerce.R",
 "rdt:type" : "Start",
-"rdt:elapsedTime" : "1.878",
-"rdt:duration" : "0",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "NA"
+"rdt:elapsedTime" : "0.124",
+"rdt:scriptNum" : "NA",
+"rdt:startLine" : "NA",
+"rdt:startCol" : "NA",
+"rdt:endLine" : "NA",
+"rdt:endCol" : "NA"
 } ,
 
 "p2" : {
 "rdt:name" : "x1 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.881",
-"rdt:duration" : "0.00299999999999923",
+"rdt:elapsedTime" : "0.127999999999999",
 "rdt:scriptNum" : "0",
-"rdt:scriptLine" : "2"
+"rdt:startLine" : "2",
+"rdt:startCol" : "1",
+"rdt:endLine" : "2",
+"rdt:endCol" : "52"
 } ,
 
 "p3" : {
 "rdt:name" : "x2 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.908",
-"rdt:duration" : "0.027000000000001",
+"rdt:elapsedTime" : "0.162",
 "rdt:scriptNum" : "0",
-"rdt:scriptLine" : "3"
+"rdt:startLine" : "3",
+"rdt:startCol" : "1",
+"rdt:endLine" : "3",
+"rdt:endCol" : "52"
 } ,
 
 "p4" : {
 "rdt:name" : "x3 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.931",
-"rdt:duration" : "0.0229999999999997",
+"rdt:elapsedTime" : "0.193",
 "rdt:scriptNum" : "0",
-"rdt:scriptLine" : "4"
+"rdt:startLine" : "4",
+"rdt:startCol" : "1",
+"rdt:endLine" : "4",
+"rdt:endCol" : "52"
 } ,
 
 "p5" : {
 "rdt:name" : "y <- read.csv(\"../data/addme.csv\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.96",
-"rdt:duration" : "0.0290000000000008",
+"rdt:elapsedTime" : "0.218999999999999",
 "rdt:scriptNum" : "0",
-"rdt:scriptLine" : "5"
+"rdt:startLine" : "5",
+"rdt:startCol" : "1",
+"rdt:endLine" : "5",
+"rdt:endCol" : "34"
 } ,
 
 "p6" : {
 "rdt:name" : "x1x3 <- cbind(x1, x3)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.998",
-"rdt:duration" : "0.0379999999999994",
+"rdt:elapsedTime" : "0.347",
 "rdt:scriptNum" : "0",
-"rdt:scriptLine" : "8"
+"rdt:startLine" : "8",
+"rdt:startCol" : "1",
+"rdt:endLine" : "8",
+"rdt:endCol" : "20"
 } ,
 
 "p7" : {
 "rdt:name" : "x1x2 <- cbind(x1, x2)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "2.049",
-"rdt:duration" : "0.0510000000000002",
+"rdt:elapsedTime" : "0.391",
 "rdt:scriptNum" : "0",
-"rdt:scriptLine" : "9"
+"rdt:startLine" : "9",
+"rdt:startCol" : "1",
+"rdt:endLine" : "9",
+"rdt:endCol" : "20"
 } ,
 
 "p8" : {
 "rdt:name" : "x1y <- cbind(x1, y)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "2.093",
-"rdt:duration" : "0.0439999999999996",
+"rdt:elapsedTime" : "0.438",
 "rdt:scriptNum" : "0",
-"rdt:scriptLine" : "10"
+"rdt:startLine" : "10",
+"rdt:startCol" : "1",
+"rdt:endLine" : "10",
+"rdt:endCol" : "18"
 } ,
 
 "p9" : {
 "rdt:name" : "apply(x1x3, 2, sum)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "2.138",
-"rdt:duration" : "0.0449999999999999",
+"rdt:elapsedTime" : "0.475",
 "rdt:scriptNum" : "0",
-"rdt:scriptLine" : "13"
+"rdt:startLine" : "15",
+"rdt:startCol" : "1",
+"rdt:endLine" : "15",
+"rdt:endCol" : "16"
 } ,
 
 "p10" : {
 "rdt:name" : "apply(x1x2, 2, sum)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "2.161",
-"rdt:duration" : "0.0229999999999997",
+"rdt:elapsedTime" : "0.494999999999999",
 "rdt:scriptNum" : "0",
-"rdt:scriptLine" : "14"
+"rdt:startLine" : "NA",
+"rdt:startCol" : "NA",
+"rdt:endLine" : "NA",
+"rdt:endCol" : "NA"
 } ,
 
 "p11" : {
 "rdt:name" : "tryCatch",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "2.185",
-"rdt:duration" : "0.024",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "15"
+"rdt:elapsedTime" : "0.522",
+"rdt:scriptNum" : "NA",
+"rdt:startLine" : "NA",
+"rdt:startCol" : "NA",
+"rdt:endLine" : "NA",
+"rdt:endCol" : "NA"
 } ,
 
 "environment" : {
@@ -111,21 +133,23 @@
 "rdt:operatingSystem" : "unix",
 "rdt:language" : "R",
 "rdt:rVersion" : "R version 3.3.1 (2016-06-21)",
-"rdt:script" : "/Users/hermes/Projects/HF/projects/Dprov/projects/coerce_example/src/coerce.R",
-"rdt:sourcedScripts" : "",
-"rdt:scriptTimeStamp" : "2016-09-19T09.37.38EDT",
-"rdt:workingDirectory" : "/Users/hermes/Projects/HF/projects/Dprov/projects/coerce_example/src",
+"rdt:script" : "/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src/coerce.R",
+"rdt:sourcedScripts" : ""
+,
+"rdt:scriptTimeStamp" : "2016-12-07T15.37.58EST",
+"rdt:workingDirectory" : "/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src",
 "rdt:ddgDirectory" : "./coerce_ddg",
-"rdt:ddgTimeStamp" : "2016-09-19T09.37.56EDT",
+"rdt:ddgTimeStamp" : "2017-01-04T17.55.53EST",
 "rdt:rdatatrackerVersion" : "2.24.1",
-"rdt:InstalledPackages": [
-	{"package":"RDataTracker", "version":"2.24.1"}]
+"rdt:installedPackages" : [
+	{"package" : "devtools", "version" : "1.12.0"},
+	{"package" : "RDataTracker", "version" : "2.24.1"}]
 }},
 "entity":{
 
 "d1" : {
 "rdt:name" : "x1",
-"rdt:value" : "./coerce_ddg/data/1-x1.csv",
+"rdt:value" : "data/1-x1.csv",
 "rdt:type" : "Snapshot",
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
@@ -135,7 +159,7 @@
 
 "d2" : {
 "rdt:name" : "x2",
-"rdt:value" : "./coerce_ddg/data/2-x2.csv",
+"rdt:value" : "data/2-x2.csv",
 "rdt:type" : "Snapshot",
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
@@ -145,7 +169,7 @@
 
 "d3" : {
 "rdt:name" : "x3",
-"rdt:value" : "./coerce_ddg/data/3-x3.csv",
+"rdt:value" : "data/3-x3.csv",
 "rdt:type" : "Snapshot",
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
@@ -155,7 +179,7 @@
 
 "d4" : {
 "rdt:name" : "addme.csv",
-"rdt:value" : "./coerce_ddg/data/4-addme.csv",
+"rdt:value" : "data/4-addme.csv",
 "rdt:type" : "File",
 "rdt:scope" : "undefined",
 "rdt:fromEnv" : "FALSE",
@@ -165,7 +189,7 @@
 
 "d5" : {
 "rdt:name" : "y",
-"rdt:value" : "./coerce_ddg/data/5-y.csv",
+"rdt:value" : "data/5-y.csv",
 "rdt:type" : "Snapshot",
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
@@ -175,7 +199,7 @@
 
 "d6" : {
 "rdt:name" : "x1x3",
-"rdt:value" : "./coerce_ddg/data/6-x1x3.csv",
+"rdt:value" : "data/6-x1x3.csv",
 "rdt:type" : "Snapshot",
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
@@ -185,7 +209,7 @@
 
 "d7" : {
 "rdt:name" : "x1x2",
-"rdt:value" : "./coerce_ddg/data/7-x1x2.csv",
+"rdt:value" : "data/7-x1x2.csv",
 "rdt:type" : "Snapshot",
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
@@ -195,7 +219,7 @@
 
 "d8" : {
 "rdt:name" : "x1y",
-"rdt:value" : "./coerce_ddg/data/8-x1y.csv",
+"rdt:value" : "data/8-x1y.csv",
 "rdt:type" : "Snapshot",
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",

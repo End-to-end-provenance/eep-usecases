@@ -1,0 +1,212 @@
+{
+
+"prefix" : {
+"prov" : "http://www.w3.org/ns/prov#",
+"rdt" : "http://rdatatracker.org/"
+},
+"activity":{
+
+"p1" : {
+"rdt:name" : "coerce2.R",
+"rdt:type" : "Start",
+"rdt:elapsedTime" : "7.177",
+"rdt:scriptNum" : "NA",
+"rdt:startLine" : "NA",
+"rdt:startCol" : "NA",
+"rdt:endLine" : "NA",
+"rdt:endCol" : "NA"
+} ,
+
+"p2" : {
+"rdt:name" : "y <- read.csv(\"../data/y.csv\", header = F)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "7.181",
+"rdt:scriptNum" : "0",
+"rdt:startLine" : "6",
+"rdt:startCol" : "1",
+"rdt:endLine" : "6",
+"rdt:endCol" : "39"
+} ,
+
+"p3" : {
+"rdt:name" : "c(apply(y, 2, mode), apply(y, 2, class))",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "7.218",
+"rdt:scriptNum" : "0",
+"rdt:startLine" : "8",
+"rdt:startCol" : "1",
+"rdt:endLine" : "8",
+"rdt:endCol" : "35"
+} ,
+
+"p4" : {
+"rdt:name" : "new.y <- matrix(c(1, 2, 3, 4, 5, \"l\", 2, 3, 4, 5), nrow = 5)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "7.25",
+"rdt:scriptNum" : "0",
+"rdt:startLine" : "10",
+"rdt:startCol" : "1",
+"rdt:endLine" : "10",
+"rdt:endCol" : "48"
+} ,
+
+"p5" : {
+"rdt:name" : "y <- rbind(y, new.y)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "7.271",
+"rdt:scriptNum" : "0",
+"rdt:startLine" : "12",
+"rdt:startCol" : "1",
+"rdt:endLine" : "12",
+"rdt:endCol" : "19"
+} ,
+
+"p6" : {
+"rdt:name" : "tryCatch",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "7.309",
+"rdt:scriptNum" : "NA",
+"rdt:startLine" : "NA",
+"rdt:startCol" : "NA",
+"rdt:endLine" : "NA",
+"rdt:endCol" : "NA"
+} ,
+
+"environment" : {
+"rdt:name" : "environment",
+"rdt:architecture" : "x86_64",
+"rdt:operatingSystem" : "unix",
+"rdt:language" : "R",
+"rdt:rVersion" : "R version 3.3.1 (2016-06-21)",
+"rdt:script" : "/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src/coerce2.R",
+"rdt:sourcedScripts" : ""
+,
+"rdt:scriptTimeStamp" : "2016-12-19T15.45.53EST",
+"rdt:workingDirectory" : "/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src",
+"rdt:ddgDirectory" : "./coerce2_ddg",
+"rdt:ddgTimeStamp" : "2017-01-04T17.57.05EST",
+"rdt:rdatatrackerVersion" : "2.24.1",
+"rdt:installedPackages" : [
+	{"package" : "devtools", "version" : "1.12.0"},
+	{"package" : "RDataTracker", "version" : "2.24.1"}]
+}},
+"entity":{
+
+"d1" : {
+"rdt:name" : "y.csv",
+"rdt:value" : "data/1-y.csv",
+"rdt:type" : "File",
+"rdt:scope" : "undefined",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d2" : {
+"rdt:name" : "y",
+"rdt:value" : "data/2-y.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d3" : {
+"rdt:name" : "new.y",
+"rdt:value" : "data/3-new.y.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d4" : {
+"rdt:name" : "y",
+"rdt:value" : "data/4-y.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d5" : {
+"rdt:name" : "error.msg",
+"rdt:value" : "\"Error in FUN(X[[i]], ...): only defined on a data frame with all numeric variables \"",
+"rdt:type" : "Exception",
+"rdt:scope" : "ddg.library",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+}},
+"wasInformedBy":{
+
+"e1" : {
+"prov:informant" : "p1",
+"prov:informed" : "p2"
+} ,
+
+"e4" : {
+"prov:informant" : "p2",
+"prov:informed" : "p3"
+} ,
+
+"e6" : {
+"prov:informant" : "p3",
+"prov:informed" : "p4"
+} ,
+
+"e8" : {
+"prov:informant" : "p4",
+"prov:informed" : "p5"
+} ,
+
+"e12" : {
+"prov:informant" : "p5",
+"prov:informed" : "p6"
+}},
+"wasGeneratedBy":{
+
+"e3" : {
+"prov:entity" : "d2",
+"prov:activity" : "p2"
+} ,
+
+"e7" : {
+"prov:entity" : "d3",
+"prov:activity" : "p4"
+} ,
+
+"e11" : {
+"prov:entity" : "d4",
+"prov:activity" : "p5"
+} ,
+
+"e13" : {
+"prov:entity" : "d5",
+"prov:activity" : "p6"
+}},
+"used":{
+
+"e2" : {
+"prov:activity" : "p2",
+"prov:entity" : "d1"
+} ,
+
+"e5" : {
+"prov:activity" : "p3",
+"prov:entity" : "d2"
+} ,
+
+"e9" : {
+"prov:activity" : "p5",
+"prov:entity" : "d2"
+} ,
+
+"e10" : {
+"prov:activity" : "p5",
+"prov:entity" : "d3"
+}}
+}
