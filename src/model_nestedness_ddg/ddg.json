@@ -1,0 +1,58 @@
+{
+
+"prefix" : {
+"prov" : "http://www.w3.org/ns/prov#",
+"rdt" : "http://rdatatracker.org/"
+},
+"activity":{
+
+"p1" : {
+"rdt:name" : "tryCatch",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.0310000000000001",
+"rdt:scriptNum" : "NA",
+"rdt:startLine" : "NA",
+"rdt:startCol" : "NA",
+"rdt:endLine" : "NA",
+"rdt:endCol" : "NA"
+} ,
+
+"environment" : {
+"rdt:name" : "environment",
+"rdt:architecture" : "x86_64",
+"rdt:operatingSystem" : "unix",
+"rdt:language" : "R",
+"rdt:rVersion" : "R version 3.3.2 (2016-10-31)",
+"rdt:script" : "/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src/model_nestedness.R",
+"rdt:sourcedScripts" : ""
+,
+"rdt:scriptTimeStamp" : "2017-01-31T14.35.23EST",
+"rdt:workingDirectory" : "/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src",
+"rdt:ddgDirectory" : "./model_nestedness_ddg",
+"rdt:ddgTimeStamp" : "2017-01-31T14.35.42EST",
+"rdt:rdatatrackerVersion" : "2.25.0",
+"rdt:installedPackages" : [
+	{"package" : "RDataTracker", "version" : "2.25.0"}]
+}},
+"entity":{
+
+"d1" : {
+"rdt:name" : "error.msg",
+"rdt:value" : "\"Error: could not find function \"new\" \"",
+"rdt:type" : "Exception",
+"rdt:scope" : "ddg.library",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+}},
+"wasInformedBy":{
+},
+"wasGeneratedBy":{
+
+"e1" : {
+"prov:entity" : "d1",
+"prov:activity" : "p1"
+}},
+"used":{
+}
+}
