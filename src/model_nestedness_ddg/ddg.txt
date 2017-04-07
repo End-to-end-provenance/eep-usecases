@@ -3,15 +3,15 @@ OperatingSystem="unix"
 Language="R"
 LanguageVersion="R version 3.3.2 (2016-10-31)"
 RDataTrackerVersion="2.25.0"
-Script="/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src/model_nestedness.R"
+Script="/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src/model_nestedness.R"
 SourcedScripts=""
 ProcessFileTimestamp="2017-01-31T14.35.23EST"
-WorkingDirectory="/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src"
+WorkingDirectory="/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src"
 DDGDirectory="./model_nestedness_ddg"
-DateTime="2017-01-31T14.35.42EST"
+DateTime="2017-01-31T15.58.37EST"
 InstalledPackages="RDataTracker 2.25.0"
 1
-Operation p1 "1-tryCatch" Value="tryCatch" Time="0.0310000000000001" Script="NA" Pos="NA";
+Operation p1 "1-tryCatch" Value="tryCatch" Time="0.032" Script="NA" Pos="NA";
 Exception d1 "1-error.msg" Value="\"Error: could not find function \"new\" \"";
 DF p1 d1
 

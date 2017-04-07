@@ -9,7 +9,7 @@
 "p1" : {
 "rdt:name" : "tryCatch",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.0310000000000001",
+"rdt:elapsedTime" : "0.032",
 "rdt:scriptNum" : "NA",
 "rdt:startLine" : "NA",
 "rdt:startCol" : "NA",
@@ -23,13 +23,13 @@
 "rdt:operatingSystem" : "unix",
 "rdt:language" : "R",
 "rdt:rVersion" : "R version 3.3.2 (2016-10-31)",
-"rdt:script" : "/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src/model_nestedness.R",
+"rdt:script" : "/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src/model_nestedness.R",
 "rdt:sourcedScripts" : ""
 ,
 "rdt:scriptTimeStamp" : "2017-01-31T14.35.23EST",
-"rdt:workingDirectory" : "/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src",
+"rdt:workingDirectory" : "/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src",
 "rdt:ddgDirectory" : "./model_nestedness_ddg",
-"rdt:ddgTimeStamp" : "2017-01-31T14.35.42EST",
+"rdt:ddgTimeStamp" : "2017-01-31T15.58.37EST",
 "rdt:rdatatrackerVersion" : "2.25.0",
 "rdt:installedPackages" : [
 	{"package" : "RDataTracker", "version" : "2.25.0"}]

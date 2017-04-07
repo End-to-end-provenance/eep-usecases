@@ -9,7 +9,7 @@
 "p1" : {
 "rdt:name" : "coerce.R",
 "rdt:type" : "Start",
-"rdt:elapsedTime" : "0.124",
+"rdt:elapsedTime" : "9.67",
 "rdt:scriptNum" : "NA",
 "rdt:startLine" : "NA",
 "rdt:startCol" : "NA",
@@ -20,7 +20,7 @@
 "p2" : {
 "rdt:name" : "x1 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.127999999999999",
+"rdt:elapsedTime" : "9.673",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "2",
 "rdt:startCol" : "1",
@@ -31,7 +31,7 @@
 "p3" : {
 "rdt:name" : "x2 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.162",
+"rdt:elapsedTime" : "9.691",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "3",
 "rdt:startCol" : "1",
@@ -42,7 +42,7 @@
 "p4" : {
 "rdt:name" : "x3 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.193",
+"rdt:elapsedTime" : "9.712",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "4",
 "rdt:startCol" : "1",
@@ -53,7 +53,7 @@
 "p5" : {
 "rdt:name" : "y <- read.csv(\"../data/addme.csv\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.218999999999999",
+"rdt:elapsedTime" : "9.742",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "5",
 "rdt:startCol" : "1",
@@ -64,7 +64,7 @@
 "p6" : {
 "rdt:name" : "x1x3 <- cbind(x1, x3)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.347",
+"rdt:elapsedTime" : "9.774",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "8",
 "rdt:startCol" : "1",
@@ -75,7 +75,7 @@
 "p7" : {
 "rdt:name" : "x1x2 <- cbind(x1, x2)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.391",
+"rdt:elapsedTime" : "9.817",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "9",
 "rdt:startCol" : "1",
@@ -86,7 +86,7 @@
 "p8" : {
 "rdt:name" : "x1y <- cbind(x1, y)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.438",
+"rdt:elapsedTime" : "9.858",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "10",
 "rdt:startCol" : "1",
@@ -95,36 +95,14 @@
 } ,
 
 "p9" : {
-"rdt:name" : "apply(x1x3, 2, sum)",
+"rdt:name" : "apply(x1y, 2, sum)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.475",
+"rdt:elapsedTime" : "9.899",
 "rdt:scriptNum" : "0",
-"rdt:startLine" : "15",
+"rdt:startLine" : "13",
 "rdt:startCol" : "1",
-"rdt:endLine" : "15",
+"rdt:endLine" : "13",
 "rdt:endCol" : "16"
-} ,
-
-"p10" : {
-"rdt:name" : "apply(x1x2, 2, sum)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.494999999999999",
-"rdt:scriptNum" : "0",
-"rdt:startLine" : "NA",
-"rdt:startCol" : "NA",
-"rdt:endLine" : "NA",
-"rdt:endCol" : "NA"
-} ,
-
-"p11" : {
-"rdt:name" : "tryCatch",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.522",
-"rdt:scriptNum" : "NA",
-"rdt:startLine" : "NA",
-"rdt:startCol" : "NA",
-"rdt:endLine" : "NA",
-"rdt:endCol" : "NA"
 } ,
 
 "environment" : {
@@ -132,18 +110,18 @@
 "rdt:architecture" : "x86_64",
 "rdt:operatingSystem" : "unix",
 "rdt:language" : "R",
-"rdt:rVersion" : "R version 3.3.1 (2016-06-21)",
-"rdt:script" : "/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src/coerce.R",
+"rdt:rVersion" : "R version 3.3.2 (2016-10-31)",
+"rdt:script" : "/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src/coerce.R",
 "rdt:sourcedScripts" : ""
 ,
-"rdt:scriptTimeStamp" : "2016-12-07T15.37.58EST",
-"rdt:workingDirectory" : "/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src",
+"rdt:scriptTimeStamp" : "2017-02-16T13.16.27EST",
+"rdt:workingDirectory" : "/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src",
 "rdt:ddgDirectory" : "./coerce_ddg",
-"rdt:ddgTimeStamp" : "2017-01-04T17.55.53EST",
-"rdt:rdatatrackerVersion" : "2.24.1",
+"rdt:ddgTimeStamp" : "2017-02-16T13.16.37EST",
+"rdt:rdatatrackerVersion" : "2.25.1",
 "rdt:installedPackages" : [
 	{"package" : "devtools", "version" : "1.12.0"},
-	{"package" : "RDataTracker", "version" : "2.24.1"}]
+	{"package" : "RDataTracker", "version" : "2.25.1"}]
 }},
 "entity":{
 
@@ -276,16 +254,6 @@
 "e22" : {
 "prov:informant" : "p8",
 "prov:informed" : "p9"
-} ,
-
-"e24" : {
-"prov:informant" : "p9",
-"prov:informed" : "p10"
-} ,
-
-"e26" : {
-"prov:informant" : "p10",
-"prov:informed" : "p11"
 }},
 "wasGeneratedBy":{
 
@@ -324,9 +292,9 @@
 "prov:activity" : "p8"
 } ,
 
-"e27" : {
+"e23" : {
 "prov:entity" : "d9",
-"prov:activity" : "p11"
+"prov:activity" : "p9"
 }},
 "used":{
 
@@ -363,15 +331,5 @@
 "e20" : {
 "prov:activity" : "p8",
 "prov:entity" : "d5"
-} ,
-
-"e23" : {
-"prov:activity" : "p9",
-"prov:entity" : "d6"
-} ,
-
-"e25" : {
-"prov:activity" : "p10",
-"prov:entity" : "d7"
 }}
 }

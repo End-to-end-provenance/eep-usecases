@@ -10,6 +10,7 @@ x1x2 <- cbind(x1,x2)
 x1y <- cbind(x1,y)
 
 ### Get the colum-wise sum
+apply(x1y,2,sum)
 apply(x1x3,2,sum)
 apply(x1x2,2,sum)
-apply(x1y,2,sum)
+

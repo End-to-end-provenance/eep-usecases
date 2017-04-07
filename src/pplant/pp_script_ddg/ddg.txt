@@ -1,0 +1,3503 @@
+Architecture="x86_64"
+OperatingSystem="unix"
+Language="R"
+LanguageVersion="R version 3.3.3 (2017-03-06)"
+RDataTrackerVersion="2.25.1"
+Script="/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src/pp_script.R"
+SourcedScripts=""
+ProcessFileTimestamp="2017-04-06T17.50.50EDT"
+WorkingDirectory="/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src"
+DDGDirectory="./pp_script_ddg"
+DateTime="2017-04-06T19.21.16EDT"
+InstalledPackages="RDataTracker 2.25.1, sarModel 0.1"
+577
+Start p1 "1-pp_script.R" Value="pp_script.R" Time="1.255" Script="NA" Pos="NA";
+Operation p2 "2-library(\"sarModel\")" Value="library(\"sarModel\")" Time="1.276" Script="0" Pos="7,1,7,19";
+CF p1 p2
+Operation p3 "3-sim <- ppSim(3)" Value="sim <- ppSim(3)" Time="2.145" Script="0" Pos="10,1,10,15";
+CF p2 p3
+Snapshot d1 "1-sim" Value="data/1-sim.csv" Time="2017-04-06T19.21.29EDT";
+DF p3 d1
+Operation p4 "4-days <- 3" Value="days <- 3" Time="2.258" Script="0" Pos="14,1,14,9";
+CF p3 p4
+Data d2 "2-days" Value="3";
+DF p4 d2
+Operation p5 "5-foodWeight <- 1" Value="foodWeight <- 1" Time="2.274" Script="0" Pos="15,1,15,15";
+CF p4 p5
+Data d3 "3-foodWeight" Value="1";
+DF p5 d3
+Operation p6 "6-beta <- 4.5e-06" Value="beta <- 4.5e-06" Time="2.29" Script="0" Pos="16,1,16,15";
+CF p5 p6
+Data d4 "4-beta" Value="4.5e-06";
+DF p6 d4
+Operation p7 "7-d <- 5" Value="d <- 5" Time="2.304" Script="0" Pos="17,1,17,6";
+CF p6 p7
+Data d5 "5-d" Value="5";
+DF p7 d5
+Operation p8 "8-k <- 2" Value="k <- 2" Time="2.322" Script="0" Pos="18,1,18,6";
+CF p7 p8
+Data d6 "6-k" Value="2";
+DF p8 d6
+Operation p9 "9-Amax <- 20" Value="Amax <- 20" Time="2.338" Script="0" Pos="19,1,19,10";
+CF p8 p9
+Data d7 "7-Amax" Value="20";
+DF p9 d7
+Operation p10 "10-Amin <- Amax/1.5" Value="Amin <- Amax/1.5" Time="2.353" Script="0" Pos="20,1,20,16";
+CF p9 p10
+DF d7 p10
+Data d8 "8-Amin" Value="13.3333333333333";
+DF p10 d8
+Operation p11 "11-m <- 0" Value="m <- 0" Time="2.383" Script="0" Pos="21,1,21,6";
+CF p10 p11
+Data d9 "9-m" Value="0";
+DF p11 d9
+Operation p12 "12-aMax <- 2" Value="aMax <- 2" Time="2.404" Script="0" Pos="22,1,22,9";
+CF p11 p12
+Data d10 "10-aMax" Value="2";
+DF p12 d10
+Operation p13 "13-aMin <- 1" Value="aMin <- 1" Time="2.418" Script="0" Pos="23,1,23,9";
+CF p12 p13
+Data d11 "11-aMin" Value="1";
+DF p13 d11
+Operation p14 "14-s <- 1" Value="s <- 1" Time="2.43" Script="0" Pos="24,1,24,6";
+CF p13 p14
+Data d12 "12-s" Value="1";
+DF p14 d12
+Operation p15 "15-feedingTime <- 720" Value="feedingTime <- 720" Time="2.443" Script="0" Pos="25,1,25,18";
+CF p14 p15
+Data d13 "13-feedingTime" Value="720";
+DF p15 d13
+Operation p16 "16-c <- 1" Value="c <- 1" Time="2.456" Script="0" Pos="26,1,26,6";
+CF p15 p16
+Data d14 "14-c" Value="1";
+DF p16 d14
+Operation p17 "17-x0 <- 0" Value="x0 <- 0" Time="2.469" Script="0" Pos="27,1,27,7";
+CF p16 p17
+Data d15 "15-x0" Value="0";
+DF p17 d15
+Operation p18 "18-w0 <- 0" Value="w0 <- 0" Time="2.481" Script="0" Pos="28,1,28,7";
+CF p17 p18
+Data d16 "16-w0" Value="0";
+DF p18 d16
+Operation p19 "19-w.w <- 75" Value="w.w <- 75" Time="2.494" Script="0" Pos="29,1,29,9";
+CF p18 p19
+Data d17 "17-w.w" Value="75";
+DF p19 d17
+Operation p20 "20-photo.val <- 1" Value="photo.val <- 1" Time="2.509" Script="0" Pos="30,1,30,14";
+CF p19 p20
+Data d18 "18-photo.val" Value="1";
+DF p20 d18
+Operation p21 "21-Ascalar <- 0.75" Value="Ascalar <- 0.75" Time="2.525" Script="0" Pos="31,1,31,15";
+CF p20 p21
+Data d19 "19-Ascalar" Value="0.75";
+DF p21 d19
+Operation p22 "22-Bscalar <- 1" Value="Bscalar <- 1" Time="2.539" Script="0" Pos="32,1,32,12";
+CF p21 p22
+Data d20 "20-Bscalar" Value="1";
+DF p22 d20
+Operation p23 "23-bound.max <- FALSE" Value="bound.max <- FALSE" Time="2.551" Script="0" Pos="33,1,33,18";
+CF p22 p23
+Data d21 "21-bound.max" Value="FALSE";
+DF p23 d21
+Operation p24 "24-verbose <- FALSE" Value="verbose <- FALSE" Time="2.566" Script="0" Pos="34,1,34,16";
+CF p23 p24
+Data d22 "22-verbose" Value="FALSE";
+DF p24 d22
+Operation p25 "25-decycle <- FALSE" Value="decycle <- FALSE" Time="2.58" Script="0" Pos="35,1,35,16";
+CF p24 p25
+Data d23 "23-decycle" Value="FALSE";
+DF p25 d23
+Start p26 "26-if (length(foodWeight) < days) {    foodWeight <- rep(foodWe" Value="if (length(foodWeight) < days) {    foodWeight <- rep(foodWe" Time="2.595" Script="0" Pos="37,1,39,1";
+CF p25 p26
+DF d3 p26
+DF d2 p26
+Start p27 "27-if" Value="if" Time="2.633" Script="NA" Pos="NA";
+CF p26 p27
+Operation p28 "28-foodWeight <- rep(foodWeight, days)[1:days]" Value="foodWeight <- rep(foodWeight, days)[1:days]" Time="2.648" Script="0" Pos="NA,NA,NA,NA";
+CF p27 p28
+DF d3 p28
+DF d2 p28
+Snapshot d24 "24-foodWeight" Value="data/24-foodWeight.csv" Time="2017-04-06T19.21.33EDT";
+DF p28 d24
+Finish p29 "29-if" Value="if" Time="2.686" Script="NA" Pos="NA";
+CF p28 p29
+Finish p30 "30-if (length(foodWeight) < days) {    foodWeight <- rep(foodWe" Value="if (length(foodWeight) < days) {    foodWeight <- rep(foodWe" Time="2.688" Script="0" Pos="37,1,39,1";
+CF p29 p30
+Operation p31 "31-minute <- 1" Value="minute <- 1" Time="2.691" Script="0" Pos="42,5,42,15";
+CF p30 p31
+Data d25 "25-minute" Value="1";
+DF p31 d25
+Operation p32 "32-P <- photo(days, (Amax/Amax), (Amax/Amin - 1))" Value="P <- photo(days, (Amax/Amax), (Amax/Amin - 1))" Time="2.704" Script="0" Pos="44,5,44,48";
+CF p31 p32
+DF d2 p32
+DF d7 p32
+DF d8 p32
+Snapshot d26 "26-P" Value="data/26-P.csv" Time="2017-04-06T19.21.33EDT";
+DF p32 d26
+Start p33 "33-if (feedingTime == 1) {    w <- w0 + foodWeight[1]} else {  " Value="if (feedingTime == 1) {    w <- w0 + foodWeight[1]} else {  " Time="2.773" Script="0" Pos="47,5,49,18";
+CF p32 p33
+DF d13 p33
+DF d16 p33
+DF d24 p33
+Start p34 "34-if" Value="if" Time="2.819" Script="NA" Pos="NA";
+CF p33 p34
+Operation p35 "35-w <- w0" Value="w <- w0" Time="2.823" Script="0" Pos="49,5,49,5";
+CF p34 p35
+DF d16 p35
+Data d27 "27-w" Value="0";
+DF p35 d27
+Finish p36 "36-if" Value="if" Time="2.843" Script="NA" Pos="NA";
+CF p35 p36
+Finish p37 "37-if (feedingTime == 1) {    w <- w0 + foodWeight[1]} else {  " Value="if (feedingTime == 1) {    w <- w0 + foodWeight[1]} else {  " Time="2.845" Script="0" Pos="47,5,49,18";
+CF p36 p37
+Operation p38 "38-n <- mineralization(x0, w[1], c)" Value="n <- mineralization(x0, w[1], c)" Time="2.847" Script="0" Pos="51,5,51,34";
+CF p37 p38
+DF d15 p38
+DF d27 p38
+DF d14 p38
+Data d28 "28-n" Value="0";
+DF p38 d28
+Operation p39 "39-a <- augmentation(n[length(n)], s, d, aMin, aMax)" Value="a <- augmentation(n[length(n)], s, d, aMin, aMax)" Time="2.891" Script="0" Pos="53,5,53,49";
+CF p38 p39
+DF d28 p39
+DF d12 p39
+DF d5 p39
+DF d11 p39
+DF d10 p39
+Data d29 "29-a" Value="1.00669285092428";
+DF p39 d29
+Operation p40 "40-B <- Amax * ((a * Bscalar) * (w[1]/(k + w[1])))" Value="B <- Amax * ((a * Bscalar) * (w[1]/(k + w[1])))" Time="2.964" Script="0" Pos="55,5,55,49";
+CF p39 p40
+DF d7 p40
+DF d29 p40
+DF d20 p40
+DF d27 p40
+DF d6 p40
+Data d30 "30-B" Value="0";
+DF p40 d30
+Operation p41 "41-A <- Amax * ((a * Ascalar) * P[1])" Value="A <- Amax * ((a * Ascalar) * P[1])" Time="3.027" Script="0" Pos="57,5,57,38";
+CF p40 p41
+DF d7 p41
+DF d29 p41
+DF d19 p41
+DF d26 p41
+Data d31 "31-A" Value="7.55019638193214";
+DF p41 d31
+Operation p42 "42-x <- A[length(minute)] - (m + B[length(minute)])" Value="x <- A[length(minute)] - (m + B[length(minute)])" Time="3.076" Script="0" Pos="59,5,59,52";
+CF p41 p42
+DF d31 p42
+DF d25 p42
+DF d9 p42
+DF d30 p42
+Data d32 "32-x" Value="7.55019638193214";
+DF p42 d32
+Start p43 "43-for (z in 1:days) {    for (j in 1:1440) {        if (verbos" Value="for (z in 1:days) {    for (j in 1:1440) {        if (verbos" Time="3.133" Script="0" Pos="61,5,92,5";
+CF p42 p43
+DF d2 p43
+DF d22 p43
+DF d25 p43
+DF d27 p43
+DF d17 p43
+DF d13 p43
+DF d24 p43
+DF d28 p43
+DF d32 p43
+DF d29 p43
+DF d12 p43
+DF d5 p43
+DF d11 p43
+DF d10 p43
+DF d30 p43
+DF d7 p43
+DF d20 p43
+DF d6 p43
+DF d31 p43
+DF d19 p43
+DF d26 p43
+DF d9 p43
+DF d21 p43
+Start p44 "44-for loop" Value="for loop" Time="3.401" Script="NA" Pos="NA";
+CF p43 p44
+Operation p45 "45-z <- 1" Value="z <- 1" Time="3.405" Script="NA" Pos="NA";
+CF p44 p45
+Data d33 "33-z" Value="1";
+DF p45 d33
+Start p46 "46-for (j in 1:1440) {    if (verbose) {        print(c(z, j, m" Value="for (j in 1:1440) {    if (verbose) {        print(c(z, j, m" Time="3.416" Script="0" Pos="NA,NA,NA,NA";
+CF p45 p46
+DF d22 p46
+DF d33 p46
+DF d25 p46
+DF d27 p46
+DF d17 p46
+DF d13 p46
+DF d24 p46
+DF d28 p46
+DF d32 p46
+DF d29 p46
+DF d12 p46
+DF d5 p46
+DF d11 p46
+DF d10 p46
+DF d30 p46
+DF d7 p46
+DF d20 p46
+DF d6 p46
+DF d31 p46
+DF d19 p46
+DF d26 p46
+DF d9 p46
+DF d21 p46
+Start p47 "47-for loop" Value="for loop" Time="3.684" Script="NA" Pos="NA";
+CF p46 p47
+Operation p48 "48-j <- 1" Value="j <- 1" Time="3.69" Script="NA" Pos="NA";
+CF p47 p48
+Data d34 "34-j" Value="1";
+DF p48 d34
+Operation p49 "49-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="3.701" Script="0" Pos="NA,NA,NA,NA";
+CF p48 p49
+DF d14 p49
+DF d25 p49
+Snapshot d35 "35-minute" Value="data/35-minute.csv" Time="2017-04-06T19.21.40EDT";
+DF p49 d35
+Operation p50 "50-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="3.735" Script="0" Pos="NA,NA,NA,NA";
+CF p49 p50
+DF d27 p50
+DF d35 p50
+DF d4 p50
+DF d17 p50
+Data d36 "36-wt" Value="0";
+DF p50 d36
+Start p51 "51-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="3.795" Script="0" Pos="NA,NA,NA,NA";
+CF p50 p51
+DF d34 p51
+DF d13 p51
+DF d27 p51
+DF d36 p51
+DF d24 p51
+DF d33 p51
+Start p52 "52-if" Value="if" Time="3.864" Script="NA" Pos="NA";
+CF p51 p52
+Operation p53 "53-w <- c(w, wt)" Value="w <- c(w, wt)" Time="3.868" Script="0" Pos="NA,NA,NA,NA";
+CF p52 p53
+DF d14 p53
+DF d27 p53
+DF d36 p53
+Snapshot d37 "37-w" Value="data/37-w.csv" Time="2017-04-06T19.21.43EDT";
+DF p53 d37
+Finish p54 "54-if" Value="if" Time="3.908" Script="NA" Pos="NA";
+CF p53 p54
+Finish p55 "55-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="3.91" Script="0" Pos="NA,NA,NA,NA";
+CF p54 p55
+Operation p56 "56-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="3.915" Script="0" Pos="NA,NA,NA,NA";
+CF p55 p56
+DF d14 p56
+DF d28 p56
+DF d32 p56
+DF d35 p56
+DF d37 p56
+Snapshot d38 "38-n" Value="data/38-n.csv" Time="2017-04-06T19.21.44EDT";
+DF p56 d38
+Operation p57 "57-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="3.978" Script="0" Pos="NA,NA,NA,NA";
+CF p56 p57
+DF d14 p57
+DF d29 p57
+DF d38 p57
+DF d12 p57
+DF d5 p57
+DF d11 p57
+DF d10 p57
+Snapshot d39 "39-a" Value="data/39-a.csv" Time="2017-04-06T19.21.44EDT";
+DF p57 d39
+Operation p58 "58-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="4.065" Script="0" Pos="NA,NA,NA,NA";
+CF p57 p58
+DF d14 p58
+DF d30 p58
+DF d7 p58
+DF d39 p58
+DF d35 p58
+DF d20 p58
+DF d37 p58
+DF d6 p58
+Snapshot d40 "40-B" Value="data/40-B.csv" Time="2017-04-06T19.21.45EDT";
+DF p58 d40
+Operation p59 "59-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="4.157" Script="0" Pos="NA,NA,NA,NA";
+CF p58 p59
+DF d14 p59
+DF d31 p59
+DF d7 p59
+DF d39 p59
+DF d35 p59
+DF d19 p59
+DF d26 p59
+Snapshot d41 "41-A" Value="data/41-A.csv" Time="2017-04-06T19.21.46EDT";
+DF p59 d41
+Operation p60 "60-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="4.241" Script="0" Pos="NA,NA,NA,NA";
+CF p59 p60
+DF d14 p60
+DF d32 p60
+DF d41 p60
+DF d35 p60
+DF d9 p60
+DF d40 p60
+Snapshot d42 "42-x" Value="data/42-x.csv" Time="2017-04-06T19.21.47EDT";
+DF p60 d42
+Finish p61 "61-for loop" Value="for loop" Time="4.317" Script="NA" Pos="NA";
+CF p60 p61
+Start p62 "62-for loop" Value="for loop" Time="4.319" Script="NA" Pos="NA";
+CF p61 p62
+Operation p63 "63-j <- 2" Value="j <- 2" Time="4.321" Script="NA" Pos="NA";
+CF p62 p63
+Data d43 "43-j" Value="2";
+DF p63 d43
+Operation p64 "64-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="4.333" Script="0" Pos="NA,NA,NA,NA";
+CF p63 p64
+DF d14 p64
+DF d35 p64
+Snapshot d44 "44-minute" Value="data/44-minute.csv" Time="2017-04-06T19.21.48EDT";
+DF p64 d44
+Operation p65 "65-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="4.368" Script="0" Pos="NA,NA,NA,NA";
+CF p64 p65
+DF d37 p65
+DF d44 p65
+DF d4 p65
+DF d17 p65
+Data d45 "45-wt" Value="0";
+DF p65 d45
+Start p66 "66-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="4.593" Script="0" Pos="NA,NA,NA,NA";
+CF p65 p66
+DF d43 p66
+DF d13 p66
+DF d37 p66
+DF d45 p66
+DF d24 p66
+DF d33 p66
+Start p67 "67-if" Value="if" Time="4.655" Script="NA" Pos="NA";
+CF p66 p67
+Operation p68 "68-w <- c(w, wt)" Value="w <- c(w, wt)" Time="4.66" Script="0" Pos="NA,NA,NA,NA";
+CF p67 p68
+DF d14 p68
+DF d37 p68
+DF d45 p68
+Snapshot d46 "46-w" Value="data/46-w.csv" Time="2017-04-06T19.21.50EDT";
+DF p68 d46
+Finish p69 "69-if" Value="if" Time="4.696" Script="NA" Pos="NA";
+CF p68 p69
+Finish p70 "70-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="4.698" Script="0" Pos="NA,NA,NA,NA";
+CF p69 p70
+Operation p71 "71-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="4.702" Script="0" Pos="NA,NA,NA,NA";
+CF p70 p71
+DF d14 p71
+DF d38 p71
+DF d42 p71
+DF d44 p71
+DF d46 p71
+Snapshot d47 "47-n" Value="data/47-n.csv" Time="2017-04-06T19.21.50EDT";
+DF p71 d47
+Operation p72 "72-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="4.762" Script="0" Pos="NA,NA,NA,NA";
+CF p71 p72
+DF d14 p72
+DF d39 p72
+DF d47 p72
+DF d12 p72
+DF d5 p72
+DF d11 p72
+DF d10 p72
+Snapshot d48 "48-a" Value="data/48-a.csv" Time="2017-04-06T19.21.51EDT";
+DF p72 d48
+Operation p73 "73-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="4.85" Script="0" Pos="NA,NA,NA,NA";
+CF p72 p73
+DF d14 p73
+DF d40 p73
+DF d7 p73
+DF d48 p73
+DF d44 p73
+DF d20 p73
+DF d46 p73
+DF d6 p73
+Snapshot d49 "49-B" Value="data/49-B.csv" Time="2017-04-06T19.21.51EDT";
+DF p73 d49
+Operation p74 "74-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="4.927" Script="0" Pos="NA,NA,NA,NA";
+CF p73 p74
+DF d14 p74
+DF d41 p74
+DF d7 p74
+DF d48 p74
+DF d44 p74
+DF d19 p74
+DF d26 p74
+Snapshot d50 "50-A" Value="data/50-A.csv" Time="2017-04-06T19.21.51EDT";
+DF p74 d50
+Operation p75 "75-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="4.998" Script="0" Pos="NA,NA,NA,NA";
+CF p74 p75
+DF d14 p75
+DF d42 p75
+DF d50 p75
+DF d44 p75
+DF d9 p75
+DF d49 p75
+Snapshot d51 "51-x" Value="data/51-x.csv" Time="2017-04-06T19.21.51EDT";
+DF p75 d51
+Finish p76 "76-for loop" Value="for loop" Time="5.059" Script="NA" Pos="NA";
+CF p75 p76
+Start p77 "77-for loop" Value="for loop" Time="5.063" Script="NA" Pos="NA";
+CF p76 p77
+Operation p78 "78-j <- 3" Value="j <- 3" Time="5.065" Script="NA" Pos="NA";
+CF p77 p78
+Data d52 "52-j" Value="3";
+DF p78 d52
+Operation p79 "79-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="5.077" Script="0" Pos="NA,NA,NA,NA";
+CF p78 p79
+DF d14 p79
+DF d44 p79
+Snapshot d53 "53-minute" Value="data/53-minute.csv" Time="2017-04-06T19.21.52EDT";
+DF p79 d53
+Operation p80 "80-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="5.113" Script="0" Pos="NA,NA,NA,NA";
+CF p79 p80
+DF d46 p80
+DF d53 p80
+DF d4 p80
+DF d17 p80
+Data d54 "54-wt" Value="0";
+DF p80 d54
+Start p81 "81-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="5.165" Script="0" Pos="NA,NA,NA,NA";
+CF p80 p81
+DF d52 p81
+DF d13 p81
+DF d46 p81
+DF d54 p81
+DF d24 p81
+DF d33 p81
+Start p82 "82-if" Value="if" Time="5.225" Script="NA" Pos="NA";
+CF p81 p82
+Operation p83 "83-w <- c(w, wt)" Value="w <- c(w, wt)" Time="5.229" Script="0" Pos="NA,NA,NA,NA";
+CF p82 p83
+DF d14 p83
+DF d46 p83
+DF d54 p83
+Snapshot d55 "55-w" Value="data/55-w.csv" Time="2017-04-06T19.21.52EDT";
+DF p83 d55
+Finish p84 "84-if" Value="if" Time="5.258" Script="NA" Pos="NA";
+CF p83 p84
+Finish p85 "85-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="5.26" Script="0" Pos="NA,NA,NA,NA";
+CF p84 p85
+Operation p86 "86-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="5.264" Script="0" Pos="NA,NA,NA,NA";
+CF p85 p86
+DF d14 p86
+DF d47 p86
+DF d51 p86
+DF d53 p86
+DF d55 p86
+Snapshot d56 "56-n" Value="data/56-n.csv" Time="2017-04-06T19.21.52EDT";
+DF p86 d56
+Operation p87 "87-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="5.314" Script="0" Pos="NA,NA,NA,NA";
+CF p86 p87
+DF d14 p87
+DF d48 p87
+DF d56 p87
+DF d12 p87
+DF d5 p87
+DF d11 p87
+DF d10 p87
+Snapshot d57 "57-a" Value="data/57-a.csv" Time="2017-04-06T19.21.53EDT";
+DF p87 d57
+Operation p88 "88-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="5.391" Script="0" Pos="NA,NA,NA,NA";
+CF p87 p88
+DF d14 p88
+DF d49 p88
+DF d7 p88
+DF d57 p88
+DF d53 p88
+DF d20 p88
+DF d55 p88
+DF d6 p88
+Snapshot d58 "58-B" Value="data/58-B.csv" Time="2017-04-06T19.21.53EDT";
+DF p88 d58
+Operation p89 "89-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="5.567" Script="0" Pos="NA,NA,NA,NA";
+CF p88 p89
+DF d14 p89
+DF d50 p89
+DF d7 p89
+DF d57 p89
+DF d53 p89
+DF d19 p89
+DF d26 p89
+Snapshot d59 "59-A" Value="data/59-A.csv" Time="2017-04-06T19.21.54EDT";
+DF p89 d59
+Operation p90 "90-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="5.628" Script="0" Pos="NA,NA,NA,NA";
+CF p89 p90
+DF d14 p90
+DF d51 p90
+DF d59 p90
+DF d53 p90
+DF d9 p90
+DF d58 p90
+Snapshot d60 "60-x" Value="data/60-x.csv" Time="2017-04-06T19.21.55EDT";
+DF p90 d60
+Finish p91 "91-for loop" Value="for loop" Time="5.689" Script="NA" Pos="NA";
+CF p90 p91
+Start p92 "92-for loop" Value="for loop" Time="5.691" Script="NA" Pos="NA";
+CF p91 p92
+Operation p93 "93-j <- 4" Value="j <- 4" Time="5.694" Script="NA" Pos="NA";
+CF p92 p93
+Data d61 "61-j" Value="4";
+DF p93 d61
+Operation p94 "94-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="5.706" Script="0" Pos="NA,NA,NA,NA";
+CF p93 p94
+DF d14 p94
+DF d53 p94
+Snapshot d62 "62-minute" Value="data/62-minute.csv" Time="2017-04-06T19.21.56EDT";
+DF p94 d62
+Operation p95 "95-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="5.736" Script="0" Pos="NA,NA,NA,NA";
+CF p94 p95
+DF d55 p95
+DF d62 p95
+DF d4 p95
+DF d17 p95
+Data d63 "63-wt" Value="0";
+DF p95 d63
+Start p96 "96-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="5.784" Script="0" Pos="NA,NA,NA,NA";
+CF p95 p96
+DF d61 p96
+DF d13 p96
+DF d55 p96
+DF d63 p96
+DF d24 p96
+DF d33 p96
+Start p97 "97-if" Value="if" Time="5.85" Script="NA" Pos="NA";
+CF p96 p97
+Operation p98 "98-w <- c(w, wt)" Value="w <- c(w, wt)" Time="5.854" Script="0" Pos="NA,NA,NA,NA";
+CF p97 p98
+DF d14 p98
+DF d55 p98
+DF d63 p98
+Snapshot d64 "64-w" Value="data/64-w.csv" Time="2017-04-06T19.21.58EDT";
+DF p98 d64
+Finish p99 "99-if" Value="if" Time="5.88" Script="NA" Pos="NA";
+CF p98 p99
+Finish p100 "100-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="5.882" Script="0" Pos="NA,NA,NA,NA";
+CF p99 p100
+Operation p101 "101-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="5.888" Script="0" Pos="NA,NA,NA,NA";
+CF p100 p101
+DF d14 p101
+DF d56 p101
+DF d60 p101
+DF d62 p101
+DF d64 p101
+Snapshot d65 "65-n" Value="data/65-n.csv" Time="2017-04-06T19.21.58EDT";
+DF p101 d65
+Operation p102 "102-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="5.974" Script="0" Pos="NA,NA,NA,NA";
+CF p101 p102
+DF d14 p102
+DF d57 p102
+DF d65 p102
+DF d12 p102
+DF d5 p102
+DF d11 p102
+DF d10 p102
+Snapshot d66 "66-a" Value="data/66-a.csv" Time="2017-04-06T19.21.58EDT";
+DF p102 d66
+Operation p103 "103-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="6.094" Script="0" Pos="NA,NA,NA,NA";
+CF p102 p103
+DF d14 p103
+DF d58 p103
+DF d7 p103
+DF d66 p103
+DF d62 p103
+DF d20 p103
+DF d64 p103
+DF d6 p103
+Snapshot d67 "67-B" Value="data/67-B.csv" Time="2017-04-06T19.22.01EDT";
+DF p103 d67
+Operation p104 "104-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="6.218" Script="0" Pos="NA,NA,NA,NA";
+CF p103 p104
+DF d14 p104
+DF d59 p104
+DF d7 p104
+DF d66 p104
+DF d62 p104
+DF d19 p104
+DF d26 p104
+Snapshot d68 "68-A" Value="data/68-A.csv" Time="2017-04-06T19.22.02EDT";
+DF p104 d68
+Operation p105 "105-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="6.33" Script="0" Pos="NA,NA,NA,NA";
+CF p104 p105
+DF d14 p105
+DF d60 p105
+DF d68 p105
+DF d62 p105
+DF d9 p105
+DF d67 p105
+Snapshot d69 "69-x" Value="data/69-x.csv" Time="2017-04-06T19.22.03EDT";
+DF p105 d69
+Finish p106 "106-for loop" Value="for loop" Time="6.424" Script="NA" Pos="NA";
+CF p105 p106
+Start p107 "107-for loop" Value="for loop" Time="6.426" Script="NA" Pos="NA";
+CF p106 p107
+Operation p108 "108-j <- 5" Value="j <- 5" Time="6.429" Script="NA" Pos="NA";
+CF p107 p108
+Data d70 "70-j" Value="5";
+DF p108 d70
+Operation p109 "109-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="6.554" Script="0" Pos="NA,NA,NA,NA";
+CF p108 p109
+DF d14 p109
+DF d62 p109
+Snapshot d71 "71-minute" Value="data/71-minute.csv" Time="2017-04-06T19.22.06EDT";
+DF p109 d71
+Operation p110 "110-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="6.6" Script="0" Pos="NA,NA,NA,NA";
+CF p109 p110
+DF d64 p110
+DF d71 p110
+DF d4 p110
+DF d17 p110
+Data d72 "72-wt" Value="0";
+DF p110 d72
+Start p111 "111-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="6.677" Script="0" Pos="NA,NA,NA,NA";
+CF p110 p111
+DF d70 p111
+DF d13 p111
+DF d64 p111
+DF d72 p111
+DF d24 p111
+DF d33 p111
+Start p112 "112-if" Value="if" Time="6.763" Script="NA" Pos="NA";
+CF p111 p112
+Operation p113 "113-w <- c(w, wt)" Value="w <- c(w, wt)" Time="6.767" Script="0" Pos="NA,NA,NA,NA";
+CF p112 p113
+DF d14 p113
+DF d64 p113
+DF d72 p113
+Snapshot d73 "73-w" Value="data/73-w.csv" Time="2017-04-06T19.22.09EDT";
+DF p113 d73
+Finish p114 "114-if" Value="if" Time="6.817" Script="NA" Pos="NA";
+CF p113 p114
+Finish p115 "115-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="6.819" Script="0" Pos="NA,NA,NA,NA";
+CF p114 p115
+Operation p116 "116-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="6.824" Script="0" Pos="NA,NA,NA,NA";
+CF p115 p116
+DF d14 p116
+DF d65 p116
+DF d69 p116
+DF d71 p116
+DF d73 p116
+Snapshot d74 "74-n" Value="data/74-n.csv" Time="2017-04-06T19.22.10EDT";
+DF p116 d74
+Operation p117 "117-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="6.904" Script="0" Pos="NA,NA,NA,NA";
+CF p116 p117
+DF d14 p117
+DF d66 p117
+DF d74 p117
+DF d12 p117
+DF d5 p117
+DF d11 p117
+DF d10 p117
+Snapshot d75 "75-a" Value="data/75-a.csv" Time="2017-04-06T19.22.13EDT";
+DF p117 d75
+Operation p118 "118-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="7.037" Script="0" Pos="NA,NA,NA,NA";
+CF p117 p118
+DF d14 p118
+DF d67 p118
+DF d7 p118
+DF d75 p118
+DF d71 p118
+DF d20 p118
+DF d73 p118
+DF d6 p118
+Snapshot d76 "76-B" Value="data/76-B.csv" Time="2017-04-06T19.22.15EDT";
+DF p118 d76
+Operation p119 "119-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="7.158" Script="0" Pos="NA,NA,NA,NA";
+CF p118 p119
+DF d14 p119
+DF d68 p119
+DF d7 p119
+DF d75 p119
+DF d71 p119
+DF d19 p119
+DF d26 p119
+Snapshot d77 "77-A" Value="data/77-A.csv" Time="2017-04-06T19.22.17EDT";
+DF p119 d77
+Operation p120 "120-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="7.267" Script="0" Pos="NA,NA,NA,NA";
+CF p119 p120
+DF d14 p120
+DF d69 p120
+DF d77 p120
+DF d71 p120
+DF d9 p120
+DF d76 p120
+Snapshot d78 "78-x" Value="data/78-x.csv" Time="2017-04-06T19.22.17EDT";
+DF p120 d78
+Finish p121 "121-for loop" Value="for loop" Time="7.352" Script="NA" Pos="NA";
+CF p120 p121
+Start p122 "122-for loop" Value="for loop" Time="7.354" Script="NA" Pos="NA";
+CF p121 p122
+Operation p123 "123-j <- 6" Value="j <- 6" Time="7.357" Script="NA" Pos="NA";
+CF p122 p123
+Data d79 "79-j" Value="6";
+DF p123 d79
+Operation p124 "124-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="7.372" Script="0" Pos="NA,NA,NA,NA";
+CF p123 p124
+DF d14 p124
+DF d71 p124
+Snapshot d80 "80-minute" Value="data/80-minute.csv" Time="2017-04-06T19.22.17EDT";
+DF p124 d80
+Operation p125 "125-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="7.416" Script="0" Pos="NA,NA,NA,NA";
+CF p124 p125
+DF d73 p125
+DF d80 p125
+DF d4 p125
+DF d17 p125
+Data d81 "81-wt" Value="0";
+DF p125 d81
+Start p126 "126-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="7.65" Script="0" Pos="NA,NA,NA,NA";
+CF p125 p126
+DF d79 p126
+DF d13 p126
+DF d73 p126
+DF d81 p126
+DF d24 p126
+DF d33 p126
+Start p127 "127-if" Value="if" Time="7.739" Script="NA" Pos="NA";
+CF p126 p127
+Operation p128 "128-w <- c(w, wt)" Value="w <- c(w, wt)" Time="7.743" Script="0" Pos="NA,NA,NA,NA";
+CF p127 p128
+DF d14 p128
+DF d73 p128
+DF d81 p128
+Snapshot d82 "82-w" Value="data/82-w.csv" Time="2017-04-06T19.22.21EDT";
+DF p128 d82
+Finish p129 "129-if" Value="if" Time="7.786" Script="NA" Pos="NA";
+CF p128 p129
+Finish p130 "130-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="7.789" Script="0" Pos="NA,NA,NA,NA";
+CF p129 p130
+Operation p131 "131-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="7.793" Script="0" Pos="NA,NA,NA,NA";
+CF p130 p131
+DF d14 p131
+DF d74 p131
+DF d78 p131
+DF d80 p131
+DF d82 p131
+Snapshot d83 "83-n" Value="data/83-n.csv" Time="2017-04-06T19.22.22EDT";
+DF p131 d83
+Operation p132 "132-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="7.866" Script="0" Pos="NA,NA,NA,NA";
+CF p131 p132
+DF d14 p132
+DF d75 p132
+DF d83 p132
+DF d12 p132
+DF d5 p132
+DF d11 p132
+DF d10 p132
+Snapshot d84 "84-a" Value="data/84-a.csv" Time="2017-04-06T19.22.23EDT";
+DF p132 d84
+Operation p133 "133-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="7.979" Script="0" Pos="NA,NA,NA,NA";
+CF p132 p133
+DF d14 p133
+DF d76 p133
+DF d7 p133
+DF d84 p133
+DF d80 p133
+DF d20 p133
+DF d82 p133
+DF d6 p133
+Snapshot d85 "85-B" Value="data/85-B.csv" Time="2017-04-06T19.22.24EDT";
+DF p133 d85
+Operation p134 "134-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="8.088" Script="0" Pos="NA,NA,NA,NA";
+CF p133 p134
+DF d14 p134
+DF d77 p134
+DF d7 p134
+DF d84 p134
+DF d80 p134
+DF d19 p134
+DF d26 p134
+Snapshot d86 "86-A" Value="data/86-A.csv" Time="2017-04-06T19.22.25EDT";
+DF p134 d86
+Operation p135 "135-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="8.185" Script="0" Pos="NA,NA,NA,NA";
+CF p134 p135
+DF d14 p135
+DF d78 p135
+DF d86 p135
+DF d80 p135
+DF d9 p135
+DF d85 p135
+Snapshot d87 "87-x" Value="data/87-x.csv" Time="2017-04-06T19.22.25EDT";
+DF p135 d87
+Finish p136 "136-for loop" Value="for loop" Time="8.266" Script="NA" Pos="NA";
+CF p135 p136
+Start p137 "137-for loop" Value="for loop" Time="8.269" Script="NA" Pos="NA";
+CF p136 p137
+Operation p138 "138-j <- 7" Value="j <- 7" Time="8.273" Script="NA" Pos="NA";
+CF p137 p138
+Data d88 "88-j" Value="7";
+DF p138 d88
+Operation p139 "139-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="8.286" Script="0" Pos="NA,NA,NA,NA";
+CF p138 p139
+DF d14 p139
+DF d80 p139
+Snapshot d89 "89-minute" Value="data/89-minute.csv" Time="2017-04-06T19.22.26EDT";
+DF p139 d89
+Operation p140 "140-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="8.328" Script="0" Pos="NA,NA,NA,NA";
+CF p139 p140
+DF d82 p140
+DF d89 p140
+DF d4 p140
+DF d17 p140
+Data d90 "90-wt" Value="0";
+DF p140 d90
+Start p141 "141-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="8.488" Script="0" Pos="NA,NA,NA,NA";
+CF p140 p141
+DF d88 p141
+DF d13 p141
+DF d82 p141
+DF d90 p141
+DF d24 p141
+DF d33 p141
+Start p142 "142-if" Value="if" Time="8.567" Script="NA" Pos="NA";
+CF p141 p142
+Operation p143 "143-w <- c(w, wt)" Value="w <- c(w, wt)" Time="8.572" Script="0" Pos="NA,NA,NA,NA";
+CF p142 p143
+DF d14 p143
+DF d82 p143
+DF d90 p143
+Snapshot d91 "91-w" Value="data/91-w.csv" Time="2017-04-06T19.22.27EDT";
+DF p143 d91
+Finish p144 "144-if" Value="if" Time="8.614" Script="NA" Pos="NA";
+CF p143 p144
+Finish p145 "145-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="8.616" Script="0" Pos="NA,NA,NA,NA";
+CF p144 p145
+Operation p146 "146-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="8.621" Script="0" Pos="NA,NA,NA,NA";
+CF p145 p146
+DF d14 p146
+DF d83 p146
+DF d87 p146
+DF d89 p146
+DF d91 p146
+Snapshot d92 "92-n" Value="data/92-n.csv" Time="2017-04-06T19.22.27EDT";
+DF p146 d92
+Operation p147 "147-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="8.682" Script="0" Pos="NA,NA,NA,NA";
+CF p146 p147
+DF d14 p147
+DF d84 p147
+DF d92 p147
+DF d12 p147
+DF d5 p147
+DF d11 p147
+DF d10 p147
+Snapshot d93 "93-a" Value="data/93-a.csv" Time="2017-04-06T19.22.27EDT";
+DF p147 d93
+Operation p148 "148-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="8.784" Script="0" Pos="NA,NA,NA,NA";
+CF p147 p148
+DF d14 p148
+DF d85 p148
+DF d7 p148
+DF d93 p148
+DF d89 p148
+DF d20 p148
+DF d91 p148
+DF d6 p148
+Snapshot d94 "94-B" Value="data/94-B.csv" Time="2017-04-06T19.22.28EDT";
+DF p148 d94
+Operation p149 "149-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="8.886" Script="0" Pos="NA,NA,NA,NA";
+CF p148 p149
+DF d14 p149
+DF d86 p149
+DF d7 p149
+DF d93 p149
+DF d89 p149
+DF d19 p149
+DF d26 p149
+Snapshot d95 "95-A" Value="data/95-A.csv" Time="2017-04-06T19.22.28EDT";
+DF p149 d95
+Operation p150 "150-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="8.978" Script="0" Pos="NA,NA,NA,NA";
+CF p149 p150
+DF d14 p150
+DF d87 p150
+DF d95 p150
+DF d89 p150
+DF d9 p150
+DF d94 p150
+Snapshot d96 "96-x" Value="data/96-x.csv" Time="2017-04-06T19.22.29EDT";
+DF p150 d96
+Finish p151 "151-for loop" Value="for loop" Time="9.051" Script="NA" Pos="NA";
+CF p150 p151
+Start p152 "152-for loop" Value="for loop" Time="9.054" Script="NA" Pos="NA";
+CF p151 p152
+Operation p153 "153-j <- 8" Value="j <- 8" Time="9.058" Script="NA" Pos="NA";
+CF p152 p153
+Data d97 "97-j" Value="8";
+DF p153 d97
+Operation p154 "154-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="9.072" Script="0" Pos="NA,NA,NA,NA";
+CF p153 p154
+DF d14 p154
+DF d89 p154
+Snapshot d98 "98-minute" Value="data/98-minute.csv" Time="2017-04-06T19.22.29EDT";
+DF p154 d98
+Operation p155 "155-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="9.11" Script="0" Pos="NA,NA,NA,NA";
+CF p154 p155
+DF d91 p155
+DF d98 p155
+DF d4 p155
+DF d17 p155
+Data d99 "99-wt" Value="0";
+DF p155 d99
+Start p156 "156-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="9.278" Script="0" Pos="NA,NA,NA,NA";
+CF p155 p156
+DF d97 p156
+DF d13 p156
+DF d91 p156
+DF d99 p156
+DF d24 p156
+DF d33 p156
+Start p157 "157-if" Value="if" Time="9.354" Script="NA" Pos="NA";
+CF p156 p157
+Operation p158 "158-w <- c(w, wt)" Value="w <- c(w, wt)" Time="9.358" Script="0" Pos="NA,NA,NA,NA";
+CF p157 p158
+DF d14 p158
+DF d91 p158
+DF d99 p158
+Snapshot d100 "100-w" Value="data/100-w.csv" Time="2017-04-06T19.22.30EDT";
+DF p158 d100
+Finish p159 "159-if" Value="if" Time="9.392" Script="NA" Pos="NA";
+CF p158 p159
+Finish p160 "160-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="9.395" Script="0" Pos="NA,NA,NA,NA";
+CF p159 p160
+Operation p161 "161-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="9.399" Script="0" Pos="NA,NA,NA,NA";
+CF p160 p161
+DF d14 p161
+DF d92 p161
+DF d96 p161
+DF d98 p161
+DF d100 p161
+Snapshot d101 "101-n" Value="data/101-n.csv" Time="2017-04-06T19.22.30EDT";
+DF p161 d101
+Operation p162 "162-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="9.46" Script="0" Pos="NA,NA,NA,NA";
+CF p161 p162
+DF d14 p162
+DF d93 p162
+DF d101 p162
+DF d12 p162
+DF d5 p162
+DF d11 p162
+DF d10 p162
+Snapshot d102 "102-a" Value="data/102-a.csv" Time="2017-04-06T19.22.31EDT";
+DF p162 d102
+Operation p163 "163-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="9.6" Script="0" Pos="NA,NA,NA,NA";
+CF p162 p163
+DF d14 p163
+DF d94 p163
+DF d7 p163
+DF d102 p163
+DF d98 p163
+DF d20 p163
+DF d100 p163
+DF d6 p163
+Snapshot d103 "103-B" Value="data/103-B.csv" Time="2017-04-06T19.22.31EDT";
+DF p163 d103
+Operation p164 "164-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="9.729" Script="0" Pos="NA,NA,NA,NA";
+CF p163 p164
+DF d14 p164
+DF d95 p164
+DF d7 p164
+DF d102 p164
+DF d98 p164
+DF d19 p164
+DF d26 p164
+Snapshot d104 "104-A" Value="data/104-A.csv" Time="2017-04-06T19.22.32EDT";
+DF p164 d104
+Operation p165 "165-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="9.946" Script="0" Pos="NA,NA,NA,NA";
+CF p164 p165
+DF d14 p165
+DF d96 p165
+DF d104 p165
+DF d98 p165
+DF d9 p165
+DF d103 p165
+Snapshot d105 "105-x" Value="data/105-x.csv" Time="2017-04-06T19.22.33EDT";
+DF p165 d105
+Finish p166 "166-for loop" Value="for loop" Time="10.056" Script="NA" Pos="NA";
+CF p165 p166
+Start p167 "167-for loop" Value="for loop" Time="10.059" Script="NA" Pos="NA";
+CF p166 p167
+Operation p168 "168-j <- 9" Value="j <- 9" Time="10.064" Script="NA" Pos="NA";
+CF p167 p168
+Data d106 "106-j" Value="9";
+DF p168 d106
+Operation p169 "169-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="10.077" Script="0" Pos="NA,NA,NA,NA";
+CF p168 p169
+DF d14 p169
+DF d98 p169
+Snapshot d107 "107-minute" Value="data/107-minute.csv" Time="2017-04-06T19.22.34EDT";
+DF p169 d107
+Operation p170 "170-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="10.127" Script="0" Pos="NA,NA,NA,NA";
+CF p169 p170
+DF d100 p170
+DF d107 p170
+DF d4 p170
+DF d17 p170
+Data d108 "108-wt" Value="0";
+DF p170 d108
+Start p171 "171-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="10.209" Script="0" Pos="NA,NA,NA,NA";
+CF p170 p171
+DF d106 p171
+DF d13 p171
+DF d100 p171
+DF d108 p171
+DF d24 p171
+DF d33 p171
+Start p172 "172-if" Value="if" Time="10.308" Script="NA" Pos="NA";
+CF p171 p172
+Operation p173 "173-w <- c(w, wt)" Value="w <- c(w, wt)" Time="10.313" Script="0" Pos="NA,NA,NA,NA";
+CF p172 p173
+DF d14 p173
+DF d100 p173
+DF d108 p173
+Snapshot d109 "109-w" Value="data/109-w.csv" Time="2017-04-06T19.22.35EDT";
+DF p173 d109
+Finish p174 "174-if" Value="if" Time="10.36" Script="NA" Pos="NA";
+CF p173 p174
+Finish p175 "175-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="10.363" Script="0" Pos="NA,NA,NA,NA";
+CF p174 p175
+Operation p176 "176-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="10.369" Script="0" Pos="NA,NA,NA,NA";
+CF p175 p176
+DF d14 p176
+DF d101 p176
+DF d105 p176
+DF d107 p176
+DF d109 p176
+Snapshot d110 "110-n" Value="data/110-n.csv" Time="2017-04-06T19.22.35EDT";
+DF p176 d110
+Operation p177 "177-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="10.447" Script="0" Pos="NA,NA,NA,NA";
+CF p176 p177
+DF d14 p177
+DF d102 p177
+DF d110 p177
+DF d12 p177
+DF d5 p177
+DF d11 p177
+DF d10 p177
+Snapshot d111 "111-a" Value="data/111-a.csv" Time="2017-04-06T19.22.36EDT";
+DF p177 d111
+Operation p178 "178-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="10.578" Script="0" Pos="NA,NA,NA,NA";
+CF p177 p178
+DF d14 p178
+DF d103 p178
+DF d7 p178
+DF d111 p178
+DF d107 p178
+DF d20 p178
+DF d109 p178
+DF d6 p178
+Snapshot d112 "112-B" Value="data/112-B.csv" Time="2017-04-06T19.22.37EDT";
+DF p178 d112
+Operation p179 "179-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="10.818" Script="0" Pos="NA,NA,NA,NA";
+CF p178 p179
+DF d14 p179
+DF d104 p179
+DF d7 p179
+DF d111 p179
+DF d107 p179
+DF d19 p179
+DF d26 p179
+Snapshot d113 "113-A" Value="data/113-A.csv" Time="2017-04-06T19.22.38EDT";
+DF p179 d113
+Operation p180 "180-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="10.932" Script="0" Pos="NA,NA,NA,NA";
+CF p179 p180
+DF d14 p180
+DF d105 p180
+DF d113 p180
+DF d107 p180
+DF d9 p180
+DF d112 p180
+Snapshot d114 "114-x" Value="data/114-x.csv" Time="2017-04-06T19.22.38EDT";
+DF p180 d114
+Finish p181 "181-for loop" Value="for loop" Time="11.027" Script="NA" Pos="NA";
+CF p180 p181
+Start p182 "182-for loop" Value="for loop" Time="11.03" Script="NA" Pos="NA";
+CF p181 p182
+Operation p183 "183-j <- 10" Value="j <- 10" Time="11.033" Script="NA" Pos="NA";
+CF p182 p183
+Data d115 "115-j" Value="10";
+DF p183 d115
+Operation p184 "184-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="11.046" Script="0" Pos="NA,NA,NA,NA";
+CF p183 p184
+DF d14 p184
+DF d107 p184
+Snapshot d116 "116-minute" Value="data/116-minute.csv" Time="2017-04-06T19.22.39EDT";
+DF p184 d116
+Operation p185 "185-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="11.097" Script="0" Pos="NA,NA,NA,NA";
+CF p184 p185
+DF d109 p185
+DF d116 p185
+DF d4 p185
+DF d17 p185
+Data d117 "117-wt" Value="0";
+DF p185 d117
+Start p186 "186-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="11.173" Script="0" Pos="NA,NA,NA,NA";
+CF p185 p186
+DF d115 p186
+DF d13 p186
+DF d109 p186
+DF d117 p186
+DF d24 p186
+DF d33 p186
+Start p187 "187-if" Value="if" Time="11.28" Script="NA" Pos="NA";
+CF p186 p187
+Operation p188 "188-w <- c(w, wt)" Value="w <- c(w, wt)" Time="11.285" Script="0" Pos="NA,NA,NA,NA";
+CF p187 p188
+DF d14 p188
+DF d109 p188
+DF d117 p188
+Snapshot d118 "118-w" Value="data/118-w.csv" Time="2017-04-06T19.22.40EDT";
+DF p188 d118
+Finish p189 "189-if" Value="if" Time="11.438" Script="NA" Pos="NA";
+CF p188 p189
+Finish p190 "190-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="11.441" Script="0" Pos="NA,NA,NA,NA";
+CF p189 p190
+Operation p191 "191-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="11.446" Script="0" Pos="NA,NA,NA,NA";
+CF p190 p191
+DF d14 p191
+DF d110 p191
+DF d114 p191
+DF d116 p191
+DF d118 p191
+Snapshot d119 "119-n" Value="data/119-n.csv" Time="2017-04-06T19.22.40EDT";
+DF p191 d119
+Operation p192 "192-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="11.524" Script="0" Pos="NA,NA,NA,NA";
+CF p191 p192
+DF d14 p192
+DF d111 p192
+DF d119 p192
+DF d12 p192
+DF d5 p192
+DF d11 p192
+DF d10 p192
+Snapshot d120 "120-a" Value="data/120-a.csv" Time="2017-04-06T19.22.41EDT";
+DF p192 d120
+Operation p193 "193-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="11.655" Script="0" Pos="NA,NA,NA,NA";
+CF p192 p193
+DF d14 p193
+DF d112 p193
+DF d7 p193
+DF d120 p193
+DF d116 p193
+DF d20 p193
+DF d118 p193
+DF d6 p193
+Snapshot d121 "121-B" Value="data/121-B.csv" Time="2017-04-06T19.22.41EDT";
+DF p193 d121
+Operation p194 "194-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="11.776" Script="0" Pos="NA,NA,NA,NA";
+CF p193 p194
+DF d14 p194
+DF d113 p194
+DF d7 p194
+DF d120 p194
+DF d116 p194
+DF d19 p194
+DF d26 p194
+Snapshot d122 "122-A" Value="data/122-A.csv" Time="2017-04-06T19.22.42EDT";
+DF p194 d122
+Operation p195 "195-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="11.884" Script="0" Pos="NA,NA,NA,NA";
+CF p194 p195
+DF d14 p195
+DF d114 p195
+DF d122 p195
+DF d116 p195
+DF d9 p195
+DF d121 p195
+Snapshot d123 "123-x" Value="data/123-x.csv" Time="2017-04-06T19.22.42EDT";
+DF p195 d123
+Finish p196 "196-for loop" Value="for loop" Time="11.978" Script="NA" Pos="NA";
+CF p195 p196
+Incomplete p197 "197-Details Omitted" Value="Details Omitted" Time="12.279" Script="NA" Pos="NA";
+CF p196 p197
+Finish p198 "198-for (j in 1:1440) {    if (verbose) {        print(c(z, j, m" Value="for (j in 1:1440) {    if (verbose) {        print(c(z, j, m" Time="12.282" Script="0" Pos="NA,NA,NA,NA";
+CF p197 p198
+Snapshot d124 "124-minute" Value="data/124-minute.csv" Time="2017-04-06T19.22.43EDT";
+DF p198 d124
+Data d125 "125-wt" Value="0.784271513771576";
+DF p198 d125
+Snapshot d126 "126-w" Value="data/126-w.csv" Time="2017-04-06T19.22.43EDT";
+DF p198 d126
+Snapshot d127 "127-n" Value="data/127-n.csv" Time="2017-04-06T19.22.43EDT";
+DF p198 d127
+Snapshot d128 "128-a" Value="data/128-a.csv" Time="2017-04-06T19.22.44EDT";
+DF p198 d128
+Snapshot d129 "129-B" Value="data/129-B.csv" Time="2017-04-06T19.22.44EDT";
+DF p198 d129
+Snapshot d130 "130-A" Value="data/130-A.csv" Time="2017-04-06T19.22.44EDT";
+DF p198 d130
+Snapshot d131 "131-x" Value="data/131-x.csv" Time="2017-04-06T19.22.44EDT";
+DF p198 d131
+Finish p199 "199-for loop" Value="for loop" Time="12.371" Script="NA" Pos="NA";
+CF p198 p199
+Start p200 "200-for loop" Value="for loop" Time="12.374" Script="NA" Pos="NA";
+CF p199 p200
+Operation p201 "201-z <- 2" Value="z <- 2" Time="12.378" Script="NA" Pos="NA";
+CF p200 p201
+Data d132 "132-z" Value="2";
+DF p201 d132
+Start p202 "202-for (j in 1:1440) {    if (verbose) {        print(c(z, j, m" Value="for (j in 1:1440) {    if (verbose) {        print(c(z, j, m" Time="12.398" Script="0" Pos="NA,NA,NA,NA";
+CF p201 p202
+DF d22 p202
+DF d132 p202
+DF d124 p202
+DF d126 p202
+DF d17 p202
+DF d13 p202
+DF d125 p202
+DF d24 p202
+DF d127 p202
+DF d131 p202
+DF d128 p202
+DF d12 p202
+DF d5 p202
+DF d11 p202
+DF d10 p202
+DF d129 p202
+DF d7 p202
+DF d20 p202
+DF d6 p202
+DF d130 p202
+DF d19 p202
+DF d26 p202
+DF d9 p202
+DF d21 p202
+Start p203 "203-for loop" Value="for loop" Time="13.051" Script="NA" Pos="NA";
+CF p202 p203
+Operation p204 "204-j <- 1" Value="j <- 1" Time="13.057" Script="NA" Pos="NA";
+CF p203 p204
+Data d133 "133-j" Value="1";
+DF p204 d133
+Operation p205 "205-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="13.076" Script="0" Pos="NA,NA,NA,NA";
+CF p204 p205
+DF d14 p205
+DF d124 p205
+Snapshot d134 "134-minute" Value="data/134-minute.csv" Time="2017-04-06T19.22.48EDT";
+DF p205 d134
+Operation p206 "206-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="13.257" Script="0" Pos="NA,NA,NA,NA";
+CF p205 p206
+DF d126 p206
+DF d134 p206
+DF d4 p206
+DF d17 p206
+Data d135 "135-wt" Value="0.784006866797367";
+DF p206 d135
+Start p207 "207-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="13.36" Script="0" Pos="NA,NA,NA,NA";
+CF p206 p207
+DF d133 p207
+DF d13 p207
+DF d126 p207
+DF d135 p207
+DF d24 p207
+DF d132 p207
+Start p208 "208-if" Value="if" Time="13.476" Script="NA" Pos="NA";
+CF p207 p208
+Operation p209 "209-w <- c(w, wt)" Value="w <- c(w, wt)" Time="13.481" Script="0" Pos="NA,NA,NA,NA";
+CF p208 p209
+DF d14 p209
+DF d126 p209
+DF d135 p209
+Snapshot d136 "136-w" Value="data/136-w.csv" Time="2017-04-06T19.22.49EDT";
+DF p209 d136
+Finish p210 "210-if" Value="if" Time="13.543" Script="NA" Pos="NA";
+CF p209 p210
+Finish p211 "211-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="13.546" Script="0" Pos="NA,NA,NA,NA";
+CF p210 p211
+Operation p212 "212-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="13.552" Script="0" Pos="NA,NA,NA,NA";
+CF p211 p212
+DF d14 p212
+DF d127 p212
+DF d131 p212
+DF d134 p212
+DF d136 p212
+Snapshot d137 "137-n" Value="data/137-n.csv" Time="2017-04-06T19.22.50EDT";
+DF p212 d137
+Operation p213 "213-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="13.655" Script="0" Pos="NA,NA,NA,NA";
+CF p212 p213
+DF d14 p213
+DF d128 p213
+DF d137 p213
+DF d12 p213
+DF d5 p213
+DF d11 p213
+DF d10 p213
+Snapshot d138 "138-a" Value="data/138-a.csv" Time="2017-04-06T19.22.51EDT";
+DF p213 d138
+Operation p214 "214-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="13.845" Script="0" Pos="NA,NA,NA,NA";
+CF p213 p214
+DF d14 p214
+DF d129 p214
+DF d7 p214
+DF d138 p214
+DF d134 p214
+DF d20 p214
+DF d136 p214
+DF d6 p214
+Snapshot d139 "139-B" Value="data/139-B.csv" Time="2017-04-06T19.22.52EDT";
+DF p214 d139
+Operation p215 "215-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="14.102" Script="0" Pos="NA,NA,NA,NA";
+CF p214 p215
+DF d14 p215
+DF d130 p215
+DF d7 p215
+DF d138 p215
+DF d134 p215
+DF d19 p215
+DF d26 p215
+Snapshot d140 "140-A" Value="data/140-A.csv" Time="2017-04-06T19.22.53EDT";
+DF p215 d140
+Operation p216 "216-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="14.249" Script="0" Pos="NA,NA,NA,NA";
+CF p215 p216
+DF d14 p216
+DF d131 p216
+DF d140 p216
+DF d134 p216
+DF d9 p216
+DF d139 p216
+Snapshot d141 "141-x" Value="data/141-x.csv" Time="2017-04-06T19.22.53EDT";
+DF p216 d141
+Finish p217 "217-for loop" Value="for loop" Time="14.371" Script="NA" Pos="NA";
+CF p216 p217
+Start p218 "218-for loop" Value="for loop" Time="14.375" Script="NA" Pos="NA";
+CF p217 p218
+Operation p219 "219-j <- 2" Value="j <- 2" Time="14.378" Script="NA" Pos="NA";
+CF p218 p219
+Data d142 "142-j" Value="2";
+DF p219 d142
+Operation p220 "220-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="14.395" Script="0" Pos="NA,NA,NA,NA";
+CF p219 p220
+DF d14 p220
+DF d134 p220
+Snapshot d143 "143-minute" Value="data/143-minute.csv" Time="2017-04-06T19.22.54EDT";
+DF p220 d143
+Operation p221 "221-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="14.456" Script="0" Pos="NA,NA,NA,NA";
+CF p220 p221
+DF d136 p221
+DF d143 p221
+DF d4 p221
+DF d17 p221
+Data d144 "144-wt" Value="0.783742309126441";
+DF p221 d144
+Start p222 "222-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="14.562" Script="0" Pos="NA,NA,NA,NA";
+CF p221 p222
+DF d142 p222
+DF d13 p222
+DF d136 p222
+DF d144 p222
+DF d24 p222
+DF d132 p222
+Start p223 "223-if" Value="if" Time="14.77" Script="NA" Pos="NA";
+CF p222 p223
+Operation p224 "224-w <- c(w, wt)" Value="w <- c(w, wt)" Time="14.776" Script="0" Pos="NA,NA,NA,NA";
+CF p223 p224
+DF d14 p224
+DF d136 p224
+DF d144 p224
+Snapshot d145 "145-w" Value="data/145-w.csv" Time="2017-04-06T19.22.56EDT";
+DF p224 d145
+Finish p225 "225-if" Value="if" Time="14.845" Script="NA" Pos="NA";
+CF p224 p225
+Finish p226 "226-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="14.849" Script="0" Pos="NA,NA,NA,NA";
+CF p225 p226
+Operation p227 "227-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="14.855" Script="0" Pos="NA,NA,NA,NA";
+CF p226 p227
+DF d14 p227
+DF d137 p227
+DF d141 p227
+DF d143 p227
+DF d145 p227
+Snapshot d146 "146-n" Value="data/146-n.csv" Time="2017-04-06T19.22.57EDT";
+DF p227 d146
+Operation p228 "228-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="14.956" Script="0" Pos="NA,NA,NA,NA";
+CF p227 p228
+DF d14 p228
+DF d138 p228
+DF d146 p228
+DF d12 p228
+DF d5 p228
+DF d11 p228
+DF d10 p228
+Snapshot d147 "147-a" Value="data/147-a.csv" Time="2017-04-06T19.22.58EDT";
+DF p228 d147
+Operation p229 "229-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="15.128" Script="0" Pos="NA,NA,NA,NA";
+CF p228 p229
+DF d14 p229
+DF d139 p229
+DF d7 p229
+DF d147 p229
+DF d143 p229
+DF d20 p229
+DF d145 p229
+DF d6 p229
+Snapshot d148 "148-B" Value="data/148-B.csv" Time="2017-04-06T19.23.01EDT";
+DF p229 d148
+Operation p230 "230-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="15.302" Script="0" Pos="NA,NA,NA,NA";
+CF p229 p230
+DF d14 p230
+DF d140 p230
+DF d7 p230
+DF d147 p230
+DF d143 p230
+DF d19 p230
+DF d26 p230
+Snapshot d149 "149-A" Value="data/149-A.csv" Time="2017-04-06T19.23.04EDT";
+DF p230 d149
+Operation p231 "231-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="15.554" Script="0" Pos="NA,NA,NA,NA";
+CF p230 p231
+DF d14 p231
+DF d141 p231
+DF d149 p231
+DF d143 p231
+DF d9 p231
+DF d148 p231
+Snapshot d150 "150-x" Value="data/150-x.csv" Time="2017-04-06T19.23.07EDT";
+DF p231 d150
+Finish p232 "232-for loop" Value="for loop" Time="15.675" Script="NA" Pos="NA";
+CF p231 p232
+Start p233 "233-for loop" Value="for loop" Time="15.679" Script="NA" Pos="NA";
+CF p232 p233
+Operation p234 "234-j <- 3" Value="j <- 3" Time="15.683" Script="NA" Pos="NA";
+CF p233 p234
+Data d151 "151-j" Value="3";
+DF p234 d151
+Operation p235 "235-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="15.698" Script="0" Pos="NA,NA,NA,NA";
+CF p234 p235
+DF d14 p235
+DF d143 p235
+Snapshot d152 "152-minute" Value="data/152-minute.csv" Time="2017-04-06T19.23.07EDT";
+DF p235 d152
+Operation p236 "236-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="15.759" Script="0" Pos="NA,NA,NA,NA";
+CF p235 p236
+DF d145 p236
+DF d152 p236
+DF d4 p236
+DF d17 p236
+Data d153 "153-wt" Value="0.783477840728663";
+DF p236 d153
+Start p237 "237-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="15.859" Script="0" Pos="NA,NA,NA,NA";
+CF p236 p237
+DF d151 p237
+DF d13 p237
+DF d145 p237
+DF d153 p237
+DF d24 p237
+DF d132 p237
+Start p238 "238-if" Value="if" Time="15.982" Script="NA" Pos="NA";
+CF p237 p238
+Operation p239 "239-w <- c(w, wt)" Value="w <- c(w, wt)" Time="15.988" Script="0" Pos="NA,NA,NA,NA";
+CF p238 p239
+DF d14 p239
+DF d145 p239
+DF d153 p239
+Snapshot d154 "154-w" Value="data/154-w.csv" Time="2017-04-06T19.23.12EDT";
+DF p239 d154
+Finish p240 "240-if" Value="if" Time="16.143" Script="NA" Pos="NA";
+CF p239 p240
+Finish p241 "241-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="16.148" Script="0" Pos="NA,NA,NA,NA";
+CF p240 p241
+Operation p242 "242-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="16.154" Script="0" Pos="NA,NA,NA,NA";
+CF p241 p242
+DF d14 p242
+DF d146 p242
+DF d150 p242
+DF d152 p242
+DF d154 p242
+Snapshot d155 "155-n" Value="data/155-n.csv" Time="2017-04-06T19.23.14EDT";
+DF p242 d155
+Operation p243 "243-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="16.276" Script="0" Pos="NA,NA,NA,NA";
+CF p242 p243
+DF d14 p243
+DF d147 p243
+DF d155 p243
+DF d12 p243
+DF d5 p243
+DF d11 p243
+DF d10 p243
+Snapshot d156 "156-a" Value="data/156-a.csv" Time="2017-04-06T19.23.16EDT";
+DF p243 d156
+Operation p244 "244-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="16.448" Script="0" Pos="NA,NA,NA,NA";
+CF p243 p244
+DF d14 p244
+DF d148 p244
+DF d7 p244
+DF d156 p244
+DF d152 p244
+DF d20 p244
+DF d154 p244
+DF d6 p244
+Snapshot d157 "157-B" Value="data/157-B.csv" Time="2017-04-06T19.23.18EDT";
+DF p244 d157
+Operation p245 "245-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="16.603" Script="0" Pos="NA,NA,NA,NA";
+CF p244 p245
+DF d14 p245
+DF d149 p245
+DF d7 p245
+DF d156 p245
+DF d152 p245
+DF d19 p245
+DF d26 p245
+Snapshot d158 "158-A" Value="data/158-A.csv" Time="2017-04-06T19.23.21EDT";
+DF p245 d158
+Operation p246 "246-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="16.857" Script="0" Pos="NA,NA,NA,NA";
+CF p245 p246
+DF d14 p246
+DF d150 p246
+DF d158 p246
+DF d152 p246
+DF d9 p246
+DF d157 p246
+Snapshot d159 "159-x" Value="data/159-x.csv" Time="2017-04-06T19.23.22EDT";
+DF p246 d159
+Finish p247 "247-for loop" Value="for loop" Time="16.97" Script="NA" Pos="NA";
+CF p246 p247
+Start p248 "248-for loop" Value="for loop" Time="16.974" Script="NA" Pos="NA";
+CF p247 p248
+Operation p249 "249-j <- 4" Value="j <- 4" Time="16.979" Script="NA" Pos="NA";
+CF p248 p249
+Data d160 "160-j" Value="4";
+DF p249 d160
+Operation p250 "250-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="16.993" Script="0" Pos="NA,NA,NA,NA";
+CF p249 p250
+DF d14 p250
+DF d152 p250
+Snapshot d161 "161-minute" Value="data/161-minute.csv" Time="2017-04-06T19.23.22EDT";
+DF p250 d161
+Operation p251 "251-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="17.051" Script="0" Pos="NA,NA,NA,NA";
+CF p250 p251
+DF d154 p251
+DF d161 p251
+DF d4 p251
+DF d17 p251
+Data d162 "162-wt" Value="0.783213461573909";
+DF p251 d162
+Start p252 "252-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="17.144" Script="0" Pos="NA,NA,NA,NA";
+CF p251 p252
+DF d160 p252
+DF d13 p252
+DF d154 p252
+DF d162 p252
+DF d24 p252
+DF d132 p252
+Start p253 "253-if" Value="if" Time="17.352" Script="NA" Pos="NA";
+CF p252 p253
+Operation p254 "254-w <- c(w, wt)" Value="w <- c(w, wt)" Time="17.358" Script="0" Pos="NA,NA,NA,NA";
+CF p253 p254
+DF d14 p254
+DF d154 p254
+DF d162 p254
+Snapshot d163 "163-w" Value="data/163-w.csv" Time="2017-04-06T19.23.26EDT";
+DF p254 d163
+Finish p255 "255-if" Value="if" Time="17.416" Script="NA" Pos="NA";
+CF p254 p255
+Finish p256 "256-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="17.419" Script="0" Pos="NA,NA,NA,NA";
+CF p255 p256
+Operation p257 "257-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="17.427" Script="0" Pos="NA,NA,NA,NA";
+CF p256 p257
+DF d14 p257
+DF d155 p257
+DF d159 p257
+DF d161 p257
+DF d163 p257
+Snapshot d164 "164-n" Value="data/164-n.csv" Time="2017-04-06T19.23.26EDT";
+DF p257 d164
+Operation p258 "258-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="17.517" Script="0" Pos="NA,NA,NA,NA";
+CF p257 p258
+DF d14 p258
+DF d156 p258
+DF d164 p258
+DF d12 p258
+DF d5 p258
+DF d11 p258
+DF d10 p258
+Snapshot d165 "165-a" Value="data/165-a.csv" Time="2017-04-06T19.23.27EDT";
+DF p258 d165
+Operation p259 "259-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="17.672" Script="0" Pos="NA,NA,NA,NA";
+CF p258 p259
+DF d14 p259
+DF d157 p259
+DF d7 p259
+DF d165 p259
+DF d161 p259
+DF d20 p259
+DF d163 p259
+DF d6 p259
+Snapshot d166 "166-B" Value="data/166-B.csv" Time="2017-04-06T19.23.29EDT";
+DF p259 d166
+Operation p260 "260-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="17.916" Script="0" Pos="NA,NA,NA,NA";
+CF p259 p260
+DF d14 p260
+DF d158 p260
+DF d7 p260
+DF d165 p260
+DF d161 p260
+DF d19 p260
+DF d26 p260
+Snapshot d167 "167-A" Value="data/167-A.csv" Time="2017-04-06T19.23.30EDT";
+DF p260 d167
+Operation p261 "261-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="18.053" Script="0" Pos="NA,NA,NA,NA";
+CF p260 p261
+DF d14 p261
+DF d159 p261
+DF d167 p261
+DF d161 p261
+DF d9 p261
+DF d166 p261
+Snapshot d168 "168-x" Value="data/168-x.csv" Time="2017-04-06T19.23.31EDT";
+DF p261 d168
+Finish p262 "262-for loop" Value="for loop" Time="18.16" Script="NA" Pos="NA";
+CF p261 p262
+Start p263 "263-for loop" Value="for loop" Time="18.165" Script="NA" Pos="NA";
+CF p262 p263
+Operation p264 "264-j <- 5" Value="j <- 5" Time="18.169" Script="NA" Pos="NA";
+CF p263 p264
+Data d169 "169-j" Value="5";
+DF p264 d169
+Operation p265 "265-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="18.183" Script="0" Pos="NA,NA,NA,NA";
+CF p264 p265
+DF d14 p265
+DF d161 p265
+Snapshot d170 "170-minute" Value="data/170-minute.csv" Time="2017-04-06T19.23.31EDT";
+DF p265 d170
+Operation p266 "266-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="18.239" Script="0" Pos="NA,NA,NA,NA";
+CF p265 p266
+DF d163 p266
+DF d170 p266
+DF d4 p266
+DF d17 p266
+Data d171 "171-wt" Value="0.782949171632065";
+DF p266 d171
+Start p267 "267-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="18.341" Script="0" Pos="NA,NA,NA,NA";
+CF p266 p267
+DF d169 p267
+DF d13 p267
+DF d163 p267
+DF d171 p267
+DF d24 p267
+DF d132 p267
+Start p268 "268-if" Value="if" Time="18.534" Script="NA" Pos="NA";
+CF p267 p268
+Operation p269 "269-w <- c(w, wt)" Value="w <- c(w, wt)" Time="18.54" Script="0" Pos="NA,NA,NA,NA";
+CF p268 p269
+DF d14 p269
+DF d163 p269
+DF d171 p269
+Snapshot d172 "172-w" Value="data/172-w.csv" Time="2017-04-06T19.23.33EDT";
+DF p269 d172
+Finish p270 "270-if" Value="if" Time="18.6" Script="NA" Pos="NA";
+CF p269 p270
+Finish p271 "271-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="18.604" Script="0" Pos="NA,NA,NA,NA";
+CF p270 p271
+Operation p272 "272-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="18.61" Script="0" Pos="NA,NA,NA,NA";
+CF p271 p272
+DF d14 p272
+DF d164 p272
+DF d168 p272
+DF d170 p272
+DF d172 p272
+Snapshot d173 "173-n" Value="data/173-n.csv" Time="2017-04-06T19.23.34EDT";
+DF p272 d173
+Operation p273 "273-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="18.693" Script="0" Pos="NA,NA,NA,NA";
+CF p272 p273
+DF d14 p273
+DF d165 p273
+DF d173 p273
+DF d12 p273
+DF d5 p273
+DF d11 p273
+DF d10 p273
+Snapshot d174 "174-a" Value="data/174-a.csv" Time="2017-04-06T19.23.35EDT";
+DF p273 d174
+Operation p274 "274-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="18.864" Script="0" Pos="NA,NA,NA,NA";
+CF p273 p274
+DF d14 p274
+DF d166 p274
+DF d7 p274
+DF d174 p274
+DF d170 p274
+DF d20 p274
+DF d172 p274
+DF d6 p274
+Snapshot d175 "175-B" Value="data/175-B.csv" Time="2017-04-06T19.23.38EDT";
+DF p274 d175
+Operation p275 "275-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="19.104" Script="0" Pos="NA,NA,NA,NA";
+CF p274 p275
+DF d14 p275
+DF d167 p275
+DF d7 p275
+DF d174 p275
+DF d170 p275
+DF d19 p275
+DF d26 p275
+Snapshot d176 "176-A" Value="data/176-A.csv" Time="2017-04-06T19.23.39EDT";
+DF p275 d176
+Operation p276 "276-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="19.241" Script="0" Pos="NA,NA,NA,NA";
+CF p275 p276
+DF d14 p276
+DF d168 p276
+DF d176 p276
+DF d170 p276
+DF d9 p276
+DF d175 p276
+Snapshot d177 "177-x" Value="data/177-x.csv" Time="2017-04-06T19.23.40EDT";
+DF p276 d177
+Finish p277 "277-for loop" Value="for loop" Time="19.34" Script="NA" Pos="NA";
+CF p276 p277
+Start p278 "278-for loop" Value="for loop" Time="19.344" Script="NA" Pos="NA";
+CF p277 p278
+Operation p279 "279-j <- 6" Value="j <- 6" Time="19.348" Script="NA" Pos="NA";
+CF p278 p279
+Data d178 "178-j" Value="6";
+DF p279 d178
+Operation p280 "280-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="19.362" Script="0" Pos="NA,NA,NA,NA";
+CF p279 p280
+DF d14 p280
+DF d170 p280
+Snapshot d179 "179-minute" Value="data/179-minute.csv" Time="2017-04-06T19.23.42EDT";
+DF p280 d179
+Operation p281 "281-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="19.428" Script="0" Pos="NA,NA,NA,NA";
+CF p280 p281
+DF d172 p281
+DF d179 p281
+DF d4 p281
+DF d17 p281
+Data d180 "180-wt" Value="0.782684970873025";
+DF p281 d180
+Start p282 "282-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="19.617" Script="0" Pos="NA,NA,NA,NA";
+CF p281 p282
+DF d178 p282
+DF d13 p282
+DF d172 p282
+DF d180 p282
+DF d24 p282
+DF d132 p282
+Start p283 "283-if" Value="if" Time="19.725" Script="NA" Pos="NA";
+CF p282 p283
+Operation p284 "284-w <- c(w, wt)" Value="w <- c(w, wt)" Time="19.732" Script="0" Pos="NA,NA,NA,NA";
+CF p283 p284
+DF d14 p284
+DF d172 p284
+DF d180 p284
+Snapshot d181 "181-w" Value="data/181-w.csv" Time="2017-04-06T19.23.46EDT";
+DF p284 d181
+Finish p285 "285-if" Value="if" Time="19.782" Script="NA" Pos="NA";
+CF p284 p285
+Finish p286 "286-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="19.786" Script="0" Pos="NA,NA,NA,NA";
+CF p285 p286
+Operation p287 "287-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="19.793" Script="0" Pos="NA,NA,NA,NA";
+CF p286 p287
+DF d14 p287
+DF d173 p287
+DF d177 p287
+DF d179 p287
+DF d181 p287
+Snapshot d182 "182-n" Value="data/182-n.csv" Time="2017-04-06T19.23.49EDT";
+DF p287 d182
+Operation p288 "288-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="19.887" Script="0" Pos="NA,NA,NA,NA";
+CF p287 p288
+DF d14 p288
+DF d174 p288
+DF d182 p288
+DF d12 p288
+DF d5 p288
+DF d11 p288
+DF d10 p288
+Snapshot d183 "183-a" Value="data/183-a.csv" Time="2017-04-06T19.23.53EDT";
+DF p288 d183
+Operation p289 "289-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="20.173" Script="0" Pos="NA,NA,NA,NA";
+CF p288 p289
+DF d14 p289
+DF d175 p289
+DF d7 p289
+DF d183 p289
+DF d179 p289
+DF d20 p289
+DF d181 p289
+DF d6 p289
+Snapshot d184 "184-B" Value="data/184-B.csv" Time="2017-04-06T19.23.54EDT";
+DF p289 d184
+Operation p290 "290-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="20.311" Script="0" Pos="NA,NA,NA,NA";
+CF p289 p290
+DF d14 p290
+DF d176 p290
+DF d7 p290
+DF d183 p290
+DF d179 p290
+DF d19 p290
+DF d26 p290
+Snapshot d185 "185-A" Value="data/185-A.csv" Time="2017-04-06T19.23.56EDT";
+DF p290 d185
+Operation p291 "291-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="20.438" Script="0" Pos="NA,NA,NA,NA";
+CF p290 p291
+DF d14 p291
+DF d177 p291
+DF d185 p291
+DF d179 p291
+DF d9 p291
+DF d184 p291
+Snapshot d186 "186-x" Value="data/186-x.csv" Time="2017-04-06T19.23.57EDT";
+DF p291 d186
+Finish p292 "292-for loop" Value="for loop" Time="20.542" Script="NA" Pos="NA";
+CF p291 p292
+Start p293 "293-for loop" Value="for loop" Time="20.657" Script="NA" Pos="NA";
+CF p292 p293
+Operation p294 "294-j <- 7" Value="j <- 7" Time="20.662" Script="NA" Pos="NA";
+CF p293 p294
+Data d187 "187-j" Value="7";
+DF p294 d187
+Operation p295 "295-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="20.674" Script="0" Pos="NA,NA,NA,NA";
+CF p294 p295
+DF d14 p295
+DF d179 p295
+Snapshot d188 "188-minute" Value="data/188-minute.csv" Time="2017-04-06T19.23.59EDT";
+DF p295 d188
+Operation p296 "296-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="20.727" Script="0" Pos="NA,NA,NA,NA";
+CF p295 p296
+DF d181 p296
+DF d188 p296
+DF d4 p296
+DF d17 p296
+Data d189 "189-wt" Value="0.782420859266696";
+DF p296 d189
+Start p297 "297-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="20.82" Script="0" Pos="NA,NA,NA,NA";
+CF p296 p297
+DF d187 p297
+DF d13 p297
+DF d181 p297
+DF d189 p297
+DF d24 p297
+DF d132 p297
+Start p298 "298-if" Value="if" Time="20.913" Script="NA" Pos="NA";
+CF p297 p298
+Operation p299 "299-w <- c(w, wt)" Value="w <- c(w, wt)" Time="20.92" Script="0" Pos="NA,NA,NA,NA";
+CF p298 p299
+DF d14 p299
+DF d181 p299
+DF d189 p299
+Snapshot d190 "190-w" Value="data/190-w.csv" Time="2017-04-06T19.24.02EDT";
+DF p299 d190
+Finish p300 "300-if" Value="if" Time="20.967" Script="NA" Pos="NA";
+CF p299 p300
+Finish p301 "301-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="20.972" Script="0" Pos="NA,NA,NA,NA";
+CF p300 p301
+Operation p302 "302-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="20.984" Script="0" Pos="NA,NA,NA,NA";
+CF p301 p302
+DF d14 p302
+DF d182 p302
+DF d186 p302
+DF d188 p302
+DF d190 p302
+Snapshot d191 "191-n" Value="data/191-n.csv" Time="2017-04-06T19.24.04EDT";
+DF p302 d191
+Operation p303 "303-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="21.197" Script="0" Pos="NA,NA,NA,NA";
+CF p302 p303
+DF d14 p303
+DF d183 p303
+DF d191 p303
+DF d12 p303
+DF d5 p303
+DF d11 p303
+DF d10 p303
+Snapshot d192 "192-a" Value="data/192-a.csv" Time="2017-04-06T19.24.05EDT";
+DF p303 d192
+Operation p304 "304-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="21.398" Script="0" Pos="NA,NA,NA,NA";
+CF p303 p304
+DF d14 p304
+DF d184 p304
+DF d7 p304
+DF d192 p304
+DF d188 p304
+DF d20 p304
+DF d190 p304
+DF d6 p304
+Snapshot d193 "193-B" Value="data/193-B.csv" Time="2017-04-06T19.24.05EDT";
+DF p304 d193
+Operation p305 "305-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="21.567" Script="0" Pos="NA,NA,NA,NA";
+CF p304 p305
+DF d14 p305
+DF d185 p305
+DF d7 p305
+DF d192 p305
+DF d188 p305
+DF d19 p305
+DF d26 p305
+Snapshot d194 "194-A" Value="data/194-A.csv" Time="2017-04-06T19.24.06EDT";
+DF p305 d194
+Operation p306 "306-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="21.845" Script="0" Pos="NA,NA,NA,NA";
+CF p305 p306
+DF d14 p306
+DF d186 p306
+DF d194 p306
+DF d188 p306
+DF d9 p306
+DF d193 p306
+Snapshot d195 "195-x" Value="data/195-x.csv" Time="2017-04-06T19.24.07EDT";
+DF p306 d195
+Finish p307 "307-for loop" Value="for loop" Time="21.982" Script="NA" Pos="NA";
+CF p306 p307
+Start p308 "308-for loop" Value="for loop" Time="21.986" Script="NA" Pos="NA";
+CF p307 p308
+Operation p309 "309-j <- 8" Value="j <- 8" Time="21.991" Script="NA" Pos="NA";
+CF p308 p309
+Data d196 "196-j" Value="8";
+DF p309 d196
+Operation p310 "310-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="22.007" Script="0" Pos="NA,NA,NA,NA";
+CF p309 p310
+DF d14 p310
+DF d188 p310
+Snapshot d197 "197-minute" Value="data/197-minute.csv" Time="2017-04-06T19.24.07EDT";
+DF p310 d197
+Operation p311 "311-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="22.075" Script="0" Pos="NA,NA,NA,NA";
+CF p310 p311
+DF d190 p311
+DF d197 p311
+DF d4 p311
+DF d17 p311
+Data d198 "198-wt" Value="0.782156836782994";
+DF p311 d198
+Start p312 "312-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="22.183" Script="0" Pos="NA,NA,NA,NA";
+CF p311 p312
+DF d196 p312
+DF d13 p312
+DF d190 p312
+DF d198 p312
+DF d24 p312
+DF d132 p312
+Start p313 "313-if" Value="if" Time="22.431" Script="NA" Pos="NA";
+CF p312 p313
+Operation p314 "314-w <- c(w, wt)" Value="w <- c(w, wt)" Time="22.438" Script="0" Pos="NA,NA,NA,NA";
+CF p313 p314
+DF d14 p314
+DF d190 p314
+DF d198 p314
+Snapshot d199 "199-w" Value="data/199-w.csv" Time="2017-04-06T19.24.09EDT";
+DF p314 d199
+Finish p315 "315-if" Value="if" Time="22.51" Script="NA" Pos="NA";
+CF p314 p315
+Finish p316 "316-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="22.514" Script="0" Pos="NA,NA,NA,NA";
+CF p315 p316
+Operation p317 "317-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="22.521" Script="0" Pos="NA,NA,NA,NA";
+CF p316 p317
+DF d14 p317
+DF d191 p317
+DF d195 p317
+DF d197 p317
+DF d199 p317
+Snapshot d200 "200-n" Value="data/200-n.csv" Time="2017-04-06T19.24.10EDT";
+DF p317 d200
+Operation p318 "318-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="22.622" Script="0" Pos="NA,NA,NA,NA";
+CF p317 p318
+DF d14 p318
+DF d192 p318
+DF d200 p318
+DF d12 p318
+DF d5 p318
+DF d11 p318
+DF d10 p318
+Snapshot d201 "201-a" Value="data/201-a.csv" Time="2017-04-06T19.24.10EDT";
+DF p318 d201
+Operation p319 "319-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="22.929" Script="0" Pos="NA,NA,NA,NA";
+CF p318 p319
+DF d14 p319
+DF d193 p319
+DF d7 p319
+DF d201 p319
+DF d197 p319
+DF d20 p319
+DF d199 p319
+DF d6 p319
+Snapshot d202 "202-B" Value="data/202-B.csv" Time="2017-04-06T19.24.13EDT";
+DF p319 d202
+Operation p320 "320-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="23.234" Script="0" Pos="NA,NA,NA,NA";
+CF p319 p320
+DF d14 p320
+DF d194 p320
+DF d7 p320
+DF d201 p320
+DF d197 p320
+DF d19 p320
+DF d26 p320
+Snapshot d203 "203-A" Value="data/203-A.csv" Time="2017-04-06T19.24.14EDT";
+DF p320 d203
+Operation p321 "321-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="23.432" Script="0" Pos="NA,NA,NA,NA";
+CF p320 p321
+DF d14 p321
+DF d195 p321
+DF d203 p321
+DF d197 p321
+DF d9 p321
+DF d202 p321
+Snapshot d204 "204-x" Value="data/204-x.csv" Time="2017-04-06T19.24.14EDT";
+DF p321 d204
+Finish p322 "322-for loop" Value="for loop" Time="23.58" Script="NA" Pos="NA";
+CF p321 p322
+Start p323 "323-for loop" Value="for loop" Time="23.585" Script="NA" Pos="NA";
+CF p322 p323
+Operation p324 "324-j <- 9" Value="j <- 9" Time="23.59" Script="NA" Pos="NA";
+CF p323 p324
+Data d205 "205-j" Value="9";
+DF p324 d205
+Operation p325 "325-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="23.62" Script="0" Pos="NA,NA,NA,NA";
+CF p324 p325
+DF d14 p325
+DF d197 p325
+Snapshot d206 "206-minute" Value="data/206-minute.csv" Time="2017-04-06T19.24.15EDT";
+DF p325 d206
+Operation p326 "326-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="23.791" Script="0" Pos="NA,NA,NA,NA";
+CF p325 p326
+DF d199 p326
+DF d206 p326
+DF d4 p326
+DF d17 p326
+Data d207 "207-wt" Value="0.781892903391844";
+DF p326 d207
+Start p327 "327-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="23.93" Script="0" Pos="NA,NA,NA,NA";
+CF p326 p327
+DF d205 p327
+DF d13 p327
+DF d199 p327
+DF d207 p327
+DF d24 p327
+DF d132 p327
+Start p328 "328-if" Value="if" Time="24.084" Script="NA" Pos="NA";
+CF p327 p328
+Operation p329 "329-w <- c(w, wt)" Value="w <- c(w, wt)" Time="24.09" Script="0" Pos="NA,NA,NA,NA";
+CF p328 p329
+DF d14 p329
+DF d199 p329
+DF d207 p329
+Snapshot d208 "208-w" Value="data/208-w.csv" Time="2017-04-06T19.24.17EDT";
+DF p329 d208
+Finish p330 "330-if" Value="if" Time="24.168" Script="NA" Pos="NA";
+CF p329 p330
+Finish p331 "331-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="24.173" Script="0" Pos="NA,NA,NA,NA";
+CF p330 p331
+Operation p332 "332-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="24.18" Script="0" Pos="NA,NA,NA,NA";
+CF p331 p332
+DF d14 p332
+DF d200 p332
+DF d204 p332
+DF d206 p332
+DF d208 p332
+Snapshot d209 "209-n" Value="data/209-n.csv" Time="2017-04-06T19.24.18EDT";
+DF p332 d209
+Operation p333 "333-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="24.41" Script="0" Pos="NA,NA,NA,NA";
+CF p332 p333
+DF d14 p333
+DF d201 p333
+DF d209 p333
+DF d12 p333
+DF d5 p333
+DF d11 p333
+DF d10 p333
+Snapshot d210 "210-a" Value="data/210-a.csv" Time="2017-04-06T19.24.19EDT";
+DF p333 d210
+Operation p334 "334-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="24.641" Script="0" Pos="NA,NA,NA,NA";
+CF p333 p334
+DF d14 p334
+DF d202 p334
+DF d7 p334
+DF d210 p334
+DF d206 p334
+DF d20 p334
+DF d208 p334
+DF d6 p334
+Snapshot d211 "211-B" Value="data/211-B.csv" Time="2017-04-06T19.24.19EDT";
+DF p334 d211
+Operation p335 "335-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="24.85" Script="0" Pos="NA,NA,NA,NA";
+CF p334 p335
+DF d14 p335
+DF d203 p335
+DF d7 p335
+DF d210 p335
+DF d206 p335
+DF d19 p335
+DF d26 p335
+Snapshot d212 "212-A" Value="data/212-A.csv" Time="2017-04-06T19.24.20EDT";
+DF p335 d212
+Operation p336 "336-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="25.136" Script="0" Pos="NA,NA,NA,NA";
+CF p335 p336
+DF d14 p336
+DF d204 p336
+DF d212 p336
+DF d206 p336
+DF d9 p336
+DF d211 p336
+Snapshot d213 "213-x" Value="data/213-x.csv" Time="2017-04-06T19.24.21EDT";
+DF p336 d213
+Finish p337 "337-for loop" Value="for loop" Time="25.286" Script="NA" Pos="NA";
+CF p336 p337
+Start p338 "338-for loop" Value="for loop" Time="25.292" Script="NA" Pos="NA";
+CF p337 p338
+Operation p339 "339-j <- 10" Value="j <- 10" Time="25.297" Script="NA" Pos="NA";
+CF p338 p339
+Data d214 "214-j" Value="10";
+DF p339 d214
+Operation p340 "340-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="25.314" Script="0" Pos="NA,NA,NA,NA";
+CF p339 p340
+DF d14 p340
+DF d206 p340
+Snapshot d215 "215-minute" Value="data/215-minute.csv" Time="2017-04-06T19.24.21EDT";
+DF p340 d215
+Operation p341 "341-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="25.387" Script="0" Pos="NA,NA,NA,NA";
+CF p340 p341
+DF d208 p341
+DF d215 p341
+DF d4 p341
+DF d17 p341
+Data d216 "216-wt" Value="0.781629059063185";
+DF p341 d216
+Start p342 "342-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="25.615" Script="0" Pos="NA,NA,NA,NA";
+CF p341 p342
+DF d214 p342
+DF d13 p342
+DF d208 p342
+DF d216 p342
+DF d24 p342
+DF d132 p342
+Start p343 "343-if" Value="if" Time="25.774" Script="NA" Pos="NA";
+CF p342 p343
+Operation p344 "344-w <- c(w, wt)" Value="w <- c(w, wt)" Time="25.781" Script="0" Pos="NA,NA,NA,NA";
+CF p343 p344
+DF d14 p344
+DF d208 p344
+DF d216 p344
+Snapshot d217 "217-w" Value="data/217-w.csv" Time="2017-04-06T19.24.24EDT";
+DF p344 d217
+Finish p345 "345-if" Value="if" Time="25.849" Script="NA" Pos="NA";
+CF p344 p345
+Finish p346 "346-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="25.853" Script="0" Pos="NA,NA,NA,NA";
+CF p345 p346
+Operation p347 "347-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="25.862" Script="0" Pos="NA,NA,NA,NA";
+CF p346 p347
+DF d14 p347
+DF d209 p347
+DF d213 p347
+DF d215 p347
+DF d217 p347
+Snapshot d218 "218-n" Value="data/218-n.csv" Time="2017-04-06T19.24.24EDT";
+DF p347 d218
+Operation p348 "348-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="25.988" Script="0" Pos="NA,NA,NA,NA";
+CF p347 p348
+DF d14 p348
+DF d210 p348
+DF d218 p348
+DF d12 p348
+DF d5 p348
+DF d11 p348
+DF d10 p348
+Snapshot d219 "219-a" Value="data/219-a.csv" Time="2017-04-06T19.24.25EDT";
+DF p348 d219
+Operation p349 "349-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="26.32" Script="0" Pos="NA,NA,NA,NA";
+CF p348 p349
+DF d14 p349
+DF d211 p349
+DF d7 p349
+DF d219 p349
+DF d215 p349
+DF d20 p349
+DF d217 p349
+DF d6 p349
+Snapshot d220 "220-B" Value="data/220-B.csv" Time="2017-04-06T19.24.26EDT";
+DF p349 d220
+Operation p350 "350-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="26.52" Script="0" Pos="NA,NA,NA,NA";
+CF p349 p350
+DF d14 p350
+DF d212 p350
+DF d7 p350
+DF d219 p350
+DF d215 p350
+DF d19 p350
+DF d26 p350
+Snapshot d221 "221-A" Value="data/221-A.csv" Time="2017-04-06T19.24.28EDT";
+DF p350 d221
+Operation p351 "351-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="26.811" Script="0" Pos="NA,NA,NA,NA";
+CF p350 p351
+DF d14 p351
+DF d213 p351
+DF d221 p351
+DF d215 p351
+DF d9 p351
+DF d220 p351
+Snapshot d222 "222-x" Value="data/222-x.csv" Time="2017-04-06T19.24.28EDT";
+DF p351 d222
+Finish p352 "352-for loop" Value="for loop" Time="26.949" Script="NA" Pos="NA";
+CF p351 p352
+Incomplete p353 "353-Details Omitted" Value="Details Omitted" Time="27.39" Script="NA" Pos="NA";
+CF p352 p353
+Finish p354 "354-for (j in 1:1440) {    if (verbose) {        print(c(z, j, m" Value="for (j in 1:1440) {    if (verbose) {        print(c(z, j, m" Time="27.395" Script="0" Pos="NA,NA,NA,NA";
+CF p353 p354
+Snapshot d223 "223-minute" Value="data/223-minute.csv" Time="2017-04-06T19.24.30EDT";
+DF p354 d223
+Data d224 "224-wt" Value="1.26666265388674";
+DF p354 d224
+Snapshot d225 "225-w" Value="data/225-w.csv" Time="2017-04-06T19.24.30EDT";
+DF p354 d225
+Snapshot d226 "226-n" Value="data/226-n.csv" Time="2017-04-06T19.24.30EDT";
+DF p354 d226
+Snapshot d227 "227-a" Value="data/227-a.csv" Time="2017-04-06T19.24.30EDT";
+DF p354 d227
+Snapshot d228 "228-B" Value="data/228-B.csv" Time="2017-04-06T19.24.30EDT";
+DF p354 d228
+Snapshot d229 "229-A" Value="data/229-A.csv" Time="2017-04-06T19.24.30EDT";
+DF p354 d229
+Snapshot d230 "230-x" Value="data/230-x.csv" Time="2017-04-06T19.24.30EDT";
+DF p354 d230
+Finish p355 "355-for loop" Value="for loop" Time="27.537" Script="NA" Pos="NA";
+CF p354 p355
+Start p356 "356-for loop" Value="for loop" Time="27.542" Script="NA" Pos="NA";
+CF p355 p356
+Operation p357 "357-z <- 3" Value="z <- 3" Time="27.547" Script="NA" Pos="NA";
+CF p356 p357
+Data d231 "231-z" Value="3";
+DF p357 d231
+Start p358 "358-for (j in 1:1440) {    if (verbose) {        print(c(z, j, m" Value="for (j in 1:1440) {    if (verbose) {        print(c(z, j, m" Time="27.566" Script="0" Pos="NA,NA,NA,NA";
+CF p357 p358
+DF d22 p358
+DF d231 p358
+DF d223 p358
+DF d225 p358
+DF d17 p358
+DF d13 p358
+DF d224 p358
+DF d24 p358
+DF d226 p358
+DF d230 p358
+DF d227 p358
+DF d12 p358
+DF d5 p358
+DF d11 p358
+DF d10 p358
+DF d228 p358
+DF d7 p358
+DF d20 p358
+DF d6 p358
+DF d229 p358
+DF d19 p358
+DF d26 p358
+DF d9 p358
+DF d21 p358
+Start p359 "359-for loop" Value="for loop" Time="28.349" Script="NA" Pos="NA";
+CF p358 p359
+Operation p360 "360-j <- 1" Value="j <- 1" Time="28.355" Script="NA" Pos="NA";
+CF p359 p360
+Data d232 "232-j" Value="1";
+DF p360 d232
+Operation p361 "361-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="28.374" Script="0" Pos="NA,NA,NA,NA";
+CF p360 p361
+DF d14 p361
+DF d223 p361
+Snapshot d233 "233-minute" Value="data/233-minute.csv" Time="2017-04-06T19.24.35EDT";
+DF p361 d233
+Operation p362 "362-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="28.572" Script="0" Pos="NA,NA,NA,NA";
+CF p361 p362
+DF d225 p362
+DF d233 p362
+DF d4 p362
+DF d17 p362
+Data d234 "234-wt" Value="1.26623522737333";
+DF p362 d234
+Start p363 "363-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="28.705" Script="0" Pos="NA,NA,NA,NA";
+CF p362 p363
+DF d232 p363
+DF d13 p363
+DF d225 p363
+DF d234 p363
+DF d24 p363
+DF d231 p363
+Start p364 "364-if" Value="if" Time="28.847" Script="NA" Pos="NA";
+CF p363 p364
+Operation p365 "365-w <- c(w, wt)" Value="w <- c(w, wt)" Time="28.853" Script="0" Pos="NA,NA,NA,NA";
+CF p364 p365
+DF d14 p365
+DF d225 p365
+DF d234 p365
+Snapshot d235 "235-w" Value="data/235-w.csv" Time="2017-04-06T19.24.36EDT";
+DF p365 d235
+Finish p366 "366-if" Value="if" Time="28.923" Script="NA" Pos="NA";
+CF p365 p366
+Finish p367 "367-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="28.929" Script="0" Pos="NA,NA,NA,NA";
+CF p366 p367
+Operation p368 "368-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="28.936" Script="0" Pos="NA,NA,NA,NA";
+CF p367 p368
+DF d14 p368
+DF d226 p368
+DF d230 p368
+DF d233 p368
+DF d235 p368
+Snapshot d236 "236-n" Value="data/236-n.csv" Time="2017-04-06T19.24.38EDT";
+DF p368 d236
+Operation p369 "369-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="29.168" Script="0" Pos="NA,NA,NA,NA";
+CF p368 p369
+DF d14 p369
+DF d227 p369
+DF d236 p369
+DF d12 p369
+DF d5 p369
+DF d11 p369
+DF d10 p369
+Snapshot d237 "237-a" Value="data/237-a.csv" Time="2017-04-06T19.24.39EDT";
+DF p369 d237
+Operation p370 "370-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="29.392" Script="0" Pos="NA,NA,NA,NA";
+CF p369 p370
+DF d14 p370
+DF d228 p370
+DF d7 p370
+DF d237 p370
+DF d233 p370
+DF d20 p370
+DF d235 p370
+DF d6 p370
+Snapshot d238 "238-B" Value="data/238-B.csv" Time="2017-04-06T19.24.39EDT";
+DF p370 d238
+Operation p371 "371-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="29.584" Script="0" Pos="NA,NA,NA,NA";
+CF p370 p371
+DF d14 p371
+DF d229 p371
+DF d7 p371
+DF d237 p371
+DF d233 p371
+DF d19 p371
+DF d26 p371
+Snapshot d239 "239-A" Value="data/239-A.csv" Time="2017-04-06T19.24.40EDT";
+DF p371 d239
+Operation p372 "372-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="29.865" Script="0" Pos="NA,NA,NA,NA";
+CF p371 p372
+DF d14 p372
+DF d230 p372
+DF d239 p372
+DF d233 p372
+DF d9 p372
+DF d238 p372
+Snapshot d240 "240-x" Value="data/240-x.csv" Time="2017-04-06T19.24.41EDT";
+DF p372 d240
+Start p373 "373-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="30.092" Script="0" Pos="NA,NA,NA,NA";
+CF p372 p373
+DF d240 p373
+Start p374 "374-if" Value="if" Time="30.135" Script="NA" Pos="NA";
+CF p373 p374
+Operation p375 "375-x[length(x)] <- 0" Value="x[length(x)] <- 0" Time="30.143" Script="0" Pos="NA,NA,NA,NA";
+CF p374 p375
+DF d240 p375
+Snapshot d241 "241-x" Value="data/241-x.csv" Time="2017-04-06T19.24.43EDT";
+DF p375 d241
+Finish p376 "376-if" Value="if" Time="30.176" Script="NA" Pos="NA";
+CF p375 p376
+Finish p377 "377-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="30.181" Script="0" Pos="NA,NA,NA,NA";
+CF p376 p377
+Finish p378 "378-for loop" Value="for loop" Time="30.188" Script="NA" Pos="NA";
+CF p377 p378
+Start p379 "379-for loop" Value="for loop" Time="30.194" Script="NA" Pos="NA";
+CF p378 p379
+Operation p380 "380-j <- 2" Value="j <- 2" Time="30.201" Script="NA" Pos="NA";
+CF p379 p380
+Data d242 "242-j" Value="2";
+DF p380 d242
+Operation p381 "381-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="30.218" Script="0" Pos="NA,NA,NA,NA";
+CF p380 p381
+DF d14 p381
+DF d233 p381
+Snapshot d243 "243-minute" Value="data/243-minute.csv" Time="2017-04-06T19.24.43EDT";
+DF p381 d243
+Operation p382 "382-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="30.294" Script="0" Pos="NA,NA,NA,NA";
+CF p381 p382
+DF d235 p382
+DF d243 p382
+DF d4 p382
+DF d17 p382
+Data d244 "244-wt" Value="1.26580794509204";
+DF p382 d244
+Start p383 "383-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="30.508" Script="0" Pos="NA,NA,NA,NA";
+CF p382 p383
+DF d242 p383
+DF d13 p383
+DF d235 p383
+DF d244 p383
+DF d24 p383
+DF d231 p383
+Start p384 "384-if" Value="if" Time="30.652" Script="NA" Pos="NA";
+CF p383 p384
+Operation p385 "385-w <- c(w, wt)" Value="w <- c(w, wt)" Time="30.659" Script="0" Pos="NA,NA,NA,NA";
+CF p384 p385
+DF d14 p385
+DF d235 p385
+DF d244 p385
+Snapshot d245 "245-w" Value="data/245-w.csv" Time="2017-04-06T19.24.46EDT";
+DF p385 d245
+Finish p386 "386-if" Value="if" Time="30.725" Script="NA" Pos="NA";
+CF p385 p386
+Finish p387 "387-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="30.731" Script="0" Pos="NA,NA,NA,NA";
+CF p386 p387
+Operation p388 "388-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="30.739" Script="0" Pos="NA,NA,NA,NA";
+CF p387 p388
+DF d14 p388
+DF d236 p388
+DF d241 p388
+DF d243 p388
+DF d245 p388
+Snapshot d246 "246-n" Value="data/246-n.csv" Time="2017-04-06T19.24.46EDT";
+DF p388 d246
+Operation p389 "389-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="30.961" Script="0" Pos="NA,NA,NA,NA";
+CF p388 p389
+DF d14 p389
+DF d237 p389
+DF d246 p389
+DF d12 p389
+DF d5 p389
+DF d11 p389
+DF d10 p389
+Snapshot d247 "247-a" Value="data/247-a.csv" Time="2017-04-06T19.24.47EDT";
+DF p389 d247
+Operation p390 "390-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="31.181" Script="0" Pos="NA,NA,NA,NA";
+CF p389 p390
+DF d14 p390
+DF d238 p390
+DF d7 p390
+DF d247 p390
+DF d243 p390
+DF d20 p390
+DF d245 p390
+DF d6 p390
+Snapshot d248 "248-B" Value="data/248-B.csv" Time="2017-04-06T19.24.48EDT";
+DF p390 d248
+Operation p391 "391-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="31.475" Script="0" Pos="NA,NA,NA,NA";
+CF p390 p391
+DF d14 p391
+DF d239 p391
+DF d7 p391
+DF d247 p391
+DF d243 p391
+DF d19 p391
+DF d26 p391
+Snapshot d249 "249-A" Value="data/249-A.csv" Time="2017-04-06T19.24.50EDT";
+DF p391 d249
+Operation p392 "392-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="31.654" Script="0" Pos="NA,NA,NA,NA";
+CF p391 p392
+DF d14 p392
+DF d241 p392
+DF d249 p392
+DF d243 p392
+DF d9 p392
+DF d248 p392
+Snapshot d250 "250-x" Value="data/250-x.csv" Time="2017-04-06T19.24.50EDT";
+DF p392 d250
+Start p393 "393-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="31.783" Script="0" Pos="NA,NA,NA,NA";
+CF p392 p393
+DF d250 p393
+Start p394 "394-if" Value="if" Time="31.82" Script="NA" Pos="NA";
+CF p393 p394
+Operation p395 "395-x[length(x)] <- 0" Value="x[length(x)] <- 0" Time="31.827" Script="0" Pos="NA,NA,NA,NA";
+CF p394 p395
+DF d250 p395
+Snapshot d251 "251-x" Value="data/251-x.csv" Time="2017-04-06T19.24.51EDT";
+DF p395 d251
+Finish p396 "396-if" Value="if" Time="31.972" Script="NA" Pos="NA";
+CF p395 p396
+Finish p397 "397-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="31.977" Script="0" Pos="NA,NA,NA,NA";
+CF p396 p397
+Finish p398 "398-for loop" Value="for loop" Time="31.985" Script="NA" Pos="NA";
+CF p397 p398
+Start p399 "399-for loop" Value="for loop" Time="31.99" Script="NA" Pos="NA";
+CF p398 p399
+Operation p400 "400-j <- 3" Value="j <- 3" Time="31.996" Script="NA" Pos="NA";
+CF p399 p400
+Data d252 "252-j" Value="3";
+DF p400 d252
+Operation p401 "401-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="32.011" Script="0" Pos="NA,NA,NA,NA";
+CF p400 p401
+DF d14 p401
+DF d243 p401
+Snapshot d253 "253-minute" Value="data/253-minute.csv" Time="2017-04-06T19.24.52EDT";
+DF p401 d253
+Operation p402 "402-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="32.107" Script="0" Pos="NA,NA,NA,NA";
+CF p401 p402
+DF d245 p402
+DF d253 p402
+DF d4 p402
+DF d17 p402
+Data d254 "254-wt" Value="1.26538080699418";
+DF p402 d254
+Start p403 "403-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="32.256" Script="0" Pos="NA,NA,NA,NA";
+CF p402 p403
+DF d252 p403
+DF d13 p403
+DF d245 p403
+DF d254 p403
+DF d24 p403
+DF d231 p403
+Start p404 "404-if" Value="if" Time="32.522" Script="NA" Pos="NA";
+CF p403 p404
+Operation p405 "405-w <- c(w, wt)" Value="w <- c(w, wt)" Time="32.53" Script="0" Pos="NA,NA,NA,NA";
+CF p404 p405
+DF d14 p405
+DF d245 p405
+DF d254 p405
+Snapshot d255 "255-w" Value="data/255-w.csv" Time="2017-04-06T19.24.54EDT";
+DF p405 d255
+Finish p406 "406-if" Value="if" Time="32.61" Script="NA" Pos="NA";
+CF p405 p406
+Finish p407 "407-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="32.615" Script="0" Pos="NA,NA,NA,NA";
+CF p406 p407
+Operation p408 "408-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="32.622" Script="0" Pos="NA,NA,NA,NA";
+CF p407 p408
+DF d14 p408
+DF d246 p408
+DF d251 p408
+DF d253 p408
+DF d255 p408
+Snapshot d256 "256-n" Value="data/256-n.csv" Time="2017-04-06T19.24.55EDT";
+DF p408 d256
+Operation p409 "409-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="32.858" Script="0" Pos="NA,NA,NA,NA";
+CF p408 p409
+DF d14 p409
+DF d247 p409
+DF d256 p409
+DF d12 p409
+DF d5 p409
+DF d11 p409
+DF d10 p409
+Snapshot d257 "257-a" Value="data/257-a.csv" Time="2017-04-06T19.24.57EDT";
+DF p409 d257
+Operation p410 "410-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="33.104" Script="0" Pos="NA,NA,NA,NA";
+CF p409 p410
+DF d14 p410
+DF d248 p410
+DF d7 p410
+DF d257 p410
+DF d253 p410
+DF d20 p410
+DF d255 p410
+DF d6 p410
+Snapshot d258 "258-B" Value="data/258-B.csv" Time="2017-04-06T19.24.58EDT";
+DF p410 d258
+Operation p411 "411-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="33.335" Script="0" Pos="NA,NA,NA,NA";
+CF p410 p411
+DF d14 p411
+DF d249 p411
+DF d7 p411
+DF d257 p411
+DF d253 p411
+DF d19 p411
+DF d26 p411
+Snapshot d259 "259-A" Value="data/259-A.csv" Time="2017-04-06T19.25.00EDT";
+DF p411 d259
+Operation p412 "412-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="33.662" Script="0" Pos="NA,NA,NA,NA";
+CF p411 p412
+DF d14 p412
+DF d251 p412
+DF d259 p412
+DF d253 p412
+DF d9 p412
+DF d258 p412
+Snapshot d260 "260-x" Value="data/260-x.csv" Time="2017-04-06T19.25.00EDT";
+DF p412 d260
+Start p413 "413-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="33.818" Script="0" Pos="NA,NA,NA,NA";
+CF p412 p413
+DF d260 p413
+Start p414 "414-if" Value="if" Time="33.863" Script="NA" Pos="NA";
+CF p413 p414
+Operation p415 "415-x[length(x)] <- 0" Value="x[length(x)] <- 0" Time="33.87" Script="0" Pos="NA,NA,NA,NA";
+CF p414 p415
+DF d260 p415
+Snapshot d261 "261-x" Value="data/261-x.csv" Time="2017-04-06T19.25.01EDT";
+DF p415 d261
+Finish p416 "416-if" Value="if" Time="33.922" Script="NA" Pos="NA";
+CF p415 p416
+Finish p417 "417-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="34.036" Script="0" Pos="NA,NA,NA,NA";
+CF p416 p417
+Finish p418 "418-for loop" Value="for loop" Time="34.042" Script="NA" Pos="NA";
+CF p417 p418
+Start p419 "419-for loop" Value="for loop" Time="34.048" Script="NA" Pos="NA";
+CF p418 p419
+Operation p420 "420-j <- 4" Value="j <- 4" Time="34.054" Script="NA" Pos="NA";
+CF p419 p420
+Data d262 "262-j" Value="4";
+DF p420 d262
+Operation p421 "421-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="34.071" Script="0" Pos="NA,NA,NA,NA";
+CF p420 p421
+DF d14 p421
+DF d253 p421
+Snapshot d263 "263-minute" Value="data/263-minute.csv" Time="2017-04-06T19.25.03EDT";
+DF p421 d263
+Operation p422 "422-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="34.159" Script="0" Pos="NA,NA,NA,NA";
+CF p421 p422
+DF d255 p422
+DF d263 p422
+DF d4 p422
+DF d17 p422
+Data d264 "264-wt" Value="1.2649538130311";
+DF p422 d264
+Start p423 "423-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="34.299" Script="0" Pos="NA,NA,NA,NA";
+CF p422 p423
+DF d262 p423
+DF d13 p423
+DF d255 p423
+DF d264 p423
+DF d24 p423
+DF d231 p423
+Start p424 "424-if" Value="if" Time="34.57" Script="NA" Pos="NA";
+CF p423 p424
+Operation p425 "425-w <- c(w, wt)" Value="w <- c(w, wt)" Time="34.577" Script="0" Pos="NA,NA,NA,NA";
+CF p424 p425
+DF d14 p425
+DF d255 p425
+DF d264 p425
+Snapshot d265 "265-w" Value="data/265-w.csv" Time="2017-04-06T19.25.06EDT";
+DF p425 d265
+Finish p426 "426-if" Value="if" Time="34.657" Script="NA" Pos="NA";
+CF p425 p426
+Finish p427 "427-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="34.662" Script="0" Pos="NA,NA,NA,NA";
+CF p426 p427
+Operation p428 "428-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="34.669" Script="0" Pos="NA,NA,NA,NA";
+CF p427 p428
+DF d14 p428
+DF d256 p428
+DF d261 p428
+DF d263 p428
+DF d265 p428
+Snapshot d266 "266-n" Value="data/266-n.csv" Time="2017-04-06T19.25.06EDT";
+DF p428 d266
+Operation p429 "429-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="34.914" Script="0" Pos="NA,NA,NA,NA";
+CF p428 p429
+DF d14 p429
+DF d257 p429
+DF d266 p429
+DF d12 p429
+DF d5 p429
+DF d11 p429
+DF d10 p429
+Snapshot d267 "267-a" Value="data/267-a.csv" Time="2017-04-06T19.25.09EDT";
+DF p429 d267
+Operation p430 "430-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="35.17" Script="0" Pos="NA,NA,NA,NA";
+CF p429 p430
+DF d14 p430
+DF d258 p430
+DF d7 p430
+DF d267 p430
+DF d263 p430
+DF d20 p430
+DF d265 p430
+DF d6 p430
+Snapshot d268 "268-B" Value="data/268-B.csv" Time="2017-04-06T19.25.11EDT";
+DF p430 d268
+Operation p431 "431-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="35.389" Script="0" Pos="NA,NA,NA,NA";
+CF p430 p431
+DF d14 p431
+DF d259 p431
+DF d7 p431
+DF d267 p431
+DF d263 p431
+DF d19 p431
+DF d26 p431
+Snapshot d269 "269-A" Value="data/269-A.csv" Time="2017-04-06T19.25.15EDT";
+DF p431 d269
+Operation p432 "432-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="35.71" Script="0" Pos="NA,NA,NA,NA";
+CF p431 p432
+DF d14 p432
+DF d261 p432
+DF d269 p432
+DF d263 p432
+DF d9 p432
+DF d268 p432
+Snapshot d270 "270-x" Value="data/270-x.csv" Time="2017-04-06T19.25.16EDT";
+DF p432 d270
+Start p433 "433-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="35.855" Script="0" Pos="NA,NA,NA,NA";
+CF p432 p433
+DF d270 p433
+Start p434 "434-if" Value="if" Time="35.898" Script="NA" Pos="NA";
+CF p433 p434
+Operation p435 "435-x[length(x)] <- 0" Value="x[length(x)] <- 0" Time="35.906" Script="0" Pos="NA,NA,NA,NA";
+CF p434 p435
+DF d270 p435
+Snapshot d271 "271-x" Value="data/271-x.csv" Time="2017-04-06T19.25.17EDT";
+DF p435 d271
+Finish p436 "436-if" Value="if" Time="36.051" Script="NA" Pos="NA";
+CF p435 p436
+Finish p437 "437-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="36.056" Script="0" Pos="NA,NA,NA,NA";
+CF p436 p437
+Finish p438 "438-for loop" Value="for loop" Time="36.064" Script="NA" Pos="NA";
+CF p437 p438
+Start p439 "439-for loop" Value="for loop" Time="36.07" Script="NA" Pos="NA";
+CF p438 p439
+Operation p440 "440-j <- 5" Value="j <- 5" Time="36.076" Script="NA" Pos="NA";
+CF p439 p440
+Data d272 "272-j" Value="5";
+DF p440 d272
+Operation p441 "441-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="36.097" Script="0" Pos="NA,NA,NA,NA";
+CF p440 p441
+DF d14 p441
+DF d263 p441
+Snapshot d273 "273-minute" Value="data/273-minute.csv" Time="2017-04-06T19.25.19EDT";
+DF p441 d273
+Operation p442 "442-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="36.19" Script="0" Pos="NA,NA,NA,NA";
+CF p441 p442
+DF d265 p442
+DF d273 p442
+DF d4 p442
+DF d17 p442
+Data d274 "274-wt" Value="1.26452696315417";
+DF p442 d274
+Start p443 "443-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="36.432" Script="0" Pos="NA,NA,NA,NA";
+CF p442 p443
+DF d272 p443
+DF d13 p443
+DF d265 p443
+DF d274 p443
+DF d24 p443
+DF d231 p443
+Start p444 "444-if" Value="if" Time="36.593" Script="NA" Pos="NA";
+CF p443 p444
+Operation p445 "445-w <- c(w, wt)" Value="w <- c(w, wt)" Time="36.601" Script="0" Pos="NA,NA,NA,NA";
+CF p444 p445
+DF d14 p445
+DF d265 p445
+DF d274 p445
+Snapshot d275 "275-w" Value="data/275-w.csv" Time="2017-04-06T19.25.26EDT";
+DF p445 d275
+Finish p446 "446-if" Value="if" Time="36.68" Script="NA" Pos="NA";
+CF p445 p446
+Finish p447 "447-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="36.685" Script="0" Pos="NA,NA,NA,NA";
+CF p446 p447
+Operation p448 "448-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="36.697" Script="0" Pos="NA,NA,NA,NA";
+CF p447 p448
+DF d14 p448
+DF d266 p448
+DF d271 p448
+DF d273 p448
+DF d275 p448
+Snapshot d276 "276-n" Value="data/276-n.csv" Time="2017-04-06T19.25.27EDT";
+DF p448 d276
+Operation p449 "449-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="36.926" Script="0" Pos="NA,NA,NA,NA";
+CF p448 p449
+DF d14 p449
+DF d267 p449
+DF d276 p449
+DF d12 p449
+DF d5 p449
+DF d11 p449
+DF d10 p449
+Snapshot d277 "277-a" Value="data/277-a.csv" Time="2017-04-06T19.25.28EDT";
+DF p449 d277
+Operation p450 "450-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="37.163" Script="0" Pos="NA,NA,NA,NA";
+CF p449 p450
+DF d14 p450
+DF d268 p450
+DF d7 p450
+DF d277 p450
+DF d273 p450
+DF d20 p450
+DF d275 p450
+DF d6 p450
+Snapshot d278 "278-B" Value="data/278-B.csv" Time="2017-04-06T19.25.29EDT";
+DF p450 d278
+Operation p451 "451-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="37.469" Script="0" Pos="NA,NA,NA,NA";
+CF p450 p451
+DF d14 p451
+DF d269 p451
+DF d7 p451
+DF d277 p451
+DF d273 p451
+DF d19 p451
+DF d26 p451
+Snapshot d279 "279-A" Value="data/279-A.csv" Time="2017-04-06T19.25.31EDT";
+DF p451 d279
+Operation p452 "452-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="37.68" Script="0" Pos="NA,NA,NA,NA";
+CF p451 p452
+DF d14 p452
+DF d271 p452
+DF d279 p452
+DF d273 p452
+DF d9 p452
+DF d278 p452
+Snapshot d280 "280-x" Value="data/280-x.csv" Time="2017-04-06T19.25.32EDT";
+DF p452 d280
+Start p453 "453-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="37.931" Script="0" Pos="NA,NA,NA,NA";
+CF p452 p453
+DF d280 p453
+Start p454 "454-if" Value="if" Time="37.973" Script="NA" Pos="NA";
+CF p453 p454
+Operation p455 "455-x[length(x)] <- 0" Value="x[length(x)] <- 0" Time="37.981" Script="0" Pos="NA,NA,NA,NA";
+CF p454 p455
+DF d280 p455
+Snapshot d281 "281-x" Value="data/281-x.csv" Time="2017-04-06T19.25.33EDT";
+DF p455 d281
+Finish p456 "456-if" Value="if" Time="38.013" Script="NA" Pos="NA";
+CF p455 p456
+Finish p457 "457-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="38.018" Script="0" Pos="NA,NA,NA,NA";
+CF p456 p457
+Finish p458 "458-for loop" Value="for loop" Time="38.026" Script="NA" Pos="NA";
+CF p457 p458
+Start p459 "459-for loop" Value="for loop" Time="38.032" Script="NA" Pos="NA";
+CF p458 p459
+Operation p460 "460-j <- 6" Value="j <- 6" Time="38.038" Script="NA" Pos="NA";
+CF p459 p460
+Data d282 "282-j" Value="6";
+DF p460 d282
+Operation p461 "461-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="38.058" Script="0" Pos="NA,NA,NA,NA";
+CF p460 p461
+DF d14 p461
+DF d273 p461
+Snapshot d283 "283-minute" Value="data/283-minute.csv" Time="2017-04-06T19.25.36EDT";
+DF p461 d283
+Operation p462 "462-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="38.238" Script="0" Pos="NA,NA,NA,NA";
+CF p461 p462
+DF d275 p462
+DF d283 p462
+DF d4 p462
+DF d17 p462
+Data d284 "284-wt" Value="1.26410025731477";
+DF p462 d284
+Start p463 "463-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="38.376" Script="0" Pos="NA,NA,NA,NA";
+CF p462 p463
+DF d282 p463
+DF d13 p463
+DF d275 p463
+DF d284 p463
+DF d24 p463
+DF d231 p463
+Start p464 "464-if" Value="if" Time="38.52" Script="NA" Pos="NA";
+CF p463 p464
+Operation p465 "465-w <- c(w, wt)" Value="w <- c(w, wt)" Time="38.528" Script="0" Pos="NA,NA,NA,NA";
+CF p464 p465
+DF d14 p465
+DF d275 p465
+DF d284 p465
+Snapshot d285 "285-w" Value="data/285-w.csv" Time="2017-04-06T19.25.38EDT";
+DF p465 d285
+Finish p466 "466-if" Value="if" Time="38.705" Script="NA" Pos="NA";
+CF p465 p466
+Finish p467 "467-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="38.71" Script="0" Pos="NA,NA,NA,NA";
+CF p466 p467
+Operation p468 "468-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="38.717" Script="0" Pos="NA,NA,NA,NA";
+CF p467 p468
+DF d14 p468
+DF d276 p468
+DF d281 p468
+DF d283 p468
+DF d285 p468
+Snapshot d286 "286-n" Value="data/286-n.csv" Time="2017-04-06T19.25.38EDT";
+DF p468 d286
+Operation p469 "469-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="38.829" Script="0" Pos="NA,NA,NA,NA";
+CF p468 p469
+DF d14 p469
+DF d277 p469
+DF d286 p469
+DF d12 p469
+DF d5 p469
+DF d11 p469
+DF d10 p469
+Snapshot d287 "287-a" Value="data/287-a.csv" Time="2017-04-06T19.25.43EDT";
+DF p469 d287
+Operation p470 "470-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="39.178" Script="0" Pos="NA,NA,NA,NA";
+CF p469 p470
+DF d14 p470
+DF d278 p470
+DF d7 p470
+DF d287 p470
+DF d283 p470
+DF d20 p470
+DF d285 p470
+DF d6 p470
+Snapshot d288 "288-B" Value="data/288-B.csv" Time="2017-04-06T19.25.44EDT";
+DF p470 d288
+Operation p471 "471-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="39.386" Script="0" Pos="NA,NA,NA,NA";
+CF p470 p471
+DF d14 p471
+DF d279 p471
+DF d7 p471
+DF d287 p471
+DF d283 p471
+DF d19 p471
+DF d26 p471
+Snapshot d289 "289-A" Value="data/289-A.csv" Time="2017-04-06T19.25.46EDT";
+DF p471 d289
+Operation p472 "472-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="39.697" Script="0" Pos="NA,NA,NA,NA";
+CF p471 p472
+DF d14 p472
+DF d281 p472
+DF d289 p472
+DF d283 p472
+DF d9 p472
+DF d288 p472
+Snapshot d290 "290-x" Value="data/290-x.csv" Time="2017-04-06T19.25.46EDT";
+DF p472 d290
+Start p473 "473-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="39.836" Script="0" Pos="NA,NA,NA,NA";
+CF p472 p473
+DF d290 p473
+Start p474 "474-if" Value="if" Time="39.877" Script="NA" Pos="NA";
+CF p473 p474
+Operation p475 "475-x[length(x)] <- 0" Value="x[length(x)] <- 0" Time="39.885" Script="0" Pos="NA,NA,NA,NA";
+CF p474 p475
+DF d290 p475
+Snapshot d291 "291-x" Value="data/291-x.csv" Time="2017-04-06T19.25.47EDT";
+DF p475 d291
+Finish p476 "476-if" Value="if" Time="39.915" Script="NA" Pos="NA";
+CF p475 p476
+Finish p477 "477-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="39.923" Script="0" Pos="NA,NA,NA,NA";
+CF p476 p477
+Finish p478 "478-for loop" Value="for loop" Time="40.037" Script="NA" Pos="NA";
+CF p477 p478
+Start p479 "479-for loop" Value="for loop" Time="40.044" Script="NA" Pos="NA";
+CF p478 p479
+Operation p480 "480-j <- 7" Value="j <- 7" Time="40.05" Script="NA" Pos="NA";
+CF p479 p480
+Data d292 "292-j" Value="7";
+DF p480 d292
+Operation p481 "481-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="40.067" Script="0" Pos="NA,NA,NA,NA";
+CF p480 p481
+DF d14 p481
+DF d283 p481
+Snapshot d293 "293-minute" Value="data/293-minute.csv" Time="2017-04-06T19.25.50EDT";
+DF p481 d293
+Operation p482 "482-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="40.143" Script="0" Pos="NA,NA,NA,NA";
+CF p481 p482
+DF d285 p482
+DF d293 p482
+DF d4 p482
+DF d17 p482
+Data d294 "294-wt" Value="1.26367369546428";
+DF p482 d294
+Start p483 "483-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="40.275" Script="0" Pos="NA,NA,NA,NA";
+CF p482 p483
+DF d292 p483
+DF d13 p483
+DF d285 p483
+DF d294 p483
+DF d24 p483
+DF d231 p483
+Start p484 "484-if" Value="if" Time="40.514" Script="NA" Pos="NA";
+CF p483 p484
+Operation p485 "485-w <- c(w, wt)" Value="w <- c(w, wt)" Time="40.521" Script="0" Pos="NA,NA,NA,NA";
+CF p484 p485
+DF d14 p485
+DF d285 p485
+DF d294 p485
+Snapshot d295 "295-w" Value="data/295-w.csv" Time="2017-04-06T19.25.52EDT";
+DF p485 d295
+Finish p486 "486-if" Value="if" Time="40.582" Script="NA" Pos="NA";
+CF p485 p486
+Finish p487 "487-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="40.588" Script="0" Pos="NA,NA,NA,NA";
+CF p486 p487
+Operation p488 "488-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="40.595" Script="0" Pos="NA,NA,NA,NA";
+CF p487 p488
+DF d14 p488
+DF d286 p488
+DF d291 p488
+DF d293 p488
+DF d295 p488
+Snapshot d296 "296-n" Value="data/296-n.csv" Time="2017-04-06T19.25.53EDT";
+DF p488 d296
+Operation p489 "489-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="40.808" Script="0" Pos="NA,NA,NA,NA";
+CF p488 p489
+DF d14 p489
+DF d287 p489
+DF d296 p489
+DF d12 p489
+DF d5 p489
+DF d11 p489
+DF d10 p489
+Snapshot d297 "297-a" Value="data/297-a.csv" Time="2017-04-06T19.25.54EDT";
+DF p489 d297
+Operation p490 "490-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="41.047" Script="0" Pos="NA,NA,NA,NA";
+CF p489 p490
+DF d14 p490
+DF d288 p490
+DF d7 p490
+DF d297 p490
+DF d293 p490
+DF d20 p490
+DF d295 p490
+DF d6 p490
+Snapshot d298 "298-B" Value="data/298-B.csv" Time="2017-04-06T19.25.55EDT";
+DF p490 d298
+Operation p491 "491-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="41.339" Script="0" Pos="NA,NA,NA,NA";
+CF p490 p491
+DF d14 p491
+DF d289 p491
+DF d7 p491
+DF d297 p491
+DF d293 p491
+DF d19 p491
+DF d26 p491
+Snapshot d299 "299-A" Value="data/299-A.csv" Time="2017-04-06T19.25.56EDT";
+DF p491 d299
+Operation p492 "492-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="41.529" Script="0" Pos="NA,NA,NA,NA";
+CF p491 p492
+DF d14 p492
+DF d291 p492
+DF d299 p492
+DF d293 p492
+DF d9 p492
+DF d298 p492
+Snapshot d300 "300-x" Value="data/300-x.csv" Time="2017-04-06T19.25.57EDT";
+DF p492 d300
+Start p493 "493-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="41.777" Script="0" Pos="NA,NA,NA,NA";
+CF p492 p493
+DF d300 p493
+Start p494 "494-if" Value="if" Time="41.818" Script="NA" Pos="NA";
+CF p493 p494
+Operation p495 "495-x[length(x)] <- 0" Value="x[length(x)] <- 0" Time="41.826" Script="0" Pos="NA,NA,NA,NA";
+CF p494 p495
+DF d300 p495
+Snapshot d301 "301-x" Value="data/301-x.csv" Time="2017-04-06T19.25.58EDT";
+DF p495 d301
+Finish p496 "496-if" Value="if" Time="41.858" Script="NA" Pos="NA";
+CF p495 p496
+Finish p497 "497-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="41.864" Script="0" Pos="NA,NA,NA,NA";
+CF p496 p497
+Finish p498 "498-for loop" Value="for loop" Time="41.874" Script="NA" Pos="NA";
+CF p497 p498
+Start p499 "499-for loop" Value="for loop" Time="41.88" Script="NA" Pos="NA";
+CF p498 p499
+Operation p500 "500-j <- 8" Value="j <- 8" Time="41.886" Script="NA" Pos="NA";
+CF p499 p500
+Data d302 "302-j" Value="8";
+DF p500 d302
+Operation p501 "501-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="42.014" Script="0" Pos="NA,NA,NA,NA";
+CF p500 p501
+DF d14 p501
+DF d293 p501
+Snapshot d303 "303-minute" Value="data/303-minute.csv" Time="2017-04-06T19.25.59EDT";
+DF p501 d303
+Operation p502 "502-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="42.125" Script="0" Pos="NA,NA,NA,NA";
+CF p501 p502
+DF d295 p502
+DF d303 p502
+DF d4 p502
+DF d17 p502
+Data d304 "304-wt" Value="1.26324727755414";
+DF p502 d304
+Start p503 "503-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="42.291" Script="0" Pos="NA,NA,NA,NA";
+CF p502 p503
+DF d302 p503
+DF d13 p503
+DF d295 p503
+DF d304 p503
+DF d24 p503
+DF d231 p503
+Start p504 "504-if" Value="if" Time="42.596" Script="NA" Pos="NA";
+CF p503 p504
+Operation p505 "505-w <- c(w, wt)" Value="w <- c(w, wt)" Time="42.604" Script="0" Pos="NA,NA,NA,NA";
+CF p504 p505
+DF d14 p505
+DF d295 p505
+DF d304 p505
+Snapshot d305 "305-w" Value="data/305-w.csv" Time="2017-04-06T19.26.01EDT";
+DF p505 d305
+Finish p506 "506-if" Value="if" Time="42.712" Script="NA" Pos="NA";
+CF p505 p506
+Finish p507 "507-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="42.718" Script="0" Pos="NA,NA,NA,NA";
+CF p506 p507
+Operation p508 "508-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="42.725" Script="0" Pos="NA,NA,NA,NA";
+CF p507 p508
+DF d14 p508
+DF d296 p508
+DF d301 p508
+DF d303 p508
+DF d305 p508
+Snapshot d306 "306-n" Value="data/306-n.csv" Time="2017-04-06T19.26.02EDT";
+DF p508 d306
+Operation p509 "509-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="43.001" Script="0" Pos="NA,NA,NA,NA";
+CF p508 p509
+DF d14 p509
+DF d297 p509
+DF d306 p509
+DF d12 p509
+DF d5 p509
+DF d11 p509
+DF d10 p509
+Snapshot d307 "307-a" Value="data/307-a.csv" Time="2017-04-06T19.26.03EDT";
+DF p509 d307
+Operation p510 "510-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="43.31" Script="0" Pos="NA,NA,NA,NA";
+CF p509 p510
+DF d14 p510
+DF d298 p510
+DF d7 p510
+DF d307 p510
+DF d303 p510
+DF d20 p510
+DF d305 p510
+DF d6 p510
+Snapshot d308 "308-B" Value="data/308-B.csv" Time="2017-04-06T19.26.05EDT";
+DF p510 d308
+Operation p511 "511-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="43.694" Script="0" Pos="NA,NA,NA,NA";
+CF p510 p511
+DF d14 p511
+DF d299 p511
+DF d7 p511
+DF d307 p511
+DF d303 p511
+DF d19 p511
+DF d26 p511
+Snapshot d309 "309-A" Value="data/309-A.csv" Time="2017-04-06T19.26.05EDT";
+DF p511 d309
+Operation p512 "512-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="43.95" Script="0" Pos="NA,NA,NA,NA";
+CF p511 p512
+DF d14 p512
+DF d301 p512
+DF d309 p512
+DF d303 p512
+DF d9 p512
+DF d308 p512
+Snapshot d310 "310-x" Value="data/310-x.csv" Time="2017-04-06T19.26.06EDT";
+DF p512 d310
+Start p513 "513-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="44.242" Script="0" Pos="NA,NA,NA,NA";
+CF p512 p513
+DF d310 p513
+Start p514 "514-if" Value="if" Time="44.293" Script="NA" Pos="NA";
+CF p513 p514
+Operation p515 "515-x[length(x)] <- 0" Value="x[length(x)] <- 0" Time="44.3" Script="0" Pos="NA,NA,NA,NA";
+CF p514 p515
+DF d310 p515
+Snapshot d311 "311-x" Value="data/311-x.csv" Time="2017-04-06T19.26.06EDT";
+DF p515 d311
+Finish p516 "516-if" Value="if" Time="44.339" Script="NA" Pos="NA";
+CF p515 p516
+Finish p517 "517-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="44.345" Script="0" Pos="NA,NA,NA,NA";
+CF p516 p517
+Finish p518 "518-for loop" Value="for loop" Time="44.352" Script="NA" Pos="NA";
+CF p517 p518
+Start p519 "519-for loop" Value="for loop" Time="44.361" Script="NA" Pos="NA";
+CF p518 p519
+Operation p520 "520-j <- 9" Value="j <- 9" Time="44.369" Script="NA" Pos="NA";
+CF p519 p520
+Data d312 "312-j" Value="9";
+DF p520 d312
+Operation p521 "521-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="44.519" Script="0" Pos="NA,NA,NA,NA";
+CF p520 p521
+DF d14 p521
+DF d303 p521
+Snapshot d313 "313-minute" Value="data/313-minute.csv" Time="2017-04-06T19.26.07EDT";
+DF p521 d313
+Operation p522 "522-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="44.618" Script="0" Pos="NA,NA,NA,NA";
+CF p521 p522
+DF d305 p522
+DF d313 p522
+DF d4 p522
+DF d17 p522
+Data d314 "314-wt" Value="1.26282100353575";
+DF p522 d314
+Start p523 "523-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="44.784" Script="0" Pos="NA,NA,NA,NA";
+CF p522 p523
+DF d312 p523
+DF d13 p523
+DF d305 p523
+DF d314 p523
+DF d24 p523
+DF d231 p523
+Start p524 "524-if" Value="if" Time="45.087" Script="NA" Pos="NA";
+CF p523 p524
+Operation p525 "525-w <- c(w, wt)" Value="w <- c(w, wt)" Time="45.094" Script="0" Pos="NA,NA,NA,NA";
+CF p524 p525
+DF d14 p525
+DF d305 p525
+DF d314 p525
+Snapshot d315 "315-w" Value="data/315-w.csv" Time="2017-04-06T19.26.09EDT";
+DF p525 d315
+Finish p526 "526-if" Value="if" Time="45.186" Script="NA" Pos="NA";
+CF p525 p526
+Finish p527 "527-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="45.193" Script="0" Pos="NA,NA,NA,NA";
+CF p526 p527
+Operation p528 "528-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="45.203" Script="0" Pos="NA,NA,NA,NA";
+CF p527 p528
+DF d14 p528
+DF d306 p528
+DF d311 p528
+DF d313 p528
+DF d315 p528
+Snapshot d316 "316-n" Value="data/316-n.csv" Time="2017-04-06T19.26.10EDT";
+DF p528 d316
+Operation p529 "529-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="45.466" Script="0" Pos="NA,NA,NA,NA";
+CF p528 p529
+DF d14 p529
+DF d307 p529
+DF d316 p529
+DF d12 p529
+DF d5 p529
+DF d11 p529
+DF d10 p529
+Snapshot d317 "317-a" Value="data/317-a.csv" Time="2017-04-06T19.26.11EDT";
+DF p529 d317
+Operation p530 "530-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="45.755" Script="0" Pos="NA,NA,NA,NA";
+CF p529 p530
+DF d14 p530
+DF d308 p530
+DF d7 p530
+DF d317 p530
+DF d313 p530
+DF d20 p530
+DF d315 p530
+DF d6 p530
+Snapshot d318 "318-B" Value="data/318-B.csv" Time="2017-04-06T19.26.13EDT";
+DF p530 d318
+Operation p531 "531-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="46.136" Script="0" Pos="NA,NA,NA,NA";
+CF p530 p531
+DF d14 p531
+DF d309 p531
+DF d7 p531
+DF d317 p531
+DF d313 p531
+DF d19 p531
+DF d26 p531
+Snapshot d319 "319-A" Value="data/319-A.csv" Time="2017-04-06T19.26.14EDT";
+DF p531 d319
+Operation p532 "532-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="46.382" Script="0" Pos="NA,NA,NA,NA";
+CF p531 p532
+DF d14 p532
+DF d311 p532
+DF d319 p532
+DF d313 p532
+DF d9 p532
+DF d318 p532
+Snapshot d320 "320-x" Value="data/320-x.csv" Time="2017-04-06T19.26.15EDT";
+DF p532 d320
+Start p533 "533-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="46.674" Script="0" Pos="NA,NA,NA,NA";
+CF p532 p533
+DF d320 p533
+Start p534 "534-if" Value="if" Time="46.729" Script="NA" Pos="NA";
+CF p533 p534
+Operation p535 "535-x[length(x)] <- 0" Value="x[length(x)] <- 0" Time="46.737" Script="0" Pos="NA,NA,NA,NA";
+CF p534 p535
+DF d320 p535
+Snapshot d321 "321-x" Value="data/321-x.csv" Time="2017-04-06T19.26.15EDT";
+DF p535 d321
+Finish p536 "536-if" Value="if" Time="46.776" Script="NA" Pos="NA";
+CF p535 p536
+Finish p537 "537-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="46.782" Script="0" Pos="NA,NA,NA,NA";
+CF p536 p537
+Finish p538 "538-for loop" Value="for loop" Time="46.793" Script="NA" Pos="NA";
+CF p537 p538
+Start p539 "539-for loop" Value="for loop" Time="46.799" Script="NA" Pos="NA";
+CF p538 p539
+Operation p540 "540-j <- 10" Value="j <- 10" Time="46.915" Script="NA" Pos="NA";
+CF p539 p540
+Data d322 "322-j" Value="10";
+DF p540 d322
+Operation p541 "541-minute <- c(minute, minute[length(minute)] + 1)" Value="minute <- c(minute, minute[length(minute)] + 1)" Time="46.937" Script="0" Pos="NA,NA,NA,NA";
+CF p540 p541
+DF d14 p541
+DF d313 p541
+Snapshot d323 "323-minute" Value="data/323-minute.csv" Time="2017-04-06T19.26.16EDT";
+DF p541 d323
+Operation p542 "542-wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Value="wt <- decomp(w[length(minute) - 1], beta = beta, w.w = w.w)" Time="47.036" Script="0" Pos="NA,NA,NA,NA";
+CF p541 p542
+DF d315 p542
+DF d323 p542
+DF d4 p542
+DF d17 p542
+Data d324 "324-wt" Value="1.26239487336057";
+DF p542 d324
+Start p543 "543-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="47.195" Script="0" Pos="NA,NA,NA,NA";
+CF p542 p543
+DF d322 p543
+DF d13 p543
+DF d315 p543
+DF d324 p543
+DF d24 p543
+DF d231 p543
+Start p544 "544-if" Value="if" Time="47.501" Script="NA" Pos="NA";
+CF p543 p544
+Operation p545 "545-w <- c(w, wt)" Value="w <- c(w, wt)" Time="47.509" Script="0" Pos="NA,NA,NA,NA";
+CF p544 p545
+DF d14 p545
+DF d315 p545
+DF d324 p545
+Snapshot d325 "325-w" Value="data/325-w.csv" Time="2017-04-06T19.26.18EDT";
+DF p545 d325
+Finish p546 "546-if" Value="if" Time="47.605" Script="NA" Pos="NA";
+CF p545 p546
+Finish p547 "547-if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Value="if (j == feedingTime) {    w <- c(w, wt + foodWeight[z])} el" Time="47.611" Script="0" Pos="NA,NA,NA,NA";
+CF p546 p547
+Operation p548 "548-n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Value="n <- c(n, mineralization(x[length(minute) - 1], w[length(min" Time="47.62" Script="0" Pos="NA,NA,NA,NA";
+CF p547 p548
+DF d14 p548
+DF d316 p548
+DF d321 p548
+DF d323 p548
+DF d325 p548
+Snapshot d326 "326-n" Value="data/326-n.csv" Time="2017-04-06T19.26.19EDT";
+DF p548 d326
+Operation p549 "549-a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Value="a <- c(a, augmentation(n[length(n)], s, d, aMin, aMax))" Time="47.867" Script="0" Pos="NA,NA,NA,NA";
+CF p548 p549
+DF d14 p549
+DF d317 p549
+DF d326 p549
+DF d12 p549
+DF d5 p549
+DF d11 p549
+DF d10 p549
+Snapshot d327 "327-a" Value="data/327-a.csv" Time="2017-04-06T19.26.20EDT";
+DF p549 d327
+Operation p550 "550-B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Value="B <- c(B, (Amax * ((a[length(minute)] * Bscalar) * (w[length" Time="48.156" Script="0" Pos="NA,NA,NA,NA";
+CF p549 p550
+DF d14 p550
+DF d318 p550
+DF d7 p550
+DF d327 p550
+DF d323 p550
+DF d20 p550
+DF d325 p550
+DF d6 p550
+Snapshot d328 "328-B" Value="data/328-B.csv" Time="2017-04-06T19.26.22EDT";
+DF p550 d328
+Operation p551 "551-A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Value="A <- c(A, (Amax * (a[length(minute)] * Ascalar) * P[length(m" Time="48.508" Script="0" Pos="NA,NA,NA,NA";
+CF p550 p551
+DF d14 p551
+DF d319 p551
+DF d7 p551
+DF d327 p551
+DF d323 p551
+DF d19 p551
+DF d26 p551
+Snapshot d329 "329-A" Value="data/329-A.csv" Time="2017-04-06T19.26.23EDT";
+DF p551 d329
+Operation p552 "552-x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Value="x <- c(x, A[length(minute)] - (m + B[length(minute)]))" Time="48.842" Script="0" Pos="NA,NA,NA,NA";
+CF p551 p552
+DF d14 p552
+DF d321 p552
+DF d329 p552
+DF d323 p552
+DF d9 p552
+DF d328 p552
+Snapshot d330 "330-x" Value="data/330-x.csv" Time="2017-04-06T19.26.24EDT";
+DF p552 d330
+Start p553 "553-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="49.016" Script="0" Pos="NA,NA,NA,NA";
+CF p552 p553
+DF d330 p553
+Start p554 "554-if" Value="if" Time="49.065" Script="NA" Pos="NA";
+CF p553 p554
+Operation p555 "555-x[length(x)] <- 0" Value="x[length(x)] <- 0" Time="49.072" Script="0" Pos="NA,NA,NA,NA";
+CF p554 p555
+DF d330 p555
+Snapshot d331 "331-x" Value="data/331-x.csv" Time="2017-04-06T19.26.24EDT";
+DF p555 d331
+Finish p556 "556-if" Value="if" Time="49.111" Script="NA" Pos="NA";
+CF p555 p556
+Finish p557 "557-if (x[length(x)] < 0) {    x[length(x)] <- 0}" Value="if (x[length(x)] < 0) {    x[length(x)] <- 0}" Time="49.217" Script="0" Pos="NA,NA,NA,NA";
+CF p556 p557
+Finish p558 "558-for loop" Value="for loop" Time="49.225" Script="NA" Pos="NA";
+CF p557 p558
+Incomplete p559 "559-Details Omitted" Value="Details Omitted" Time="49.765" Script="NA" Pos="NA";
+CF p558 p559
+Finish p560 "560-for (j in 1:1440) {    if (verbose) {        print(c(z, j, m" Value="for (j in 1:1440) {    if (verbose) {        print(c(z, j, m" Time="49.772" Script="0" Pos="NA,NA,NA,NA";
+CF p559 p560
+Snapshot d332 "332-minute" Value="data/332-minute.csv" Time="2017-04-06T19.26.26EDT";
+DF p560 d332
+Data d333 "333-wt" Value="1.56337266818082";
+DF p560 d333
+Snapshot d334 "334-w" Value="data/334-w.csv" Time="2017-04-06T19.26.27EDT";
+DF p560 d334
+Snapshot d335 "335-n" Value="data/335-n.csv" Time="2017-04-06T19.26.27EDT";
+DF p560 d335
+Snapshot d336 "336-a" Value="data/336-a.csv" Time="2017-04-06T19.26.27EDT";
+DF p560 d336
+Snapshot d337 "337-B" Value="data/337-B.csv" Time="2017-04-06T19.26.27EDT";
+DF p560 d337
+Snapshot d338 "338-A" Value="data/338-A.csv" Time="2017-04-06T19.26.27EDT";
+DF p560 d338
+Snapshot d339 "339-x" Value="data/339-x.csv" Time="2017-04-06T19.26.27EDT";
+DF p560 d339
+Finish p561 "561-for loop" Value="for loop" Time="49.947" Script="NA" Pos="NA";
+CF p560 p561
+Finish p562 "562-for (z in 1:days) {    for (j in 1:1440) {        if (verbos" Value="for (z in 1:days) {    for (j in 1:1440) {        if (verbos" Time="49.953" Script="0" Pos="61,5,92,5";
+CF p561 p562
+Snapshot d340 "340-minute" Value="data/340-minute.csv" Time="2017-04-06T19.26.27EDT";
+DF p562 d340
+Snapshot d341 "341-n" Value="data/341-n.csv" Time="2017-04-06T19.26.27EDT";
+DF p562 d341
+Snapshot d342 "342-a" Value="data/342-a.csv" Time="2017-04-06T19.26.27EDT";
+DF p562 d342
+Snapshot d343 "343-B" Value="data/343-B.csv" Time="2017-04-06T19.26.28EDT";
+DF p562 d343
+Snapshot d344 "344-A" Value="data/344-A.csv" Time="2017-04-06T19.26.28EDT";
+DF p562 d344
+Snapshot d345 "345-x" Value="data/345-x.csv" Time="2017-04-06T19.26.28EDT";
+DF p562 d345
+Data d346 "346-wt" Value="1.56337266818082";
+DF p562 d346
+Snapshot d347 "347-w" Value="data/347-w.csv" Time="2017-04-06T19.26.28EDT";
+DF p562 d347
+Operation p563 "563-minute <- minute[1:length(P)]" Value="minute <- minute[1:length(P)]" Time="50.227" Script="0" Pos="95,5,95,33";
+CF p562 p563
+DF d340 p563
+DF d26 p563
+Snapshot d348 "348-minute" Value="data/348-minute.csv" Time="2017-04-06T19.26.28EDT";
+DF p563 d348
+Operation p564 "564-Control <- (P * Amax * (augmentation(0, s, d, aMin, aMax) * " Value="Control <- (P * Amax * (augmentation(0, s, d, aMin, aMax) * " Time="50.327" Script="0" Pos="96,5,96,69";
+CF p563 p564
+DF d26 p564
+DF d7 p564
+DF d12 p564
+DF d5 p564
+DF d11 p564
+DF d10 p564
+DF d19 p564
+Snapshot d349 "349-Control" Value="data/349-Control.csv" Time="2017-04-06T19.26.30EDT";
+DF p564 d349
+Operation p565 "565-A <- A[1:length(P)]" Value="A <- A[1:length(P)]" Time="50.772" Script="0" Pos="97,5,97,23";
+CF p564 p565
+DF d344 p565
+DF d26 p565
+Snapshot d350 "350-A" Value="data/350-A.csv" Time="2017-04-06T19.26.30EDT";
+DF p565 d350
+Operation p566 "566-B <- B[1:length(P)]" Value="B <- B[1:length(P)]" Time="50.873" Script="0" Pos="98,5,98,23";
+CF p565 p566
+DF d343 p566
+DF d26 p566
+Snapshot d351 "351-B" Value="data/351-B.csv" Time="2017-04-06T19.26.30EDT";
+DF p566 d351
+Operation p567 "567-n <- n[1:length(P)]" Value="n <- n[1:length(P)]" Time="51.073" Script="0" Pos="99,5,99,23";
+CF p566 p567
+DF d341 p567
+DF d26 p567
+Snapshot d352 "352-n" Value="data/352-n.csv" Time="2017-04-06T19.26.31EDT";
+DF p567 d352
+Operation p568 "568-a <- a[1:length(P)]" Value="a <- a[1:length(P)]" Time="51.17" Script="0" Pos="100,5,100,23";
+CF p567 p568
+DF d342 p568
+DF d26 p568
+Snapshot d353 "353-a" Value="data/353-a.csv" Time="2017-04-06T19.26.31EDT";
+DF p568 d353
+Start p569 "569-if (decycle) {    x <- x[1:length(P)] - Control} else {    x" Value="if (decycle) {    x <- x[1:length(P)] - Control} else {    x" Time="51.276" Script="0" Pos="101,5,101,72";
+CF p568 p569
+DF d23 p569
+DF d345 p569
+DF d26 p569
+DF d349 p569
+Start p570 "570-if" Value="if" Time="51.419" Script="NA" Pos="NA";
+CF p569 p570
+Operation p571 "571-x <- x[1:length(P)]" Value="x <- x[1:length(P)]" Time="51.526" Script="0" Pos="NA,NA,NA,NA";
+CF p570 p571
+DF d345 p571
+DF d26 p571
+Snapshot d354 "354-x" Value="data/354-x.csv" Time="2017-04-06T19.26.32EDT";
+DF p571 d354
+Finish p572 "572-if" Value="if" Time="51.617" Script="NA" Pos="NA";
+CF p571 p572
+Finish p573 "573-if (decycle) {    x <- x[1:length(P)] - Control} else {    x" Value="if (decycle) {    x <- x[1:length(P)] - Control} else {    x" Time="51.623" Script="0" Pos="101,5,101,72";
+CF p572 p573
+Operation p574 "574-w <- w[1:length(P)]" Value="w <- w[1:length(P)]" Time="51.63" Script="0" Pos="102,5,102,23";
+CF p573 p574
+DF d347 p574
+DF d26 p574
+Snapshot d355 "355-w" Value="data/355-w.csv" Time="2017-04-06T19.26.33EDT";
+DF p574 d355
+Operation p575 "575-data <- data.frame(minute, x, Control, A, B, w, n, a)" Value="data <- data.frame(minute, x, Control, A, B, w, n, a)" Time="51.738" Script="0" Pos="104,5,104,57";
+CF p574 p575
+DF d348 p575
+DF d354 p575
+DF d349 p575
+DF d350 p575
+DF d351 p575
+DF d355 p575
+DF d352 p575
+DF d353 p575
+Snapshot d356 "356-data" Value="data/356-data.csv" Time="2017-04-06T19.26.33EDT";
+DF p575 d356
+Operation p576 "576-colnames(data) <- c(\"Minute\", \"Oxygen\", \"Control\", \"Photosyn" Value="colnames(data) <- c(\"Minute\", \"Oxygen\", \"Control\", \"Photosyn" Time="52.025" Script="0" Pos="105,5,107,57";
+CF p575 p576
+DF d356 p576
+DF d14 p576
+Snapshot d357 "357-data" Value="data/357-data.csv" Time="2017-04-06T19.26.34EDT";
+DF p576 d357
+Finish p577 "577-pp_script.R" Value="pp_script.R" Time="52.184" Script="NA" Pos="NA";
+CF p576 p577
+
