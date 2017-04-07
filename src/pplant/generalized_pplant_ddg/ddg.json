@@ -1,0 +1,160 @@
+{
+
+"prefix" : {
+"prov" : "http://www.w3.org/ns/prov#",
+"rdt" : "http://rdatatracker.org/"
+},
+"activity":{
+
+"p1" : {
+"rdt:name" : "generalized_pplant.R",
+"rdt:type" : "Start",
+"rdt:elapsedTime" : "0.0289999999999999",
+"rdt:scriptNum" : "NA",
+"rdt:startLine" : "NA",
+"rdt:startCol" : "NA",
+"rdt:endLine" : "NA",
+"rdt:endCol" : "NA"
+} ,
+
+"p2" : {
+"rdt:name" : "x <- exp(1)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.0319999999999996",
+"rdt:scriptNum" : "0",
+"rdt:startLine" : "3",
+"rdt:startCol" : "1",
+"rdt:endLine" : "3",
+"rdt:endCol" : "11"
+} ,
+
+"p3" : {
+"rdt:name" : "y <- exp(x)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.0550000000000002",
+"rdt:scriptNum" : "0",
+"rdt:startLine" : "7",
+"rdt:startCol" : "1",
+"rdt:endLine" : "7",
+"rdt:endCol" : "11"
+} ,
+
+"p4" : {
+"rdt:name" : "z <- y + 10",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.0829999999999997",
+"rdt:scriptNum" : "0",
+"rdt:startLine" : "9",
+"rdt:startCol" : "1",
+"rdt:endLine" : "9",
+"rdt:endCol" : "11"
+} ,
+
+"p5" : {
+"rdt:name" : "generalized_pplant.R",
+"rdt:type" : "Finish",
+"rdt:elapsedTime" : "0.112",
+"rdt:scriptNum" : "NA",
+"rdt:startLine" : "NA",
+"rdt:startCol" : "NA",
+"rdt:endLine" : "NA",
+"rdt:endCol" : "NA"
+} ,
+
+"environment" : {
+"rdt:name" : "environment",
+"rdt:architecture" : "x86_64",
+"rdt:operatingSystem" : "unix",
+"rdt:language" : "R",
+"rdt:rVersion" : "R version 3.3.3 (2017-03-06)",
+"rdt:script" : "/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src/pplant/generalized_pplant.R",
+"rdt:sourcedScripts" : ""
+,
+"rdt:scriptTimeStamp" : "2017-04-07T10.46.43EDT",
+"rdt:workingDirectory" : "/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src/pplant",
+"rdt:ddgDirectory" : "./generalized_pplant_ddg",
+"rdt:ddgTimeStamp" : "2017-04-07T10.47.14EDT",
+"rdt:rdatatrackerVersion" : "2.25.1",
+"rdt:installedPackages" : [
+	{"package" : "RDataTracker", "version" : "2.25.1"}]
+}},
+"entity":{
+
+"d1" : {
+"rdt:name" : "x",
+"rdt:value" : "2.71828182845905",
+"rdt:type" : "Data",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d2" : {
+"rdt:name" : "y",
+"rdt:value" : "15.1542622414793",
+"rdt:type" : "Data",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d3" : {
+"rdt:name" : "z",
+"rdt:value" : "25.1542622414793",
+"rdt:type" : "Data",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+}},
+"wasInformedBy":{
+
+"e1" : {
+"prov:informant" : "p1",
+"prov:informed" : "p2"
+} ,
+
+"e3" : {
+"prov:informant" : "p2",
+"prov:informed" : "p3"
+} ,
+
+"e6" : {
+"prov:informant" : "p3",
+"prov:informed" : "p4"
+} ,
+
+"e9" : {
+"prov:informant" : "p4",
+"prov:informed" : "p5"
+}},
+"wasGeneratedBy":{
+
+"e2" : {
+"prov:entity" : "d1",
+"prov:activity" : "p2"
+} ,
+
+"e5" : {
+"prov:entity" : "d2",
+"prov:activity" : "p3"
+} ,
+
+"e8" : {
+"prov:entity" : "d3",
+"prov:activity" : "p4"
+}},
+"used":{
+
+"e4" : {
+"prov:activity" : "p3",
+"prov:entity" : "d1"
+} ,
+
+"e7" : {
+"prov:activity" : "p4",
+"prov:entity" : "d2"
+}}
+}
