@@ -1,0 +1,50 @@
+Architecture="x86_64"
+OperatingSystem="unix"
+Language="R"
+LanguageVersion="R version 3.3.3 (2017-03-06)"
+RDataTrackerVersion="2.26.1"
+Script="/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/hashtable/HT3.R"
+SourcedScripts=""
+ProcessFileTimestamp="2017-06-09T17.27.44EDT"
+WorkingDirectory="/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/hashtable"
+DDGDirectory="./HT3_ddg"
+DateTime="2017-06-12T09.07.16EDT"
+InstalledPackages="base 3.3.3, datasets 3.3.3, devtools 1.13.2, graphics 3.3.3, grDevices 3.3.3, methods 3.3.3, RDataTracker 2.26.1, stats 3.3.3, utils 3.3.3"
+8
+Start p1 "1-HT3.R" Value="HT3.R" Time="0.052999999999999" Script="NA" Pos="NA";
+Operation p2 "2-x <- read.csv(\"x.csv\")" Value="x <- read.csv(\"x.csv\")" Time="0.0579999999999998" Script="0" Pos="3,1,3,22";
+CF p1 p2
+File d1 "1-x.csv" Value="data/1-x.csv" ValType="{"container":"vector", "dimension":[1], "type":["character"]}" Time="2017-06-12T09.07.16EDT" Location="/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/hashtable/x.csv" MD5 Hash="17ff646f1bd300498265602c523aa301" RW="read";
+DF d1 p2
+Snapshot d2 "2-x" Value="data/2-x.csv" ValType="{"container":"data_frame", "dimension":[5,2], "type":["integer","integer"]}" Time="2017-06-12T09.07.16EDT";
+DF p2 d2
+Operation p3 "3-xy <- read.csv(\"xy.csv\")" Value="xy <- read.csv(\"xy.csv\")" Time="0.196" Script="0" Pos="4,1,4,24";
+CF p2 p3
+File d3 "3-xy.csv" Value="data/3-xy.csv" ValType="{"container":"vector", "dimension":[1], "type":["character"]}" Time="2017-06-12T09.07.16EDT" Location="/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/hashtable/xy.csv" MD5 Hash="ac4d1e426f1008bdb45f72fce18f9d4d" RW="read";
+DF d3 p3
+Snapshot d4 "4-xy" Value="data/4-xy.csv" ValType="{"container":"data_frame", "dimension":[5,3], "type":["integer","integer","integer"]}" Time="2017-06-12T09.07.16EDT";
+DF p3 d4
+Operation p4 "4-write.csv(x, \"x2.csv\")" Value="write.csv(x, \"x2.csv\")" Time="0.242000000000001" Script="0" Pos="5,1,5,21";
+CF p3 p4
+DF d2 p4
+File d5 "5-x2.csv" Value="data/5-x2.csv" ValType="{"container":"vector", "dimension":[1], "type":["character"]}" Time="2017-06-12T09.07.16EDT" Location="/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/hashtable/x2.csv" MD5 Hash="9d32689cd84c8927afa1c69690d4c797" RW="write";
+DF p4 d5
+Operation p5 "5-xyz <- read.csv(\"xyz.csv\")" Value="xyz <- read.csv(\"xyz.csv\")" Time="0.275" Script="0" Pos="6,1,6,26";
+CF p4 p5
+File d6 "6-xyz.csv" Value="data/6-xyz.csv" ValType="{"container":"vector", "dimension":[1], "type":["character"]}" Time="2017-06-12T09.07.16EDT" Location="/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/hashtable/xyz.csv" MD5 Hash="a7fb8bce93bc9351486f8bd9681e28de" RW="read";
+DF d6 p5
+Snapshot d7 "7-xyz" Value="data/7-xyz.csv" ValType="{"container":"data_frame", "dimension":[5,4], "type":["integer","integer","integer","integer"]}" Time="2017-06-12T09.07.16EDT";
+DF p5 d7
+Operation p6 "6-write.csv(xy, \"xy2.csv\")" Value="write.csv(xy, \"xy2.csv\")" Time="0.311999999999999" Script="0" Pos="7,1,7,23";
+CF p5 p6
+DF d4 p6
+File d8 "8-xy2.csv" Value="data/8-xy2.csv" ValType="{"container":"vector", "dimension":[1], "type":["character"]}" Time="2017-06-12T09.07.16EDT" Location="/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/hashtable/xy2.csv" MD5 Hash="08e93f242170027866419d7ec91cee3b" RW="write";
+DF p6 d8
+Operation p7 "7-write.csv(xyz, \"xyz2.csv\")" Value="write.csv(xyz, \"xyz2.csv\")" Time="0.343" Script="0" Pos="8,1,8,25";
+CF p6 p7
+DF d7 p7
+File d9 "9-xyz2.csv" Value="data/9-xyz2.csv" ValType="{"container":"vector", "dimension":[1], "type":["character"]}" Time="2017-06-12T09.07.16EDT" Location="/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/hashtable/xyz2.csv" MD5 Hash="22e266e840f61c6b256fd2b0aa242acb" RW="write";
+DF p7 d9
+Finish p8 "8-HT3.R" Value="HT3.R" Time="0.375" Script="NA" Pos="NA";
+CF p7 p8
+

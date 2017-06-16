@@ -20,7 +20,7 @@
 "p2" : {
 "rdt:name" : "x <- exp(1)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.0319999999999996",
+"rdt:elapsedTime" : "0.0319999999999998",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "3",
 "rdt:startCol" : "1",
@@ -31,7 +31,7 @@
 "p3" : {
 "rdt:name" : "y <- exp(x)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.0550000000000002",
+"rdt:elapsedTime" : "0.0489999999999999",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "7",
 "rdt:startCol" : "1",
@@ -42,7 +42,7 @@
 "p4" : {
 "rdt:name" : "z <- y + 10",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.0829999999999997",
+"rdt:elapsedTime" : "0.081",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "9",
 "rdt:startCol" : "1",
@@ -53,7 +53,7 @@
 "p5" : {
 "rdt:name" : "generalized_pplant.R",
 "rdt:type" : "Finish",
-"rdt:elapsedTime" : "0.112",
+"rdt:elapsedTime" : "0.107",
 "rdt:scriptNum" : "NA",
 "rdt:startLine" : "NA",
 "rdt:startCol" : "NA",
@@ -67,13 +67,13 @@
 "rdt:operatingSystem" : "unix",
 "rdt:language" : "R",
 "rdt:rVersion" : "R version 3.3.3 (2017-03-06)",
-"rdt:script" : "/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src/pplant/generalized_pplant.R",
+"rdt:script" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/pplant/generalized_pplant.R",
 "rdt:sourcedScripts" : ""
 ,
 "rdt:scriptTimeStamp" : "2017-04-07T10.46.43EDT",
-"rdt:workingDirectory" : "/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src/pplant",
+"rdt:workingDirectory" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/pplant",
 "rdt:ddgDirectory" : "./generalized_pplant_ddg",
-"rdt:ddgTimeStamp" : "2017-04-07T10.47.14EDT",
+"rdt:ddgTimeStamp" : "2017-04-10T15.34.34EDT",
 "rdt:rdatatrackerVersion" : "2.25.1",
 "rdt:installedPackages" : [
 	{"package" : "RDataTracker", "version" : "2.25.1"}]

@@ -1,0 +1,14 @@
+Architecture="x86_64"
+OperatingSystem="unix"
+Language="R"
+LanguageVersion="R version 3.3.3 (2017-03-06)"
+RDataTrackerVersion="2.26.1"
+Script="HT1.R"
+SourcedScripts=""
+ProcessFileTimestamp="NA"
+WorkingDirectory="/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/hashtable"
+DDGDirectory="./HT1_ddg"
+DateTime="2017-06-09T17.56.39EDT"
+InstalledPackages="base 3.3.3, datasets 3.3.3, devtools 1.13.2, graphics 3.3.3, grDevices 3.3.3, methods 3.3.3, RDataTracker 2.26.1, stats 3.3.3, utils 3.3.3"
+0
+

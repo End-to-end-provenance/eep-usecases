@@ -1,0 +1,68 @@
+{
+
+"prefix" : {
+"prov" : "http://www.w3.org/ns/prov#",
+"rdt" : "http://rdatatracker.org/"
+},
+"activity":{
+
+"p1" : {
+"rdt:name" : "HT2.R",
+"rdt:type" : "Start",
+"rdt:elapsedTime" : "0.249000000000002",
+"rdt:scriptNum" : "NA",
+"rdt:startLine" : "NA",
+"rdt:startCol" : "NA",
+"rdt:endLine" : "NA",
+"rdt:endCol" : "NA"
+} ,
+
+"p2" : {
+"rdt:name" : "x <- read.csv(\"x.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.253000000000004",
+"rdt:scriptNum" : "0",
+"rdt:startLine" : "2",
+"rdt:startCol" : "1",
+"rdt:endLine" : "2",
+"rdt:endCol" : "22"
+} ,
+
+"environment" : {
+"rdt:name" : "environment",
+"rdt:architecture" : "x86_64",
+"rdt:operatingSystem" : "unix",
+"rdt:language" : "R",
+"rdt:rVersion" : "R version 3.3.3 (2017-03-06)",
+"rdt:script" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/hashtable/HT2.R",
+"rdt:sourcedScripts" : ""
+,
+"rdt:scriptTimeStamp" : "2017-06-09T17.27.44EDT",
+"rdt:workingDirectory" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/hashtable",
+"rdt:ddgDirectory" : "./HT2_ddg",
+"rdt:ddgTimeStamp" : "2017-06-09T17.56.41EDT",
+"rdt:rdatatrackerVersion" : "2.26.1",
+"rdt:installedPackages" : [
+	{"package" : "base", "version" : "3.3.3"},
+	{"package" : "datasets", "version" : "3.3.3"},
+	{"package" : "devtools", "version" : "1.13.2"},
+	{"package" : "graphics", "version" : "3.3.3"},
+	{"package" : "grDevices", "version" : "3.3.3"},
+	{"package" : "methods", "version" : "3.3.3"},
+	{"package" : "RDataTracker", "version" : "2.26.1"},
+	{"package" : "stats", "version" : "3.3.3"},
+	{"package" : "utils", "version" : "3.3.3"}]
+}},
+"entity":{
+},
+"wasInformedBy":{
+
+"e1" : {
+"prov:informant" : "p1",
+"prov:informed" : "p2"
+}},
+"wasGeneratedBy":{
+},
+"used":{
+}
+}
