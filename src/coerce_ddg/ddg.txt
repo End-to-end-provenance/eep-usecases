@@ -1,55 +1,62 @@
 Architecture="x86_64"
 OperatingSystem="unix"
 Language="R"
-LanguageVersion="R version 3.3.2 (2016-10-31)"
-RDataTrackerVersion="2.25.1"
-Script="/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src/coerce.R"
+LanguageVersion="R version 3.4.0 (2017-04-21)"
+RDataTrackerVersion="2.26.2"
+Script="/home/vagrant/workspace/eep-usecases/src/coerce.R"
 SourcedScripts=""
-ProcessFileTimestamp="2017-02-16T13.16.27EST"
-WorkingDirectory="/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/src"
+ProcessFileTimestamp="2017-06-28T23.03.47BST"
+WorkingDirectory="/home/vagrant/workspace/eep-usecases/src"
 DDGDirectory="./coerce_ddg"
-DateTime="2017-02-16T13.16.37EST"
-InstalledPackages="devtools 1.12.0, RDataTracker 2.25.1"
-9
-Start p1 "1-coerce.R" Value="coerce.R" Time="9.67" Script="NA" Pos="NA";
-Operation p2 "2-x1 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Value="x1 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Time="9.673" Script="0" Pos="2,1,2,52";
+DateTime="2017-06-29T23.47.35BST"
+InstalledPackages="base 3.4.0, datasets 3.4.0, graphics 3.4.0, grDevices 3.4.0, methods 3.4.0, RDataTracker 2.26.2, stats 3.4.0, utils 3.4.0"
+11
+Start p1 "1-coerce.R" Value="coerce.R" Time="0.205" Script="NA" Pos="NA";
+Operation p2 "2-x1 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Value="x1 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Time="0.222" Script="0" Pos="2,1,2,52";
 CF p1 p2
-Snapshot d1 "1-x1" Value="data/1-x1.csv" Time="2017-02-16T13.16.37EST";
+Snapshot d1 "1-x1" Value="data/1-x1.csv" ValType="\"{\"container\":\"matrix\", \"dimension\":[10,10], \"type\":[\"integer\"]}\"" Time="2017-06-29T23.47.36BST";
 DF p2 d1
-Operation p3 "3-x2 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Value="x2 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Time="9.691" Script="0" Pos="3,1,3,52";
+Operation p3 "3-x2 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Value="x2 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Time="0.326" Script="0" Pos="3,1,3,52";
 CF p2 p3
-Snapshot d2 "2-x2" Value="data/2-x2.csv" Time="2017-02-16T13.16.37EST";
+Snapshot d2 "2-x2" Value="data/2-x2.csv" ValType="\"{\"container\":\"matrix\", \"dimension\":[10,10], \"type\":[\"integer\"]}\"" Time="2017-06-29T23.47.36BST";
 DF p3 d2
-Operation p4 "4-x3 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Value="x3 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Time="9.712" Script="0" Pos="4,1,4,52";
+Operation p4 "4-x3 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Value="x3 <- matrix(sample(1:100, 100, replace = TRUE), nrow = 10)" Time="0.554" Script="0" Pos="4,1,4,52";
 CF p3 p4
-Snapshot d3 "3-x3" Value="data/3-x3.csv" Time="2017-02-16T13.16.37EST";
+Snapshot d3 "3-x3" Value="data/3-x3.csv" ValType="\"{\"container\":\"matrix\", \"dimension\":[10,10], \"type\":[\"integer\"]}\"" Time="2017-06-29T23.47.36BST";
 DF p4 d3
-Operation p5 "5-y <- read.csv(\"../data/addme.csv\")" Value="y <- read.csv(\"../data/addme.csv\")" Time="9.742" Script="0" Pos="5,1,5,34";
+Operation p5 "5-y <- read.csv(\"../data/addme.csv\")" Value="y <- read.csv(\"../data/addme.csv\")" Time="0.563" Script="0" Pos="5,1,5,34";
 CF p4 p5
-File d4 "4-addme.csv" Value="data/4-addme.csv" Time="2017-02-16T13.16.37EST" Location="/Users/hermes/Labs/HF/projects/Dprov/projects/eep-usecases/data/addme.csv";
+File d4 "4-addme.csv" Value="data/4-addme.csv" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-06-29T23.47.36BST" Location="/home/vagrant/workspace/eep-usecases/data/addme.csv";
 DF d4 p5
-Snapshot d5 "5-y" Value="data/5-y.csv" Time="2017-02-16T13.16.37EST";
+Snapshot d5 "5-y" Value="data/5-y.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[10,2], \"type\":[\"integer\",\"factor\"]}\"" Time="2017-06-29T23.47.36BST";
 DF p5 d5
-Operation p6 "6-x1x3 <- cbind(x1, x3)" Value="x1x3 <- cbind(x1, x3)" Time="9.774" Script="0" Pos="8,1,8,20";
+Operation p6 "6-x1x3 <- cbind(x1, x3)" Value="x1x3 <- cbind(x1, x3)" Time="0.576" Script="0" Pos="8,1,8,20";
 CF p5 p6
 DF d1 p6
 DF d3 p6
-Snapshot d6 "6-x1x3" Value="data/6-x1x3.csv" Time="2017-02-16T13.16.38EST";
+Snapshot d6 "6-x1x3" Value="data/6-x1x3.csv" ValType="\"{\"container\":\"matrix\", \"dimension\":[10,20], \"type\":[\"integer\"]}\"" Time="2017-06-29T23.47.36BST";
 DF p6 d6
-Operation p7 "7-x1x2 <- cbind(x1, x2)" Value="x1x2 <- cbind(x1, x2)" Time="9.817" Script="0" Pos="9,1,9,20";
+Operation p7 "7-x1x2 <- cbind(x1, x2)" Value="x1x2 <- cbind(x1, x2)" Time="0.588" Script="0" Pos="9,1,9,20";
 CF p6 p7
 DF d1 p7
 DF d2 p7
-Snapshot d7 "7-x1x2" Value="data/7-x1x2.csv" Time="2017-02-16T13.16.38EST";
+Snapshot d7 "7-x1x2" Value="data/7-x1x2.csv" ValType="\"{\"container\":\"matrix\", \"dimension\":[10,20], \"type\":[\"integer\"]}\"" Time="2017-06-29T23.47.36BST";
 DF p7 d7
-Operation p8 "8-x1y <- cbind(x1, y)" Value="x1y <- cbind(x1, y)" Time="9.858" Script="0" Pos="10,1,10,18";
+Operation p8 "8-x1y <- cbind(x1, y)" Value="x1y <- cbind(x1, y)" Time="0.617" Script="0" Pos="10,1,10,18";
 CF p7 p8
 DF d1 p8
 DF d5 p8
-Snapshot d8 "8-x1y" Value="data/8-x1y.csv" Time="2017-02-16T13.16.38EST";
+Snapshot d8 "8-x1y" Value="data/8-x1y.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[10,12], \"type\":[\"integer\",\"integer\",\"integer\",\"integer\",\"integer\",\"integer\",\"integer\",\"integer\",\"integer\",\"integer\",\"integer\",\"factor\"]}\"" Time="2017-06-29T23.47.36BST";
 DF p8 d8
-Operation p9 "9-apply(x1y, 2, sum)" Value="apply(x1y, 2, sum)" Time="9.899" Script="0" Pos="13,1,13,16";
+Operation p9 "9-apply(x1x3, 2, sum)" Value="apply(x1x3, 2, sum)" Time="0.628" Script="0" Pos="13,1,13,17";
 CF p8 p9
-Exception d9 "9-error.msg" Value="\"Error in FUN(newX[, i], ...): invalid 'type' (character) of argument \"";
-DF p9 d9
+DF d6 p9
+Operation p10 "10-apply(x1x2, 2, sum)" Value="apply(x1x2, 2, sum)" Time="0.633" Script="0" Pos="14,1,14,17";
+CF p9 p10
+DF d7 p10
+Operation p11 "11-apply(x1y, 2, sum)" Value="apply(x1y, 2, sum)" Time="0.641" Script="0" Pos="15,1,15,16";
+CF p10 p11
+DF d8 p11
+Exception d9 "9-error.msg" Value="\"Error in FUN(newX[, i], ...): invalid 'type' (character) of argument \"" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"";
+DF p11 d9
 

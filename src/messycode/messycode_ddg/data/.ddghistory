@@ -1,0 +1,83 @@
+      .RINRUBY.KEEPTRYING.VARIABLE <- TRUE
+      while ( .RINRUBY.KEEPTRYING.VARIABLE ) {
+        .RINRUBY.PULL.SOCKET <- try(suppressWarnings(socketConnection("127.0.0.1", 39427, blocking=TRUE, open="rb")),TRUE)
+        if ( inherits(.RINRUBY.PULL.SOCKET,"try-error") ) {
+          Sys.sleep(0.1)
+        } else {
+          .RINRUBY.KEEPTRYING.VARIABLE <- FALSE
+        }
+      }
+      rm(.RINRUBY.KEEPTRYING.VARIABLE)
+    rinruby_get_value <-function() {
+      value <- NULL
+      type <- readBin(.RINRUBY.PULL.SOCKET, integer(), 1, endian="big")
+      length <- readBin(.RINRUBY.PULL.SOCKET,integer(),1,endian="big")
+      if ( type == 0 ) {
+        value <- readBin(.RINRUBY.PULL.SOCKET,numeric(), length,endian="big")
+        } else if ( type == 1 ) {
+        value <- readBin(.RINRUBY.PULL.SOCKET,integer(), length, endian="big")
+        } else if ( type == 2 ) {
+        value <- readBin(.RINRUBY.PULL.SOCKET,character(),1,endian="big")
+        } else {
+          value <-NULL
+        }
+      value
+      }
+ rinruby_pull <-function(var)
+{
+  if ( inherits(var ,"try-error") ) {
+     writeBin(as.integer(-2),.RINRUBY.PULL.SOCKET,endian="big")
+  } else {
+    if (is.matrix(var)) {
+      writeBin(as.integer(4),.RINRUBY.PULL.SOCKET,endian="big")
+      writeBin(as.integer(dim(var)[1]),.RINRUBY.PULL.SOCKET,endian="big")
+      writeBin(as.integer(dim(var)[2]),.RINRUBY.PULL.SOCKET,endian="big")
+      
+    }  else if ( is.double(var) ) {
+      writeBin(as.integer(0),.RINRUBY.PULL.SOCKET,endian="big")
+      writeBin(as.integer(length(var)),.RINRUBY.PULL.SOCKET,endian="big")
+      writeBin(var,.RINRUBY.PULL.SOCKET,endian="big")
+    } else if ( is.integer(var) ) {
+      writeBin(as.integer(1),.RINRUBY.PULL.SOCKET,endian="big")
+      writeBin(as.integer(length(var)),.RINRUBY.PULL.SOCKET,endian="big")
+      writeBin(var,.RINRUBY.PULL.SOCKET,endian="big")
+    } else if ( is.character(var) && ( length(var) == 1 ) ) {
+      writeBin(as.integer(2),.RINRUBY.PULL.SOCKET,endian="big")
+      writeBin(as.integer(nchar(var)),.RINRUBY.PULL.SOCKET,endian="big")
+      writeBin(var,.RINRUBY.PULL.SOCKET,endian="big")
+    } else if ( is.character(var) && ( length(var) > 1 ) ) {
+      writeBin(as.integer(3),.RINRUBY.PULL.SOCKET,endian="big")
+      writeBin(as.integer(length(var)),.RINRUBY.PULL.SOCKET,endian="big")
+    } else {
+      writeBin(as.integer(-1),.RINRUBY.PULL.SOCKET,endian="big")
+    }
+  }
+}
+    rinruby_parseable<-function(var) {
+      result=try(parse(text=var),TRUE)
+      if(inherits(result, "try-error")) {
+        writeBin(as.integer(-1),.RINRUBY.PULL.SOCKET, endian="big")
+      } else {
+        writeBin(as.integer(1),.RINRUBY.PULL.SOCKET, endian="big")
+      }
+    }
+.RINRUBY.PARSE.STRING <- rinruby_get_value()
+rinruby_parseable(.RINRUBY.PARSE.STRING)
+rm(.RINRUBY.PARSE.STRING)
+require('devtools')
+print('RINRUBY.EVAL.FLAG')
+.RINRUBY.PARSE.STRING <- rinruby_get_value()
+rinruby_parseable(.RINRUBY.PARSE.STRING)
+rm(.RINRUBY.PARSE.STRING)
+install_github('End-to-end-provenance/RDataTracker', ref='graphics')
+print('RINRUBY.EVAL.FLAG')
+.RINRUBY.PARSE.STRING <- rinruby_get_value()
+rinruby_parseable(.RINRUBY.PARSE.STRING)
+rm(.RINRUBY.PARSE.STRING)
+library('RDataTracker')
+print('RINRUBY.EVAL.FLAG')
+.RINRUBY.PARSE.STRING <- rinruby_get_value()
+rinruby_parseable(.RINRUBY.PARSE.STRING)
+rm(.RINRUBY.PARSE.STRING)
+ddg.run('messycode.R')
+##-ddg-- Mon Jul  3 20:46:01 2017 ------##
