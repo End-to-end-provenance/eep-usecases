@@ -8,144 +8,144 @@ SourcedScripts=""
 ProcessFileTimestamp="2017-06-28T23.03.47BST"
 WorkingDirectory="/home/vagrant/workspace/eep-usecases/src/messycode"
 DDGDirectory="./messycode_ddg"
-DateTime="2017-07-03T20.46.01BST"
+DateTime="2017-07-05T21.59.29BST"
 InstalledPackages="base 3.4.0, datasets 3.4.0, devtools 1.13.2, gdata 2.18.0, graphics 3.4.0, grDevices 3.4.0, lattice 0.20-35, methods 3.4.0, permute 0.9-4, RDataTracker 2.26.2, stats 3.4.0, txtplot 1.0-3, utils 3.4.0, vegan 2.4-3"
 30
-Start p1 "1-messycode.R" Value="messycode.R" Time="0.553" Script="NA" Pos="NA";
-Operation p2 "2-library(\"gdata\")" Value="library(\"gdata\")" Time="0.601" Script="0" Pos="12,1,12,16";
+Start p1 "1-messycode.R" Value="messycode.R" Time="0.373" Script="NA" Pos="NA";
+Operation p2 "2-library(\"gdata\")" Value="library(\"gdata\")" Time="0.446" Script="0" Pos="12,1,12,16";
 CF p1 p2
-Operation p3 "3-data.16 <- read.csv(\"projects/2016/july_biomass_survey.csv\")" Value="data.16 <- read.csv(\"projects/2016/july_biomass_survey.csv\")" Time="0.762" Script="0" Pos="17,1,17,60";
+Operation p3 "3-data.16 <- read.csv(\"projects/2016/july_biomass_survey.csv\")" Value="data.16 <- read.csv(\"projects/2016/july_biomass_survey.csv\")" Time="0.578" Script="0" Pos="17,1,17,60";
 CF p2 p3
-File d1 "1-july_biomass_survey.csv" Value="data/1-july_biomass_survey.csv" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-07-03T20.46.02BST" Location="/home/vagrant/workspace/eep-usecases/src/messycode/projects/2016/july_biomass_survey.csv";
+File d1 "1-july_biomass_survey.csv" Value="data/1-july_biomass_survey.csv" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-07-05T21.59.29BST" Location="/home/vagrant/workspace/eep-usecases/src/messycode/projects/2016/july_biomass_survey.csv";
 DF d1 p3
-Snapshot d2 "2-data.16" Value="data/2-data.16.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,5], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"factor\"]}\"" Time="2017-07-03T20.46.02BST";
+Snapshot d2 "2-data.16" Value="data/2-data.16.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,5], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"factor\"]}\"" Time="2017-07-05T21.59.30BST";
 DF p3 d2
-Operation p4 "4-data.16.2 <- read.csv(\"projects/data_forestplot/dataset_v2_j" Value="data.16.2 <- read.csv(\"projects/data_forestplot/dataset_v2_j" Time="1.117" Script="0" Pos="21,1,21,88";
+Operation p4 "4-data.16.2 <- read.csv(\"projects/data_forestplot/dataset_v2_j" Value="data.16.2 <- read.csv(\"projects/data_forestplot/dataset_v2_j" Time="0.87" Script="0" Pos="21,1,21,88";
 CF p3 p4
-File d3 "3-dataset_v2_june_from_collaborator1.csv" Value="data/3-dataset_v2_june_from_collaborator1.csv" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-07-03T20.46.02BST" Location="/home/vagrant/workspace/eep-usecases/src/messycode/projects/data_forestplot/dataset_v2_june_from_collaborator1.csv";
+File d3 "3-dataset_v2_june_from_collaborator1.csv" Value="data/3-dataset_v2_june_from_collaborator1.csv" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-07-05T21.59.30BST" Location="/home/vagrant/workspace/eep-usecases/src/messycode/projects/data_forestplot/dataset_v2_june_from_collaborator1.csv";
 DF d3 p4
-Snapshot d4 "4-data.16.2" Value="data/4-data.16.2.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,5], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"factor\"]}\"" Time="2017-07-03T20.46.02BST";
+Snapshot d4 "4-data.16.2" Value="data/4-data.16.2.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,5], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"factor\"]}\"" Time="2017-07-05T21.59.30BST";
 DF p4 d4
-Operation p5 "5-data.v1.1to4 <- data.16[, 1:4]" Value="data.v1.1to4 <- data.16[, 1:4]" Time="1.326" Script="0" Pos="24,1,24,29";
+Operation p5 "5-data.v1.1to4 <- data.16[, 1:4]" Value="data.v1.1to4 <- data.16[, 1:4]" Time="1.11" Script="0" Pos="24,1,24,29";
 CF p4 p5
 DF d2 p5
-Snapshot d5 "5-data.v1.1to4" Value="data/5-data.v1.1to4.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,4], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\"]}\"" Time="2017-07-03T20.46.02BST";
+Snapshot d5 "5-data.v1.1to4" Value="data/5-data.v1.1to4.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,4], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\"]}\"" Time="2017-07-05T21.59.30BST";
 DF p5 d5
-Operation p6 "6-data.v1.1to4. <- data.v1.1to4" Value="data.v1.1to4. <- data.v1.1to4" Time="1.336" Script="0" Pos="25,1,25,29";
+Operation p6 "6-data.v1.1to4. <- data.v1.1to4" Value="data.v1.1to4. <- data.v1.1to4" Time="1.156" Script="0" Pos="25,1,25,29";
 CF p5 p6
 DF d5 p6
-Snapshot d6 "6-data.v1.1to4." Value="data/6-data.v1.1to4..csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,4], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\"]}\"" Time="2017-07-03T20.46.02BST";
+Snapshot d6 "6-data.v1.1to4." Value="data/6-data.v1.1to4..csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,4], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\"]}\"" Time="2017-07-05T21.59.30BST";
 DF p6 d6
-Operation p7 "7-data.v1.1to4 <- data.v1.1to4 * 2" Value="data.v1.1to4 <- data.v1.1to4 * 2" Time="1.347" Script="0" Pos="26,1,26,32";
+Operation p7 "7-data.v1.1to4 <- data.v1.1to4 * 2" Value="data.v1.1to4 <- data.v1.1to4 * 2" Time="1.167" Script="0" Pos="26,1,26,32";
 CF p6 p7
 DF d5 p7
-Snapshot d7 "7-data.v1.1to4" Value="data/7-data.v1.1to4.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,4], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\"]}\"" Time="2017-07-03T20.46.02BST";
+Snapshot d7 "7-data.v1.1to4" Value="data/7-data.v1.1to4.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,4], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\"]}\"" Time="2017-07-05T21.59.30BST";
 DF p7 d7
-Operation p8 "8-data.v1.1to4.2 <- data.v1.1to4 * 2" Value="data.v1.1to4.2 <- data.v1.1to4 * 2" Time="1.357" Script="0" Pos="27,1,27,34";
+Operation p8 "8-data.v1.1to4.2 <- data.v1.1to4 * 2" Value="data.v1.1to4.2 <- data.v1.1to4 * 2" Time="1.178" Script="0" Pos="27,1,27,34";
 CF p7 p8
 DF d7 p8
-Snapshot d8 "8-data.v1.1to4.2" Value="data/8-data.v1.1to4.2.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,4], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\"]}\"" Time="2017-07-03T20.46.02BST";
+Snapshot d8 "8-data.v1.1to4.2" Value="data/8-data.v1.1to4.2.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,4], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\"]}\"" Time="2017-07-05T21.59.30BST";
 DF p8 d8
-Operation p9 "9-data.16[, 1:4] <- data.v1.1to4.2" Value="data.16[, 1:4] <- data.v1.1to4.2" Time="1.369" Script="0" Pos="28,1,28,31";
+Operation p9 "9-data.16[, 1:4] <- data.v1.1to4.2" Value="data.16[, 1:4] <- data.v1.1to4.2" Time="1.189" Script="0" Pos="28,1,28,31";
 CF p8 p9
 DF d2 p9
 DF d8 p9
-Snapshot d9 "9-data.16" Value="data/9-data.16.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,5], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"factor\"]}\"" Time="2017-07-03T20.46.02BST";
+Snapshot d9 "9-data.16" Value="data/9-data.16.csv" ValType="\"{\"container\":\"data_frame\", \"dimension\":[150,5], \"type\":[\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"factor\"]}\"" Time="2017-07-05T21.59.30BST";
 DF p9 d9
-Operation p10 "10-library(\"vegan\")" Value="library(\"vegan\")" Time="2.961" Script="0" Pos="29,1,29,16";
+Operation p10 "10-library(\"vegan\")" Value="library(\"vegan\")" Time="2.618" Script="0" Pos="29,1,29,16";
 CF p9 p10
-Operation p11 "11-d1 <- vegdist(data.16[, 1:2])" Value="d1 <- vegdist(data.16[, 1:2])" Time="2.964" Script="0" Pos="30,1,30,28";
+Operation p11 "11-d1 <- vegdist(data.16[, 1:2])" Value="d1 <- vegdist(data.16[, 1:2])" Time="2.621" Script="0" Pos="30,1,30,28";
 CF p10 p11
 DF d9 p11
-Snapshot d10 "10-d1" Value="data/10-d1-PARTIAL.txt" ValType="\"\"object\"\"" Time="2017-07-03T20.46.04BST";
+Snapshot d10 "10-d1" Value="data/10-d1-PARTIAL.txt" ValType="\"\"object\"\"" Time="2017-07-05T21.59.32BST";
 DF p11 d10
-Operation p12 "12-d2 <- vegdist(data.16[, 2:3])" Value="d2 <- vegdist(data.16[, 2:3])" Time="3.125" Script="0" Pos="31,1,31,28";
+Operation p12 "12-d2 <- vegdist(data.16[, 2:3])" Value="d2 <- vegdist(data.16[, 2:3])" Time="2.748" Script="0" Pos="31,1,31,28";
 CF p11 p12
 DF d9 p12
-Snapshot d11 "11-d2" Value="data/11-d2-PARTIAL.txt" ValType="\"\"object\"\"" Time="2017-07-03T20.46.04BST";
+Snapshot d11 "11-d2" Value="data/11-d2-PARTIAL.txt" ValType="\"\"object\"\"" Time="2017-07-05T21.59.32BST";
 DF p12 d11
-Operation p13 "13-mant1 <- mantel(d1, d2)" Value="mant1 <- mantel(d1, d2)" Time="4.118" Script="0" Pos="34,1,34,22";
+Operation p13 "13-mant1 <- mantel(d1, d2)" Value="mant1 <- mantel(d1, d2)" Time="3.663" Script="0" Pos="34,1,34,22";
 CF p12 p13
 DF d10 p13
 DF d11 p13
-Snapshot d12 "12-mant1" Value="data/12-mant1.txt" ValType="\"\"list\"\"" Time="2017-07-03T20.46.05BST";
+Snapshot d12 "12-mant1" Value="data/12-mant1.txt" ValType="\"\"list\"\"" Time="2017-07-05T21.59.33BST";
 DF p13 d12
-Operation p14 "14-mant2 <- mantel(d2, d1)" Value="mant2 <- mantel(d2, d1)" Time="4.813" Script="0" Pos="35,1,35,22";
+Operation p14 "14-mant2 <- mantel(d2, d1)" Value="mant2 <- mantel(d2, d1)" Time="4.381" Script="0" Pos="35,1,35,22";
 CF p13 p14
 DF d11 p14
 DF d10 p14
-Snapshot d13 "13-mant2" Value="data/13-mant2.txt" ValType="\"\"list\"\"" Time="2017-07-03T20.46.06BST";
+Snapshot d13 "13-mant2" Value="data/13-mant2.txt" ValType="\"\"list\"\"" Time="2017-07-05T21.59.33BST";
 DF p14 d13
-Operation p15 "15-mant11 <- mantel(d1, d1)" Value="mant11 <- mantel(d1, d1)" Time="5.67" Script="0" Pos="36,1,36,23";
+Operation p15 "15-mant11 <- mantel(d1, d1)" Value="mant11 <- mantel(d1, d1)" Time="5.071" Script="0" Pos="36,1,36,23";
 CF p14 p15
 DF d10 p15
-Snapshot d14 "14-mant11" Value="data/14-mant11.txt" ValType="\"\"list\"\"" Time="2017-07-03T20.46.07BST";
+Snapshot d14 "14-mant11" Value="data/14-mant11.txt" ValType="\"\"list\"\"" Time="2017-07-05T21.59.34BST";
 DF p15 d14
-Operation p16 "16-fit1 <- lm(Sepal.Length ~ Sepal.Width, data = data.16)" Value="fit1 <- lm(Sepal.Length ~ Sepal.Width, data = data.16)" Time="5.696" Script="0" Pos="37,1,37,49";
+Operation p16 "16-fit1 <- lm(Sepal.Length ~ Sepal.Width, data = data.16)" Value="fit1 <- lm(Sepal.Length ~ Sepal.Width, data = data.16)" Time="5.09" Script="0" Pos="37,1,37,49";
 CF p15 p16
 DF d9 p16
-Snapshot d15 "15-fit1" Value="data/15-fit1.txt" ValType="\"\"list\"\"" Time="2017-07-03T20.46.07BST";
+Snapshot d15 "15-fit1" Value="data/15-fit1.txt" ValType="\"\"list\"\"" Time="2017-07-05T21.59.34BST";
 DF p16 d15
-Operation p17 "17-lm.summary.1 <- summary(fit1)" Value="lm.summary.1 <- summary(fit1)" Time="5.743" Script="0" Pos="38,1,38,29";
+Operation p17 "17-lm.summary.1 <- summary(fit1)" Value="lm.summary.1 <- summary(fit1)" Time="5.108" Script="0" Pos="38,1,38,29";
 CF p16 p17
 DF d15 p17
-Snapshot d16 "16-lm.summary.1" Value="data/16-lm.summary.1.txt" ValType="\"\"list\"\"" Time="2017-07-03T20.46.07BST";
+Snapshot d16 "16-lm.summary.1" Value="data/16-lm.summary.1.txt" ValType="\"\"list\"\"" Time="2017-07-05T21.59.34BST";
 DF p17 d16
-Operation p18 "18-write.csv(data.v1.1to4, \"projects/data_forestplot/save1.csv\"" Value="write.csv(data.v1.1to4, \"projects/data_forestplot/save1.csv\"" Time="5.756" Script="0" Pos="41,1,41,74";
+Operation p18 "18-write.csv(data.v1.1to4, \"projects/data_forestplot/save1.csv\"" Value="write.csv(data.v1.1to4, \"projects/data_forestplot/save1.csv\"" Time="5.119" Script="0" Pos="41,1,41,74";
 CF p17 p18
 DF d7 p18
-File d17 "17-save1.csv" Value="data/17-save1.csv" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-07-03T20.46.07BST" Location="/home/vagrant/workspace/eep-usecases/src/messycode/projects/data_forestplot/save1.csv";
+File d17 "17-save1.csv" Value="data/17-save1.csv" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-07-05T21.59.34BST" Location="/home/vagrant/workspace/eep-usecases/src/messycode/projects/data_forestplot/save1.csv";
 DF p18 d17
-Operation p19 "19-capture.output(lm.summary.1, file = \"analysis_forest/anova_t" Value="capture.output(lm.summary.1, file = \"analysis_forest/anova_t" Time="5.773" Script="0" Pos="44,1,44,70";
+Operation p19 "19-capture.output(lm.summary.1, file = \"analysis_forest/anova_t" Value="capture.output(lm.summary.1, file = \"analysis_forest/anova_t" Time="5.16" Script="0" Pos="44,1,44,70";
 CF p18 p19
 DF d16 p19
-Operation p20 "20-library(\"txtplot\")" Value="library(\"txtplot\")" Time="5.784" Script="0" Pos="48,1,48,18";
+Operation p20 "20-library(\"txtplot\")" Value="library(\"txtplot\")" Time="5.172" Script="0" Pos="48,1,48,18";
 CF p19 p20
-Operation p21 "21-png(\"figures_1/fig1_biplot.png\")" Value="png(\"figures_1/fig1_biplot.png\")" Time="5.794" Script="0" Pos="50,1,50,32";
+Operation p21 "21-png(\"figures_1/fig1_biplot.png\")" Value="png(\"figures_1/fig1_biplot.png\")" Time="5.181" Script="0" Pos="50,1,50,32";
 CF p20 p21
 Data d18 "18-dev.2" Value="\"graph\"" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"";
 DF p21 d18
-Operation p22 "22-plot(data.16[, 1:2])" Value="plot(data.16[, 1:2])" Time="5.855" Script="0" Pos="51,1,51,19";
+Operation p22 "22-plot(data.16[, 1:2])" Value="plot(data.16[, 1:2])" Time="5.215" Script="0" Pos="51,1,51,19";
 CF p21 p22
 DF d9 p22
 DF d18 p22
 Data d19 "19-dev.2" Value="\"graph\"" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"";
 DF p22 d19
-Operation p23 "23-dev.off()" Value="dev.off()" Time="5.915" Script="0" Pos="52,1,52,9";
+Operation p23 "23-dev.off()" Value="dev.off()" Time="5.3" Script="0" Pos="52,1,52,9";
 CF p22 p23
-File d20 "20-fig1_biplot.png" Value="data/20-fig1_biplot.png" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-07-03T20.46.07BST" Location="/home/vagrant/workspace/eep-usecases/src/messycode/figures_1/fig1_biplot.png";
+File d20 "20-fig1_biplot.png" Value="data/20-fig1_biplot.png" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-07-05T21.59.34BST" Location="/home/vagrant/workspace/eep-usecases/src/messycode/figures_1/fig1_biplot.png";
 DF p23 d20
 DF d19 p23
-Operation p24 "24-png(\"figures_1/fig1_biplot_t2.png\")" Value="png(\"figures_1/fig1_biplot_t2.png\")" Time="5.926" Script="0" Pos="54,1,54,35";
+Operation p24 "24-png(\"figures_1/fig1_biplot_t2.png\")" Value="png(\"figures_1/fig1_biplot_t2.png\")" Time="5.308" Script="0" Pos="54,1,54,35";
 CF p23 p24
 Data d21 "21-dev.2" Value="\"graph\"" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"";
 DF p24 d21
-Operation p25 "25-plot(data.16[, 1:2] * 2)" Value="plot(data.16[, 1:2] * 2)" Time="5.936" Script="0" Pos="55,1,55,21";
+Operation p25 "25-plot(data.16[, 1:2] * 2)" Value="plot(data.16[, 1:2] * 2)" Time="5.316" Script="0" Pos="55,1,55,21";
 CF p24 p25
 DF d9 p25
 DF d21 p25
 Data d22 "22-dev.2" Value="\"graph\"" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"";
 DF p25 d22
-Operation p26 "26-dev.off()" Value="dev.off()" Time="5.991" Script="0" Pos="56,1,56,9";
+Operation p26 "26-dev.off()" Value="dev.off()" Time="5.366" Script="0" Pos="56,1,56,9";
 CF p25 p26
-File d23 "23-fig1_biplot_t2.png" Value="data/23-fig1_biplot_t2.png" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-07-03T20.46.07BST" Location="/home/vagrant/workspace/eep-usecases/src/messycode/figures_1/fig1_biplot_t2.png";
+File d23 "23-fig1_biplot_t2.png" Value="data/23-fig1_biplot_t2.png" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-07-05T21.59.34BST" Location="/home/vagrant/workspace/eep-usecases/src/messycode/figures_1/fig1_biplot_t2.png";
 DF p26 d23
 DF d22 p26
-Operation p27 "27-png(\"figures_2/fig2_biplot.png\")" Value="png(\"figures_2/fig2_biplot.png\")" Time="6.021" Script="0" Pos="58,1,58,32";
+Operation p27 "27-png(\"figures_2/fig2_biplot.png\")" Value="png(\"figures_2/fig2_biplot.png\")" Time="5.387" Script="0" Pos="58,1,58,32";
 CF p26 p27
 Data d24 "24-dev.2" Value="\"graph\"" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"";
 DF p27 d24
-Operation p28 "28-plot(data.16[, 2:3])" Value="plot(data.16[, 2:3])" Time="6.059" Script="0" Pos="59,1,59,19";
+Operation p28 "28-plot(data.16[, 2:3])" Value="plot(data.16[, 2:3])" Time="5.396" Script="0" Pos="59,1,59,19";
 CF p27 p28
 DF d9 p28
 DF d24 p28
 Data d25 "25-dev.2" Value="\"graph\"" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"";
 DF p28 d25
-Operation p29 "29-dev.off()" Value="dev.off()" Time="6.084" Script="0" Pos="60,1,60,9";
+Operation p29 "29-dev.off()" Value="dev.off()" Time="5.429" Script="0" Pos="60,1,60,9";
 CF p28 p29
-File d26 "26-fig2_biplot.png" Value="data/26-fig2_biplot.png" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-07-03T20.46.07BST" Location="/home/vagrant/workspace/eep-usecases/src/messycode/figures_2/fig2_biplot.png";
+File d26 "26-fig2_biplot.png" Value="data/26-fig2_biplot.png" ValType="\"{\"container\":\"vector\", \"dimension\":[1], \"type\":[\"character\"]}\"" Time="2017-07-05T21.59.34BST" Location="/home/vagrant/workspace/eep-usecases/src/messycode/figures_2/fig2_biplot.png";
 DF p29 d26
 DF d25 p29
-Finish p30 "30-messycode.R" Value="messycode.R" Time="6.094" Script="NA" Pos="NA";
+Finish p30 "30-messycode.R" Value="messycode.R" Time="5.462" Script="NA" Pos="NA";
 CF p29 p30
 

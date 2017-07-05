@@ -9,7 +9,7 @@
 "p1" : {
 "rdt:name" : "messycode.R",
 "rdt:type" : "Start",
-"rdt:elapsedTime" : "0.553",
+"rdt:elapsedTime" : "0.373",
 "rdt:scriptNum" : "NA",
 "rdt:startLine" : "NA",
 "rdt:startCol" : "NA",
@@ -20,7 +20,7 @@
 "p2" : {
 "rdt:name" : "library(\"gdata\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.601",
+"rdt:elapsedTime" : "0.446",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "12",
 "rdt:startCol" : "1",
@@ -31,7 +31,7 @@
 "p3" : {
 "rdt:name" : "data.16 <- read.csv(\"projects/2016/july_biomass_survey.csv\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.762",
+"rdt:elapsedTime" : "0.578",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "17",
 "rdt:startCol" : "1",
@@ -42,7 +42,7 @@
 "p4" : {
 "rdt:name" : "data.16.2 <- read.csv(\"projects/data_forestplot/dataset_v2_j",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.117",
+"rdt:elapsedTime" : "0.87",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "21",
 "rdt:startCol" : "1",
@@ -53,7 +53,7 @@
 "p5" : {
 "rdt:name" : "data.v1.1to4 <- data.16[, 1:4]",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.326",
+"rdt:elapsedTime" : "1.11",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "24",
 "rdt:startCol" : "1",
@@ -64,7 +64,7 @@
 "p6" : {
 "rdt:name" : "data.v1.1to4. <- data.v1.1to4",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.336",
+"rdt:elapsedTime" : "1.156",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "25",
 "rdt:startCol" : "1",
@@ -75,7 +75,7 @@
 "p7" : {
 "rdt:name" : "data.v1.1to4 <- data.v1.1to4 * 2",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.347",
+"rdt:elapsedTime" : "1.167",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "26",
 "rdt:startCol" : "1",
@@ -86,7 +86,7 @@
 "p8" : {
 "rdt:name" : "data.v1.1to4.2 <- data.v1.1to4 * 2",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.357",
+"rdt:elapsedTime" : "1.178",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "27",
 "rdt:startCol" : "1",
@@ -97,7 +97,7 @@
 "p9" : {
 "rdt:name" : "data.16[, 1:4] <- data.v1.1to4.2",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.369",
+"rdt:elapsedTime" : "1.189",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "28",
 "rdt:startCol" : "1",
@@ -108,7 +108,7 @@
 "p10" : {
 "rdt:name" : "library(\"vegan\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "2.961",
+"rdt:elapsedTime" : "2.618",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "29",
 "rdt:startCol" : "1",
@@ -119,7 +119,7 @@
 "p11" : {
 "rdt:name" : "d1 <- vegdist(data.16[, 1:2])",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "2.964",
+"rdt:elapsedTime" : "2.621",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "30",
 "rdt:startCol" : "1",
@@ -130,7 +130,7 @@
 "p12" : {
 "rdt:name" : "d2 <- vegdist(data.16[, 2:3])",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "3.125",
+"rdt:elapsedTime" : "2.748",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "31",
 "rdt:startCol" : "1",
@@ -141,7 +141,7 @@
 "p13" : {
 "rdt:name" : "mant1 <- mantel(d1, d2)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "4.118",
+"rdt:elapsedTime" : "3.663",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "34",
 "rdt:startCol" : "1",
@@ -152,7 +152,7 @@
 "p14" : {
 "rdt:name" : "mant2 <- mantel(d2, d1)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "4.813",
+"rdt:elapsedTime" : "4.381",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "35",
 "rdt:startCol" : "1",
@@ -163,7 +163,7 @@
 "p15" : {
 "rdt:name" : "mant11 <- mantel(d1, d1)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "5.67",
+"rdt:elapsedTime" : "5.071",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "36",
 "rdt:startCol" : "1",
@@ -174,7 +174,7 @@
 "p16" : {
 "rdt:name" : "fit1 <- lm(Sepal.Length ~ Sepal.Width, data = data.16)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "5.696",
+"rdt:elapsedTime" : "5.09",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "37",
 "rdt:startCol" : "1",
@@ -185,7 +185,7 @@
 "p17" : {
 "rdt:name" : "lm.summary.1 <- summary(fit1)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "5.743",
+"rdt:elapsedTime" : "5.108",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "38",
 "rdt:startCol" : "1",
@@ -196,7 +196,7 @@
 "p18" : {
 "rdt:name" : "write.csv(data.v1.1to4, \"projects/data_forestplot/save1.csv\"",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "5.756",
+"rdt:elapsedTime" : "5.119",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "41",
 "rdt:startCol" : "1",
@@ -207,7 +207,7 @@
 "p19" : {
 "rdt:name" : "capture.output(lm.summary.1, file = \"analysis_forest/anova_t",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "5.773",
+"rdt:elapsedTime" : "5.16",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "44",
 "rdt:startCol" : "1",
@@ -218,7 +218,7 @@
 "p20" : {
 "rdt:name" : "library(\"txtplot\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "5.784",
+"rdt:elapsedTime" : "5.172",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "48",
 "rdt:startCol" : "1",
@@ -229,7 +229,7 @@
 "p21" : {
 "rdt:name" : "png(\"figures_1/fig1_biplot.png\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "5.794",
+"rdt:elapsedTime" : "5.181",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "50",
 "rdt:startCol" : "1",
@@ -240,7 +240,7 @@
 "p22" : {
 "rdt:name" : "plot(data.16[, 1:2])",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "5.855",
+"rdt:elapsedTime" : "5.215",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "51",
 "rdt:startCol" : "1",
@@ -251,7 +251,7 @@
 "p23" : {
 "rdt:name" : "dev.off()",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "5.915",
+"rdt:elapsedTime" : "5.3",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "52",
 "rdt:startCol" : "1",
@@ -262,7 +262,7 @@
 "p24" : {
 "rdt:name" : "png(\"figures_1/fig1_biplot_t2.png\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "5.926",
+"rdt:elapsedTime" : "5.308",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "54",
 "rdt:startCol" : "1",
@@ -273,7 +273,7 @@
 "p25" : {
 "rdt:name" : "plot(data.16[, 1:2] * 2)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "5.936",
+"rdt:elapsedTime" : "5.316",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "55",
 "rdt:startCol" : "1",
@@ -284,7 +284,7 @@
 "p26" : {
 "rdt:name" : "dev.off()",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "5.991",
+"rdt:elapsedTime" : "5.366",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "56",
 "rdt:startCol" : "1",
@@ -295,7 +295,7 @@
 "p27" : {
 "rdt:name" : "png(\"figures_2/fig2_biplot.png\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "6.021",
+"rdt:elapsedTime" : "5.387",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "58",
 "rdt:startCol" : "1",
@@ -306,7 +306,7 @@
 "p28" : {
 "rdt:name" : "plot(data.16[, 2:3])",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "6.059",
+"rdt:elapsedTime" : "5.396",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "59",
 "rdt:startCol" : "1",
@@ -317,7 +317,7 @@
 "p29" : {
 "rdt:name" : "dev.off()",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "6.084",
+"rdt:elapsedTime" : "5.429",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "60",
 "rdt:startCol" : "1",
@@ -328,7 +328,7 @@
 "p30" : {
 "rdt:name" : "messycode.R",
 "rdt:type" : "Finish",
-"rdt:elapsedTime" : "6.094",
+"rdt:elapsedTime" : "5.462",
 "rdt:scriptNum" : "NA",
 "rdt:startLine" : "NA",
 "rdt:startCol" : "NA",
@@ -348,7 +348,7 @@
 "rdt:scriptTimeStamp" : "2017-06-28T23.03.47BST",
 "rdt:workingDirectory" : "/home/vagrant/workspace/eep-usecases/src/messycode",
 "rdt:ddgDirectory" : "./messycode_ddg",
-"rdt:ddgTimeStamp" : "2017-07-03T20.46.01BST",
+"rdt:ddgTimeStamp" : "2017-07-05T21.59.29BST",
 "rdt:rdatatrackerVersion" : "2.26.2",
 "rdt:installedPackages" : [
 	{"package" : "base", "version" : "3.4.0"},

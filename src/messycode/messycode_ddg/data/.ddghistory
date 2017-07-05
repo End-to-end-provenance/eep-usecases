@@ -1,6 +1,6 @@
       .RINRUBY.KEEPTRYING.VARIABLE <- TRUE
       while ( .RINRUBY.KEEPTRYING.VARIABLE ) {
-        .RINRUBY.PULL.SOCKET <- try(suppressWarnings(socketConnection("127.0.0.1", 39427, blocking=TRUE, open="rb")),TRUE)
+        .RINRUBY.PULL.SOCKET <- try(suppressWarnings(socketConnection("127.0.0.1", 38964, blocking=TRUE, open="rb")),TRUE)
         if ( inherits(.RINRUBY.PULL.SOCKET,"try-error") ) {
           Sys.sleep(0.1)
         } else {
@@ -80,4 +80,4 @@ print('RINRUBY.EVAL.FLAG')
 rinruby_parseable(.RINRUBY.PARSE.STRING)
 rm(.RINRUBY.PARSE.STRING)
 ddg.run('messycode.R')
-##-ddg-- Mon Jul  3 20:46:01 2017 ------##
+##-ddg-- Wed Jul  5 21:59:29 2017 ------##
