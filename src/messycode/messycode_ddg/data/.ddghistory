@@ -1,6 +1,6 @@
       .RINRUBY.KEEPTRYING.VARIABLE <- TRUE
       while ( .RINRUBY.KEEPTRYING.VARIABLE ) {
-        .RINRUBY.PULL.SOCKET <- try(suppressWarnings(socketConnection("127.0.0.1", 38964, blocking=TRUE, open="rb")),TRUE)
+        .RINRUBY.PULL.SOCKET <- try(suppressWarnings(socketConnection("127.0.0.1", 39311, blocking=TRUE, open="rb")),TRUE)
         if ( inherits(.RINRUBY.PULL.SOCKET,"try-error") ) {
           Sys.sleep(0.1)
         } else {
@@ -64,6 +64,11 @@
 .RINRUBY.PARSE.STRING <- rinruby_get_value()
 rinruby_parseable(.RINRUBY.PARSE.STRING)
 rm(.RINRUBY.PARSE.STRING)
+install.packages('devtools')
+print('RINRUBY.EVAL.FLAG')
+.RINRUBY.PARSE.STRING <- rinruby_get_value()
+rinruby_parseable(.RINRUBY.PARSE.STRING)
+rm(.RINRUBY.PARSE.STRING)
 require('devtools')
 print('RINRUBY.EVAL.FLAG')
 .RINRUBY.PARSE.STRING <- rinruby_get_value()
@@ -74,10 +79,10 @@ print('RINRUBY.EVAL.FLAG')
 .RINRUBY.PARSE.STRING <- rinruby_get_value()
 rinruby_parseable(.RINRUBY.PARSE.STRING)
 rm(.RINRUBY.PARSE.STRING)
-library('RDataTracker')
+require('RDataTracker')
 print('RINRUBY.EVAL.FLAG')
 .RINRUBY.PARSE.STRING <- rinruby_get_value()
 rinruby_parseable(.RINRUBY.PARSE.STRING)
 rm(.RINRUBY.PARSE.STRING)
 ddg.run('messycode.R')
-##-ddg-- Wed Jul  5 21:59:29 2017 ------##
+##-ddg-- Wed Jul  5 22:31:38 2017 ------##
