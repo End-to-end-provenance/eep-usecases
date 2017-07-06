@@ -1,0 +1,15 @@
+This repository contains examples of code for exploring the applications of data provenance. 
+
+messycode: entirely fabricated workspace that exhibits several key aspects of typical code produced by scientists.
+noWorkflow: example used for generating python provenance.
+pplant: example script from a real project simulating oxygen values in a carnivorous plant food web.
+coerce.R: simple example of data coersion.
+coerce2.R: simple example of data coersion.
+coerce3.R: simple example of data coersion.
+coerce4.R: simple example of data coersion.
+coerce_bugged.R: simple example of data coersion with an introduced bug.
+data_types.R: simple example of coersion between data types for diagnosing data coersion issues.
+helpers.R: depenency functions used by metrics.R.
+metrics.R: example of a real network analysis using the *enaR* package.
+model_nestedness.R: example of a real network analysis using the *enaR* package.
+nmr_ddg_gen.R: script for getting provenance from the network analysis scripts.
