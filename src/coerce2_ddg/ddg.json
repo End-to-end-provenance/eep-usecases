@@ -9,7 +9,7 @@
 "p1" : {
 "rdt:name" : "coerce2.R",
 "rdt:type" : "Start",
-"rdt:elapsedTime" : "7.177",
+"rdt:elapsedTime" : "10.771",
 "rdt:scriptNum" : "NA",
 "rdt:startLine" : "NA",
 "rdt:startCol" : "NA",
@@ -20,7 +20,7 @@
 "p2" : {
 "rdt:name" : "y <- read.csv(\"../data/y.csv\", header = F)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "7.181",
+"rdt:elapsedTime" : "10.775",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "6",
 "rdt:startCol" : "1",
@@ -31,7 +31,7 @@
 "p3" : {
 "rdt:name" : "c(apply(y, 2, mode), apply(y, 2, class))",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "7.218",
+"rdt:elapsedTime" : "10.821",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "8",
 "rdt:startCol" : "1",
@@ -42,7 +42,7 @@
 "p4" : {
 "rdt:name" : "new.y <- matrix(c(1, 2, 3, 4, 5, \"l\", 2, 3, 4, 5), nrow = 5)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "7.25",
+"rdt:elapsedTime" : "10.847",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "10",
 "rdt:startCol" : "1",
@@ -53,7 +53,7 @@
 "p5" : {
 "rdt:name" : "y <- rbind(y, new.y)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "7.271",
+"rdt:elapsedTime" : "10.875",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "12",
 "rdt:startCol" : "1",
@@ -62,14 +62,14 @@
 } ,
 
 "p6" : {
-"rdt:name" : "tryCatch",
+"rdt:name" : "sum(y)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "7.309",
-"rdt:scriptNum" : "NA",
-"rdt:startLine" : "NA",
-"rdt:startCol" : "NA",
-"rdt:endLine" : "NA",
-"rdt:endCol" : "NA"
+"rdt:elapsedTime" : "10.912",
+"rdt:scriptNum" : "0",
+"rdt:startLine" : "14",
+"rdt:startCol" : "1",
+"rdt:endLine" : "14",
+"rdt:endCol" : "6"
 } ,
 
 "environment" : {
@@ -77,24 +77,32 @@
 "rdt:architecture" : "x86_64",
 "rdt:operatingSystem" : "unix",
 "rdt:language" : "R",
-"rdt:rVersion" : "R version 3.3.1 (2016-06-21)",
-"rdt:script" : "/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src/coerce2.R",
+"rdt:rVersion" : "R version 3.3.3 (2017-03-06)",
+"rdt:script" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/coerce2.R",
 "rdt:sourcedScripts" : ""
 ,
 "rdt:scriptTimeStamp" : "2016-12-19T15.45.53EST",
-"rdt:workingDirectory" : "/Users/hermes/Projects/HF/projects/Dprov/projects/eep-usecases/src",
+"rdt:workingDirectory" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src",
 "rdt:ddgDirectory" : "./coerce2_ddg",
-"rdt:ddgTimeStamp" : "2017-01-04T17.57.05EST",
-"rdt:rdatatrackerVersion" : "2.24.1",
+"rdt:ddgTimeStamp" : "2017-06-19T15.37.28EDT",
+"rdt:rdatatrackerVersion" : "2.26.1",
 "rdt:installedPackages" : [
-	{"package" : "devtools", "version" : "1.12.0"},
-	{"package" : "RDataTracker", "version" : "2.24.1"}]
+	{"package" : "base", "version" : "3.3.3"},
+	{"package" : "datasets", "version" : "3.3.3"},
+	{"package" : "devtools", "version" : "1.13.2"},
+	{"package" : "graphics", "version" : "3.3.3"},
+	{"package" : "grDevices", "version" : "3.3.3"},
+	{"package" : "methods", "version" : "3.3.3"},
+	{"package" : "RDataTracker", "version" : "2.26.1"},
+	{"package" : "stats", "version" : "3.3.3"},
+	{"package" : "utils", "version" : "3.3.3"}]
 }},
 "entity":{
 
 "d1" : {
 "rdt:name" : "y.csv",
 "rdt:value" : "data/1-y.csv",
+"rdt:valType" : {"container":"vector", "dimension":[1], "type":["character"]},
 "rdt:type" : "File",
 "rdt:scope" : "undefined",
 "rdt:fromEnv" : "FALSE",
@@ -105,6 +113,7 @@
 "d2" : {
 "rdt:name" : "y",
 "rdt:value" : "data/2-y.csv",
+"rdt:valType" : {"container":"data_frame", "dimension":[10,2], "type":["integer","integer"]},
 "rdt:type" : "Snapshot",
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
@@ -115,6 +124,7 @@
 "d3" : {
 "rdt:name" : "new.y",
 "rdt:value" : "data/3-new.y.csv",
+"rdt:valType" : {"container":"matrix", "dimension":[5,2], "type":["character"]},
 "rdt:type" : "Snapshot",
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
@@ -125,6 +135,7 @@
 "d4" : {
 "rdt:name" : "y",
 "rdt:value" : "data/4-y.csv",
+"rdt:valType" : {"container":"data_frame", "dimension":[15,2], "type":["character","character"]},
 "rdt:type" : "Snapshot",
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
@@ -135,6 +146,7 @@
 "d5" : {
 "rdt:name" : "error.msg",
 "rdt:value" : "\"Error in FUN(X[[i]], ...): only defined on a data frame with all numeric variables \"",
+"rdt:valType" : {"container":"vector", "dimension":[1], "type":["character"]},
 "rdt:type" : "Exception",
 "rdt:scope" : "ddg.library",
 "rdt:fromEnv" : "FALSE",
@@ -184,7 +196,7 @@
 "prov:activity" : "p5"
 } ,
 
-"e13" : {
+"e14" : {
 "prov:entity" : "d5",
 "prov:activity" : "p6"
 }},
@@ -208,5 +220,10 @@
 "e10" : {
 "prov:activity" : "p5",
 "prov:entity" : "d3"
+} ,
+
+"e13" : {
+"prov:activity" : "p6",
+"prov:entity" : "d4"
 }}
 }

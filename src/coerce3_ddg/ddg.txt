@@ -1,0 +1,26 @@
+Architecture="x86_64"
+OperatingSystem="unix"
+Language="R"
+LanguageVersion="R version 3.3.3 (2017-03-06)"
+RDataTrackerVersion="2.26.1"
+Script="/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/coerce3.R"
+SourcedScripts=""
+ProcessFileTimestamp="2016-12-19T15.48.21EST"
+WorkingDirectory="/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src"
+DDGDirectory="./coerce3_ddg"
+DateTime="2017-06-19T15.37.44EDT"
+InstalledPackages="base 3.3.3, datasets 3.3.3, devtools 1.13.2, graphics 3.3.3, grDevices 3.3.3, methods 3.3.3, RDataTracker 2.26.1, stats 3.3.3, utils 3.3.3"
+3
+Start p1 "1-coerce3.R" Value="coerce3.R" Time="0.542000000000002" Script="NA" Pos="NA";
+Operation p2 "2-x <- read.csv(\"../data/x.csv\", header = F)" Value="x <- read.csv(\"../data/x.csv\", header = F)" Time="0.545999999999999" Script="0" Pos="9,1,9,39";
+CF p1 p2
+File d1 "1-x.csv" Value="data/1-x.csv" ValType="{"container":"vector", "dimension":[1], "type":["character"]}" Time="2017-06-19T15.37.44EDT" Location="/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/data/x.csv";
+DF d1 p2
+Snapshot d2 "2-x" Value="data/2-x.csv" ValType="{"container":"data_frame", "dimension":[10,2], "type":["integer","factor"]}" Time="2017-06-19T15.37.44EDT";
+DF p2 d2
+Operation p3 "3-sum(x)" Value="sum(x)" Time="0.592000000000001" Script="0" Pos="10,1,10,6";
+CF p2 p3
+DF d2 p3
+Exception d3 "3-error.msg" Value="\"Error in FUN(X[[i]], ...): only defined on a data frame with all numeric variables \"" ValType="{"container":"vector", "dimension":[1], "type":["character"]}";
+DF p3 d3
+
