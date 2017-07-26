@@ -1,0 +1,10 @@
+Use scripts in this directory to test a variety of features and issues of python_tools/noworkflow/sql_to_json.py.
+
+Script(s)               Features to test
+first.py                Collapsible function nodes
+first.py and last.py    Python to Python workflow
+first.py and second.R   Python to R workflow
+first.R and second.py   R to Python workflow
+test_one.py             Missing "with open(filename) as f" syntax
+                        Collapsible loop/control flow nodes
+test_two.py              Sequential functions.
