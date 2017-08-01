@@ -8,3 +8,9 @@ first.R and second.py   R to Python workflow
 test_one.py             Missing "with open(filename) as f" syntax
                         Collapsible loop/control flow nodes
 test_two.py              Sequential functions.
+
+
+sap_flow is a Python script use case.
+The directories back_up, graphs, old_charts, and pickled_data 
+The files master_board_list and probe_spoof.txt
+are all used for sap_flow.

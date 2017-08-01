@@ -1,0 +1,492 @@
+#!/usr/bin/python
+#VERSION 14 USED FOR SPOOFING DATA ON A LOCAL SYSTEM
+#Created by: Corey Kasem Carter
+#if you need to contact me email me at: ckcarter1065@gmail.com or carte731@umn.edu
+
+import os
+import sys
+import datetime
+import time
+import pandas as pd
+import numpy as np
+import matplotlib #used to stop plotting error
+matplotlib.use('Agg') #Global Variable used to make graphs without a graphic interface (GUI).
+import matplotlib.pyplot as plt #used for plotting
+# import urllib2 #for python 2
+import urllib.request  as urllib2 #for python 3
+import pickle
+from subprocess import call
+import random
+import getpass
+
+def callit():
+    zq = getpass.getuser()
+    zq = "/Users/jen/"
+    return(zq)
+
+def masterprobe(zq): #makes list of probes connected to Beaglebone board
+    blist = ['boardA','boardB','boardC','boardD','boardE','boardF','boardG','boardH','boardI','boardJ','boardK','boardL','boardM','boardN','boardO','boardP','boardQ','boardR','boardS','boardT','boardU','boardV','boardW','boardX','boardY','boardZ']
+    probelist=[]
+    master = []
+    # probelist_raw=open("/home/" + zq + "/sap_2017/probe_spoof.txt", 'r')
+    probelist_raw=open(zq + "/sap_2017/probe_spoof.txt", 'r')
+    # master_board_list_local=open("/home/" + zq + "/sap_2017/master_board_list.txt", 'r+')
+    master_board_list_local=open(zq + "/sap_2017/master_board_list.txt", 'r+')
+    pro = probelist_raw
+    mbl = master_board_list_local
+    for probe in pro:
+        probe = probe.rstrip() #removes newline character \n from list elements.
+        probelist.append(probe)
+    probelist_raw.close()
+    for i in mbl:
+        i = i.rstrip()
+        master.append(i)
+    gap = 0
+    bnum = 0
+    for u in probelist: #makes sure the probe list matchs the saved and local master list
+        row = ''
+        if u not in master and u != 'not found.': #adds to master list text file if not already there and turns that probe on
+            for i in master:
+                if i[:5] == 'board': #counts how many boards are in master list
+                    if i != blist[bnum]: #####
+                        gap += 1
+                    bnum += 1
+            try:
+                if gap == 0:
+                    b_id = blist[bnum]
+                else:
+                    b_id = blist[bnum] + "2"
+            except IndexError:
+                if gap == 0:
+                    bnum = bnum - 26
+                    b_id = blist[bnum] + '3'
+                else:
+                    bnum = bnum - 26
+                    b_id = blist[bnum] + '4'
+            te = 0
+            for i in range(5):
+                te += temp(u)
+            te = te/5 #####
+            if te >= 40: #!!!!!Link this to the BIT mode, allow the probe to heat up for 30 to 60 sec. test the average warm up temp!!!!!!
+                t = '?hot?'
+            elif te < 40: #CHANGED FROM 30 TO 40
+                t = '?cold?'
+            row += b_id + '\n' + u + '\n' + t + '\n' + '----' + '\n'
+            bnum = 0
+            gap = 0
+            master.append(row)
+            master_board_list_local.write(row)
+    master_board_list_local.close()
+    return(probelist, master)
+
+def op_list(probelist, master, zq):
+    on_master = []
+    barrier = False
+    gate = False
+    oncount = 0
+    loc = 0
+    for i in master:
+        if i[:5] == 'board':
+            start = master.index(i)
+        elif i in probelist:
+            oncount += 1
+        elif i == '----':
+            barrier = True
+        if barrier == True:
+            if oncount > 0:
+                master.insert(start, "ON")
+                oncount = 0
+            barrier = False
+    # print(master)
+    for s in master:
+        if s == "ON":
+            gate = True
+        if gate == True:
+            if s[:5] == 'board':
+                on_master.append(s)
+            if len(s) >= 15:
+                on_master.append(s)
+            if s == 'hot' or s == 'cold':
+                on_master.append(s)
+            elif s == '?hot?' or s == '?cold?':
+                on_master.append(s)
+            if s == '----':
+                on_master.append(s)
+                gate = False
+    return(on_master)
+
+def reader(probelist, on_master, zq):
+    order = os.path.isfile(zq + '/sap_2017/data/pickled_data/data_raw.pickle') #ADD IF THIS IS NOT FOUND LOOK AT BACK UP DATA NEXT BEFORE MAKING NEW FILE.
+    sort_order = os.path.isfile(zq + '/sap_2017/data/pickled_data/data_sorted.pickle')
+    if order == False:
+        df = {'date':[],'time':[],'board':[],'probe_id':[],'hot/cold':[],'temp':[],'user_notes':[]} #add a note section if temp is negative or zero
+        data = pd.DataFrame.from_dict(df)
+        with open(zq + "/sap_2017/data/pickled_data/data_raw.pickle", 'wb') as data_raw:
+            # pickle.dump(data, data_raw)
+            data.to_pickle(data_raw)
+    if sort_order == False:
+        df = {'date':[],'time':[],'board':[],'probe_id':[],'hot/cold':[],'temp':[]} #add a note section if temp is negative or zero
+        data = pd.DataFrame.from_dict(df)
+        with open(zq +"/sap_2017/data/pickled_data/data_sorted.pickle", 'wb') as data_sorted:
+            # pickle.dump(data, data_sorted)
+            data.to_pickle(data_sorted)
+    with open(zq + "/sap_2017/data/pickled_data/data_raw.pickle", 'rb') as data_in:
+        # dataf = pickle.load(data_in) #use pd.read_pickle(file_name) for later versions of Pandas(15.0 or greater)
+        dataf = pd.read_pickle(data_in)
+    with open(zq + "/sap_2017/data/pickled_data/data_sorted.pickle", 'rb') as data_in_sort:
+        # datafs = pickle.load(data_in_sort)
+        datafs = pd.read_pickle(data_in_sort)
+    label = ['date','time','board','probe_id','hot/cold','temp','user_notes']
+    sort_label = ['date','time','board','probe_id','hot/cold','temp']
+    master = []
+    sort_master = []
+    now = datetime.datetime.now()
+    date = now.strftime("%Y-%m-%d")
+    append_counter = 0
+    boardit = 0
+    probeit = 0
+    temperr = 0
+    sort_boards = ''
+    for i in on_master:
+        if i[:5] == 'board':
+            board = i
+            append_counter += 1
+            boardit += 1
+        if len(i) >= 15:
+            probe = i
+            # t = temp(i)
+            append_counter += 1
+            probeit += 1
+        if i == 'hot' or i == 'cold':
+            horc = i
+            t = spoof(horc)
+            # db = on_master.index(i) + 1
+            append_counter += 1
+        elif i == "?hot?" or i == '?cold?':
+            horc = i
+            t = spoof(horc)
+            # db = on_master.index(i) + 1
+            append_counter += 1
+        if i == '----':
+            append_counter = 0
+            temperr = 0
+            boardit = 0
+            probeit = 0
+        if append_counter >= 3:
+            notes = ''
+            time = now.strftime("%H:%M")
+            # if FCB == 'f' or 'all':
+            #     c,k,f = temp_converter(t)
+            #     notes += 'fahrenheit: ' + f + ' '
+            # if FCB == 'k' or 'all':
+            #     c,k,f = temp_converter(t)
+            #     notes  += 'Kelvin: ' + k + ' '
+            if t == 0:
+                notes += 'Probe temp is ZERO, check probe wiring. '
+                temperr += 1
+            elif t < 0:
+                notes += 'Probe temp is NEGATIVE, check power and data line from board. '
+                temperr += 1
+            if int(now.strftime("%Y")) < 2017:
+                notes += ' ' + 'Date is wrong, check internet. '
+            sub = (date, time, board, probe, horc, t, notes)
+            if boardit == 1 and temperr == 0:
+                if probeit == 1:
+                    sort_sub_1 = (date, time, board, probe, horc, t)
+                elif probeit == 2:
+                    sort_sub_2 = (date, time, board, probe, horc, t)
+                    sort_master.append(sort_sub_1)
+                    sort_master.append(sort_sub_2)
+                    sort_sub_1 = ''
+                    sort_sub_2 = ''
+                    temperr = 0
+                    boardit = 0
+                    probeit = 0
+            append_counter = 1
+            master.append(sub)
+            sub = ''
+    add_dr = pd.DataFrame.from_records(master, columns=label)
+    add_sort = pd.DataFrame.from_records(sort_master, columns=sort_label)
+    df = dataf.append(add_dr, ignore_index=True)
+    dfs = datafs.append(add_sort, ignore_index=False)
+    with open(zq + "/sap_2017/data/pickled_data/data_raw.pickle", 'wb') as data_raw:
+            # pickle.dump(df, data_raw)
+            df.to_pickle(data_raw)
+    with open(zq + "/sap_2017/data/pickled_data/data_sorted.pickle", 'wb') as data_sort:
+            # pickle.dump(dfs, data_sort)
+            dfs.to_pickle(data_sort)
+    return(df, dfs, add_sort)
+
+def sapflux(add_sort, dfs, zq):
+    sap_order = os.path.isfile( zq + '/sap_2017/data/pickled_data/data_sap.pickle')
+    if sap_order == False:
+        df = {'board':[],'density':[], 'time':[]} #add a note section if temp is negative or zero
+        data = pd.DataFrame.from_dict(df)
+        with open(zq + "/sap_2017/data/pickled_data/data_sap.pickle", 'wb') as data_sap:
+            # pickle.dump(data, data_sap)
+            data.to_pickle(data_sap)
+    with open(zq + "/sap_2017/data/pickled_data/data_sap.pickle", 'rb') as data_in_sap:
+        # datasap = pickle.load(data_in_sap)
+        datasap = pd.read_pickle(data_in_sap)
+    sap_label = ['board', 'density','time']
+    ni = 0
+    density_list = []
+    for u in range(len(add_sort)):
+        if add_sort['hot/cold'][u] == 'cold' or add_sort['hot/cold'][u] == '?cold?':
+            cold = add_sort['temp'][u]
+        elif add_sort['hot/cold'][u] == 'hot' or add_sort['hot/cold'][u] == '?hot?':
+            hot = add_sort['temp'][u]
+        ni += 1
+        if ni == 2:
+            dt = hot - cold
+            num = max(dfs.temp) - dt
+            frac = num/dt
+            density = 0.000119 * frac**1.231
+            sub = (add_sort['board'][u], density, add_sort['time'][u])
+            density_list.append(sub)
+            ni = 0
+        # i += 1
+    add_sap = pd.DataFrame.from_records(density_list, columns=sap_label)
+    dfsd = datasap.append(add_sap, ignore_index=False)
+    with open(zq + "/sap_2017/data/pickled_data/data_sap.pickle", 'wb') as data_sap_out:
+        # pickle.dump(dfsd, data_sap_out)
+        dfsd.to_pickle(data_sap_out)
+    return(dfsd, add_sap)
+
+def normal(dfsd, add_sap, zq): #HAVE INDEX USE THE DATE AND TIME AS INDEX!!!!!!!!! MAKE AN (INDEX CHANGE) IF INTERNET TIME IS OFF.
+    time = 0 #each int equals one minute
+    for i in dfsd.index:
+        if i == 0:
+            time += 1 #sets time in minutes
+    sec_time = time * 60 #sets time as seconds
+    sap_norm = os.path.isfile( zq + '/sap_2017/data/pickled_data/data_normal.pickle')
+    if sap_norm == False:
+        col_list = {}
+        for i in dfsd.board:
+            if i not in col_list:
+                col_list[i] = []
+        data = pd.DataFrame.from_dict(col_list)
+        with open(zq + "/sap_2017/data/pickled_data/data_normal.pickle", 'wb') as data_norm:
+            # pickle.dump(data, data_norm)
+            data.to_pickle(data_norm)
+    with open(zq + "/sap_2017/data/pickled_data/data_normal.pickle", 'rb') as data_in_norm:
+        # datanorm = pickle.load(data_in_norm)
+        datanorm = pd.read_pickle(data_in_norm)
+    col_op = {}
+    for u in add_sap.board:
+        if u not in col_op:
+            col_op[u] = []
+    for u in range(len(add_sap)):
+        board = add_sap['board'][u]
+        QS = add_sap['density'][u]
+        nom = QS * time ####
+        normalized = nom/max(dfsd.density)
+        col_op[board].append(normalized)
+    add_norm = pd.DataFrame.from_dict(col_op)
+    dfn = datanorm.append(add_norm, ignore_index=True)
+    with open(zq + "/sap_2017/data/pickled_data/data_normal.pickle", 'wb') as data_norm:
+        # pickle.dump(dfn, data_norm)
+        dfn.to_pickle(data_norm)
+    add_norm = 'test'
+    return(dfn, add_norm)
+
+def plot_it(dfn, zq):
+    now = datetime.datetime.now()
+    date = now.strftime("%Y-%m-%d_%H:%M:%S")
+    graphs = []
+    for i in dfn.columns:
+        if i not in graphs:
+            graphs.append(i)
+    gx = dfn[graphs].plot(title="Sap Flux Density for " + date)
+    gx.set_xlabel("Total Operational Time in Minutes")
+    gx.set_ylabel("Sap Flux Density Values (Normalized)")
+    figure = gx.get_figure()
+    figure.savefig(zq + '/sap_2017/data/graphs/' + date + '_graph.png')
+
+def exporter(df, dfs, dfsd, dfn, x, zq): #uses data_output data and formats depending on file format is specified in config file.
+    if x == 'excel':
+        writer = pd.ExcelWriter(zq + '/sap_2017/data/data_charts.xlsx')
+        df.to_excel(writer, sheet_name='raw_data')
+        dfs.to_excel(writer, sheet_name='sorted_data')
+        dfsd.to_excel(writer, sheet_name='sap_flux_density')
+        dfn.to_excel(writer, sheet_name='sap_flux_normalized')
+        writer.save()
+    elif x == 'txt':
+        with open(zq + '/sap_2017/data/data_charts_txt.txt', 'w') as df_txt: #NEED TO TEST!!!!
+            write.df_txt(str(df))
+        writer = pd.ExcelWriter(zq + '/sap_2017/data/back_up/data_charts_BU.xlsx') #creates a back up.
+        df.to_excel(writer, sheet)
+        writer.save()
+    elif x == 'csv':
+        df.to_csv(zq + '/sap_2017/data/data_charts_csv.csv', index=False, encoding='utf-8') #NEED TO TEST!!!!
+        writer = pd.ExcelWriter(zq + '/sap_2017/data/back_up/data_charts_BU.xlsx') #creates a back up.
+        df.to_excel(writer, sheet)
+        writer.save()
+
+def BIT(probelist, zq): #Test boards, probe temps(If they're negative numbers or zero), internet connection, maybe compares op_list to probelist
+    now = datetime.datetime.now() #DATE AND TIME CHECK?????
+    master_fail = ''
+    sub_fail = ''
+    fail_probes = ''
+    fail_num = 0
+    with open(zq + "/sap_2017/data/system_status_log.txt", 'a+') as fail_list:
+        sub_fail = '\n' + 'BUILT IN TEST (BIT) FOR ' + now.strftime("%Y-%m-%d, %H:%M") + '\n' + '-----------'
+        sub_fail += '\n' + 'NETWORK STATUS:'
+        try:
+            urllib2.urlopen('http://www.google.com', timeout=1)
+            sub_fail += '\n' + 'Network: is up and operational.' + '\n'
+            net = "up"
+        except urllib2.URLError as err:
+            sub_fail += '\n' + 'Network: DOWN, PLEASE CHECK NETWORK.' + '\n'
+            net = 'no'
+        sub_fail += '\n' + 'PROBE STATUS:'
+        for i in probelist:
+            if i != 'not found.':
+                t = temp(i)
+                if t == 0:
+                    sub_fail += '\n' + i + ' -FAILED - it has a temp of 0. Check probe wire isnt loose or that it is installed correctly into board housing.' #have this write to BIT txt file
+                    fail_probes += i + ': FAILED' + '\n'
+                    fail_num += 1
+                elif t < 0:
+                    sub_fail += '\n' + i + ' -FAILED - it has a negative temp. Check if theres power, POS or NEG arent fliped and/or that the data line is installed correctly on board or that the series data line hasnt been compromised.' #have this write to BIT txt file
+                    fail_probes += i + ': FAILED' + '\n'
+                    fail_num += 1
+                else:
+                    fail_probes += i + ': is up and operational.' + '\n'
+            else:
+                sub_fail += '\n' + 'No probes attached.' + '\n'
+                fail_probes += 'No probes attached.' + '\n'
+                fail_num += 1
+        if fail_num == 0:
+            sub_fail += '\n' + "No probe failures."
+        sub_fail += '\n'
+        sub_fail += '\n' + 'PROBE FAIL LIST:' + '\n'
+        sub_fail += fail_probes
+        if int(now.strftime("%Y")) < 2017:
+            sub_fail += '\n' + 'YEAR CHECKER' + '\n'
+            sub_fail += "the year is off, re-set time/date on BBB." + '\n'
+        else:
+            sub_fail += '\n' + 'YEAR CHECKER' + '\n'
+            sub_fail += 'The year is up to date.' + '\n'
+        config = os.path.exists(zq + '/sap_2017/config.txt') #CHANGE WHEN I MIGRATE TO BBB IN THE FIELD!!!
+        sub_fail += '\n' + 'CONFIG FILE CHECK:'
+        if config == True:
+            sub_fail += '\n' + 'Config file in place.'
+        elif config == False:
+            sub_fail += '\n' + "Config file is missing, will auto generate new file with default settings."
+            make_config(zq)
+        master_fail = sub_fail #CREATE A SUB STR AND ADD TO MASTER_FAIL!!!!!
+        master_fail += '\n' + '\n'
+        fail_list.write(master_fail)
+
+def make_config(zq): #makes a default config file if file is missing during opeations.
+    task = 'ForC=f', 'emailaddress=NONE', 'worktimes=[]', 'outformat=excel'
+    sub_config = ''
+    with open(zq + '/sap_2017/config.txt', 'w') as config:
+        for i in task:
+            sub_config += i + '\n'
+        config.write(sub_config)
+
+def temp(i): #Used for normal operation on a Beaglebone Black
+    try:
+        probe=open("/sys/devices/w1_bus_master1/" + i + "/w1_slave", 'r')
+        for u in probe:
+            u = u.rstrip()
+            sub_probe = ''
+            for x in u:
+                r = u.index(x) + 1
+                if x == 't' and u[r] == '=':
+                    p = u.index(x)
+                    sub_probe += u[p+2:]
+                    if len(sub_probe) == 4:
+                        sub_probe = sub_probe[:1] + '.' + sub_probe[1:]
+                    elif len(sub_probe) > 4:
+                        sub_probe = sub_probe[:2] + '.' + sub_probe[2:]
+        sub_float = float(sub_probe)
+        probe.close()
+        return(sub_float)
+    except:
+        if i == 'not found.':
+            print("No probes attached, please check connections.")
+        else:
+            print('\n' + "probe " + i + " temp data not found." + "\n" + "Either the probe board isn't being supplied power or the data and ground pins aren't installed properly on the BeagleBone.")
+
+def spoof(horc): #USED FOR TESTING SYSTEM WITHOUT PROBES ATTACHED
+    if horc == 'hot' or horc == '?hot?':
+        temp = random.uniform(35,60)
+    elif horc == 'cold' or horc == '?cold?':
+        temp = random.uniform(15,34)
+    chance = random.uniform(0,10)
+    if chance == 5:
+        temp = temp * -1
+    elif chance == 0:
+        temp = 0
+    return(temp)
+
+def backthatthangup(df, dfs, dfsd, dfn, zq):
+    with open(zq + "/sap_2017/data/back_up/data_raw_BU.pickle", 'wb') as backup:
+        # pickle.dump(df, backup)
+        df.to_pickle(backup)
+    with open(zq + "/sap_2017/data/back_up/data_sort_BU.pickle", 'wb') as backup_sort:
+        # pickle.dump(dfs, backup_sort)
+        dfs.to_pickle(backup_sort)
+    with open(zq + "/sap_2017/data/back_up/data_sap_BU.pickle", 'wb') as backup_sap:
+        # pickle.dump(dfsd, backup_sap)
+        dfsd.to_pickle(backup_sap)
+    with open(zq + "/sap_2017/data/back_up/data_norm_BU.pickle", 'wb') as backup_norm:
+        # pickle.dump(dfn, backup_norm)
+        dfn.to_pickle(backup_norm)
+    #ADD A IF CONDITIONAL THAT CHECKS WHAT FILE FORMAT THE USER WANTS AND BACKS THAT THANG UP TOO WITH EXCEL.
+    BU_writer = pd.ExcelWriter(zq + '/sap_2017/data/back_up/data_charts_BU.xlsx') #creates a back up in excel format.
+    df.to_excel(BU_writer, sheet_name='raw_data_BU')
+    dfs.to_excel(BU_writer, sheet_name='sorted_data_BU')
+    dfsd.to_excel(BU_writer, sheet_name='sap_flux_density')
+    dfn.to_excel(BU_writer, sheet_name='sap_flux_normalized')
+    BU_writer.save()
+
+# def sendit(): #sends data to config position and pumps data out over the internet to tower PC, off site storage and website
+
+def temp_converter(c): #converts temp to fahrenheit base off of config preferences ####ADD KELVIN TEMP DISPLAY OPTION
+    f = c * 9/5 + 32 #fahrenheit
+    k = c + 273.15
+    return(c, k, f)
+
+def main(): #add a try and exception to each section. Add a while loop that goes off of config operational time line.
+    temp_i = 0
+    zq = callit()
+    # while True:
+    jen = 0
+    while jen == 0:
+        x = 'excel'
+        probelist, master = masterprobe(zq)
+        print(probelist)
+        on_master = op_list(probelist, master, zq)
+        print(on_master)
+        if on_master and probelist != ['not found.']:
+            print(temp_i)
+            while temp_i < 10: #Change to 60
+                df, dfs, add_sort = reader(probelist, on_master, zq)
+                if not dfs.empty:
+                    dfsd, add_sap = sapflux(add_sort, dfs, zq)
+                if not dfsd.empty:
+                    dfn, add_norm = normal(dfsd, add_sap, zq)
+                temp_i += 1
+                print("Temp_i ++")
+                print(temp_i)
+                exporter(df, dfs, dfsd, dfn, x, zq)
+            plot_it(dfn, zq)
+            backthatthangup(df, dfs, dfsd, dfn, zq)
+            print("exporter, plotted, backed up")
+            try:
+                BIT(probelist, zq)
+                break
+            except:
+                print("not connected, keep going")
+                break
+            temp_i = 0
+        # if not on_master or probelist == ['not found.']:
+        #     call(["echo", '\n' + "No probes attached..." + '\n' + 'Restarting program in 60 seconds...' + '\n'])
+
+        jen +=1
+
+main() #excutes program
