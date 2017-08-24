@@ -9,7 +9,7 @@
 "p1" : {
 "rdt:name" : "messycode.R",
 "rdt:type" : "Start",
-"rdt:elapsedTime" : "8.657",
+"rdt:elapsedTime" : "7.651",
 "rdt:scriptNum" : "NA",
 "rdt:startLine" : "NA",
 "rdt:startCol" : "NA",
@@ -20,7 +20,7 @@
 "p2" : {
 "rdt:name" : "library(\"gdata\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.66",
+"rdt:elapsedTime" : "7.654",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "12",
 "rdt:startCol" : "1",
@@ -31,7 +31,7 @@
 "p3" : {
 "rdt:name" : "sourced.R",
 "rdt:type" : "Start",
-"rdt:elapsedTime" : "8.675",
+"rdt:elapsedTime" : "7.669",
 "rdt:scriptNum" : "NA",
 "rdt:startLine" : "NA",
 "rdt:startCol" : "NA",
@@ -42,7 +42,7 @@
 "p4" : {
 "rdt:name" : "2 + 2",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.678",
+"rdt:elapsedTime" : "7.672",
 "rdt:scriptNum" : "1",
 "rdt:startLine" : "1",
 "rdt:startCol" : "1",
@@ -53,7 +53,7 @@
 "p5" : {
 "rdt:name" : "sourced.R",
 "rdt:type" : "Finish",
-"rdt:elapsedTime" : "8.679",
+"rdt:elapsedTime" : "7.673",
 "rdt:scriptNum" : "NA",
 "rdt:startLine" : "NA",
 "rdt:startCol" : "NA",
@@ -64,7 +64,7 @@
 "p6" : {
 "rdt:name" : "source(\"sourced.R\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.68",
+"rdt:elapsedTime" : "7.674",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "13",
 "rdt:startCol" : "1",
@@ -75,7 +75,7 @@
 "p7" : {
 "rdt:name" : "data.16 <- read.csv(\"projects/2016/july_biomass_survey.csv\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.703",
+"rdt:elapsedTime" : "7.699",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "17",
 "rdt:startCol" : "1",
@@ -86,7 +86,7 @@
 "p8" : {
 "rdt:name" : "data.16.2 <- read.csv(\"projects/data_forestplot/dataset_v2_j",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.734",
+"rdt:elapsedTime" : "7.731",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "21",
 "rdt:startCol" : "1",
@@ -97,7 +97,7 @@
 "p9" : {
 "rdt:name" : "data.v1.1to4 <- data.16[, 1:4]",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.765",
+"rdt:elapsedTime" : "7.761",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "24",
 "rdt:startCol" : "1",
@@ -108,7 +108,7 @@
 "p10" : {
 "rdt:name" : "data.v1.1to4. <- data.v1.1to4",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.788",
+"rdt:elapsedTime" : "7.782",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "25",
 "rdt:startCol" : "1",
@@ -119,7 +119,7 @@
 "p11" : {
 "rdt:name" : "data.v1.1to4 <- data.v1.1to4 * 2",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.812",
+"rdt:elapsedTime" : "7.804",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "26",
 "rdt:startCol" : "1",
@@ -130,7 +130,7 @@
 "p12" : {
 "rdt:name" : "data.v1.1to4.2 <- data.v1.1to4 * 2",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.832",
+"rdt:elapsedTime" : "7.837",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "27",
 "rdt:startCol" : "1",
@@ -141,7 +141,7 @@
 "p13" : {
 "rdt:name" : "data.16[, 1:4] <- data.v1.1to4.2",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.853",
+"rdt:elapsedTime" : "7.858",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "28",
 "rdt:startCol" : "1",
@@ -152,7 +152,7 @@
 "p14" : {
 "rdt:name" : "library(\"vegan\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.881",
+"rdt:elapsedTime" : "7.885",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "29",
 "rdt:startCol" : "1",
@@ -163,7 +163,7 @@
 "p15" : {
 "rdt:name" : "d1 <- vegdist(data.16[, 1:2])",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.886",
+"rdt:elapsedTime" : "7.89",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "30",
 "rdt:startCol" : "1",
@@ -174,7 +174,7 @@
 "p16" : {
 "rdt:name" : "d2 <- vegdist(data.16[, 2:3])",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "9.058",
+"rdt:elapsedTime" : "8.059",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "31",
 "rdt:startCol" : "1",
@@ -185,7 +185,7 @@
 "p17" : {
 "rdt:name" : "mant1 <- mantel(d1, d2)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "10.274",
+"rdt:elapsedTime" : "9.266",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "34",
 "rdt:startCol" : "1",
@@ -196,7 +196,7 @@
 "p18" : {
 "rdt:name" : "mant2 <- mantel(d2, d1)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "11.175",
+"rdt:elapsedTime" : "10.169",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "35",
 "rdt:startCol" : "1",
@@ -207,7 +207,7 @@
 "p19" : {
 "rdt:name" : "mant11 <- mantel(d1, d1)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.258",
+"rdt:elapsedTime" : "11.251",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "36",
 "rdt:startCol" : "1",
@@ -218,7 +218,7 @@
 "p20" : {
 "rdt:name" : "fit1 <- lm(Sepal.Length ~ Sepal.Width, data = data.16)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.333",
+"rdt:elapsedTime" : "11.327",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "37",
 "rdt:startCol" : "1",
@@ -229,7 +229,7 @@
 "p21" : {
 "rdt:name" : "lm.summary.1 <- summary(fit1)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.402",
+"rdt:elapsedTime" : "11.401",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "38",
 "rdt:startCol" : "1",
@@ -240,7 +240,7 @@
 "p22" : {
 "rdt:name" : "anova.summary <- anova(fit1)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.433",
+"rdt:elapsedTime" : "11.432",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "39",
 "rdt:startCol" : "1",
@@ -251,7 +251,7 @@
 "p23" : {
 "rdt:name" : "out.summary <- as.data.frame(anova.summary)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.453",
+"rdt:elapsedTime" : "11.452",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "40",
 "rdt:startCol" : "1",
@@ -262,7 +262,7 @@
 "p24" : {
 "rdt:name" : "write.csv(data.v1.1to4, \"projects/data_forestplot/save1.csv\"",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.476",
+"rdt:elapsedTime" : "11.476",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "43",
 "rdt:startCol" : "1",
@@ -273,7 +273,7 @@
 "p25" : {
 "rdt:name" : "capture.output(lm.summary.1, file = \"analysis_forest/lm_tabl",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.507",
+"rdt:elapsedTime" : "11.507",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "46",
 "rdt:startCol" : "1",
@@ -284,7 +284,7 @@
 "p26" : {
 "rdt:name" : "write.csv(out.summary, file = \"analysis_forest/table_2.txt\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.521",
+"rdt:elapsedTime" : "11.521",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "47",
 "rdt:startCol" : "1",
@@ -295,7 +295,7 @@
 "p27" : {
 "rdt:name" : "library(\"txtplot\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.545",
+"rdt:elapsedTime" : "11.544",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "51",
 "rdt:startCol" : "1",
@@ -306,7 +306,7 @@
 "p28" : {
 "rdt:name" : "png(\"figures_1/fig1_biplot.png\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.551",
+"rdt:elapsedTime" : "11.551",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "53",
 "rdt:startCol" : "1",
@@ -317,7 +317,7 @@
 "p29" : {
 "rdt:name" : "plot(data.16[, 1:2])",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.577",
+"rdt:elapsedTime" : "11.583",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "54",
 "rdt:startCol" : "1",
@@ -328,7 +328,7 @@
 "p30" : {
 "rdt:name" : "dev.off()",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.613",
+"rdt:elapsedTime" : "11.618",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "55",
 "rdt:startCol" : "1",
@@ -339,7 +339,7 @@
 "p31" : {
 "rdt:name" : "png(\"figures_1/fig1_biplot_t2.png\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.634",
+"rdt:elapsedTime" : "11.639",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "57",
 "rdt:startCol" : "1",
@@ -350,7 +350,7 @@
 "p32" : {
 "rdt:name" : "plot(data.16[, 1:2] * 2)",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.659",
+"rdt:elapsedTime" : "11.666",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "58",
 "rdt:startCol" : "1",
@@ -361,7 +361,7 @@
 "p33" : {
 "rdt:name" : "dev.off()",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.694",
+"rdt:elapsedTime" : "11.705",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "59",
 "rdt:startCol" : "1",
@@ -372,7 +372,7 @@
 "p34" : {
 "rdt:name" : "png(\"figures_2/fig2_biplot.png\")",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.717",
+"rdt:elapsedTime" : "11.725",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "61",
 "rdt:startCol" : "1",
@@ -383,7 +383,7 @@
 "p35" : {
 "rdt:name" : "plot(data.16[, 2:3])",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.743",
+"rdt:elapsedTime" : "11.753",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "62",
 "rdt:startCol" : "1",
@@ -394,7 +394,7 @@
 "p36" : {
 "rdt:name" : "dev.off()",
 "rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.782",
+"rdt:elapsedTime" : "11.787",
 "rdt:scriptNum" : "0",
 "rdt:startLine" : "63",
 "rdt:startCol" : "1",
@@ -405,7 +405,7 @@
 "p37" : {
 "rdt:name" : "messycode.R",
 "rdt:type" : "Finish",
-"rdt:elapsedTime" : "12.8",
+"rdt:elapsedTime" : "11.81",
 "rdt:scriptNum" : "NA",
 "rdt:startLine" : "NA",
 "rdt:startCol" : "NA",
@@ -426,8 +426,8 @@
                              "timestamp" : "2017-07-14T17.24.53EDT"} ],
 "rdt:scriptTimeStamp" : "2017-07-14T17.24.23EDT",
 "rdt:workingDirectory" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/messycode",
-"rdt:ddgDirectory" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/messycode/clean/.prov",
-"rdt:ddgTimeStamp" : "2017-08-05T20.20.46EDT",
+"rdt:ddgDirectory" : "./messycode_ddg",
+"rdt:ddgTimeStamp" : "2017-08-05T20.41.46EDT",
 "rdt:rdatatrackerVersion" : "2.27.0",
 "rdt:installedPackages" : [
 	{"package" : "base", "version" : "3.4.0"},
@@ -456,7 +456,7 @@
 "rdt:scope" : "undefined",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "9b3c9ece5285bb1bcd1164cec8aa4243",
-"rdt:timestamp" : "2017-08-05T20.20.47EDT",
+"rdt:timestamp" : "2017-08-05T20.41.46EDT",
 "rdt:location" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/messycode/sourced.R"
 } ,
 
@@ -468,7 +468,7 @@
 "rdt:scope" : "undefined",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "NA",
-"rdt:timestamp" : "2017-08-05T20.20.47EDT",
+"rdt:timestamp" : "2017-08-05T20.41.46EDT",
 "rdt:location" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/messycode/projects/2016/july_biomass_survey.csv"
 } ,
 
@@ -480,7 +480,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.47EDT",
+"rdt:timestamp" : "2017-08-05T20.41.46EDT",
 "rdt:location" : ""
 } ,
 
@@ -492,7 +492,7 @@
 "rdt:scope" : "undefined",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "NA",
-"rdt:timestamp" : "2017-08-05T20.20.47EDT",
+"rdt:timestamp" : "2017-08-05T20.41.46EDT",
 "rdt:location" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/messycode/projects/data_forestplot/dataset_v2_june_from_collaborator1.csv"
 } ,
 
@@ -504,7 +504,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.47EDT",
+"rdt:timestamp" : "2017-08-05T20.41.46EDT",
 "rdt:location" : ""
 } ,
 
@@ -516,7 +516,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.47EDT",
+"rdt:timestamp" : "2017-08-05T20.41.46EDT",
 "rdt:location" : ""
 } ,
 
@@ -528,7 +528,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.47EDT",
+"rdt:timestamp" : "2017-08-05T20.41.46EDT",
 "rdt:location" : ""
 } ,
 
@@ -540,7 +540,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.47EDT",
+"rdt:timestamp" : "2017-08-05T20.41.46EDT",
 "rdt:location" : ""
 } ,
 
@@ -552,7 +552,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.47EDT",
+"rdt:timestamp" : "2017-08-05T20.41.46EDT",
 "rdt:location" : ""
 } ,
 
@@ -564,7 +564,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.47EDT",
+"rdt:timestamp" : "2017-08-05T20.41.46EDT",
 "rdt:location" : ""
 } ,
 
@@ -576,7 +576,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.47EDT",
+"rdt:timestamp" : "2017-08-05T20.41.46EDT",
 "rdt:location" : ""
 } ,
 
@@ -588,7 +588,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.47EDT",
+"rdt:timestamp" : "2017-08-05T20.41.47EDT",
 "rdt:location" : ""
 } ,
 
@@ -600,7 +600,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.48EDT",
+"rdt:timestamp" : "2017-08-05T20.41.48EDT",
 "rdt:location" : ""
 } ,
 
@@ -612,7 +612,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.49EDT",
+"rdt:timestamp" : "2017-08-05T20.41.49EDT",
 "rdt:location" : ""
 } ,
 
@@ -624,7 +624,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.50EDT",
+"rdt:timestamp" : "2017-08-05T20.41.50EDT",
 "rdt:location" : ""
 } ,
 
@@ -636,7 +636,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.50EDT",
+"rdt:timestamp" : "2017-08-05T20.41.50EDT",
 "rdt:location" : ""
 } ,
 
@@ -648,7 +648,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.50EDT",
+"rdt:timestamp" : "2017-08-05T20.41.50EDT",
 "rdt:location" : ""
 } ,
 
@@ -660,7 +660,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.50EDT",
+"rdt:timestamp" : "2017-08-05T20.41.50EDT",
 "rdt:location" : ""
 } ,
 
@@ -672,7 +672,7 @@
 "rdt:scope" : "R_GlobalEnv",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "",
-"rdt:timestamp" : "2017-08-05T20.20.50EDT",
+"rdt:timestamp" : "2017-08-05T20.41.50EDT",
 "rdt:location" : ""
 } ,
 
@@ -684,7 +684,7 @@
 "rdt:scope" : "undefined",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "NA",
-"rdt:timestamp" : "2017-08-05T20.20.50EDT",
+"rdt:timestamp" : "2017-08-05T20.41.50EDT",
 "rdt:location" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/messycode/projects/data_forestplot/save1.csv"
 } ,
 
@@ -696,7 +696,7 @@
 "rdt:scope" : "undefined",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "NA",
-"rdt:timestamp" : "2017-08-05T20.20.50EDT",
+"rdt:timestamp" : "2017-08-05T20.41.50EDT",
 "rdt:location" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/messycode/analysis_forest/table_2.txt"
 } ,
 
@@ -732,7 +732,7 @@
 "rdt:scope" : "undefined",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "NA",
-"rdt:timestamp" : "2017-08-05T20.20.51EDT",
+"rdt:timestamp" : "2017-08-05T20.41.50EDT",
 "rdt:location" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/messycode/figures_1/fig1_biplot.png"
 } ,
 
@@ -768,7 +768,7 @@
 "rdt:scope" : "undefined",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "NA",
-"rdt:timestamp" : "2017-08-05T20.20.51EDT",
+"rdt:timestamp" : "2017-08-05T20.41.50EDT",
 "rdt:location" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/messycode/figures_1/fig1_biplot_t2.png"
 } ,
 
@@ -804,7 +804,7 @@
 "rdt:scope" : "undefined",
 "rdt:fromEnv" : "FALSE",
 "rdt:MD5hash" : "NA",
-"rdt:timestamp" : "2017-08-05T20.20.51EDT",
+"rdt:timestamp" : "2017-08-05T20.41.50EDT",
 "rdt:location" : "/Users/hermes/Labs/HF/projects/e2ep/projects/eep-usecases/src/messycode/figures_2/fig2_biplot.png"
 }},
 "wasInformedBy":{
