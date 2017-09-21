@@ -9,6 +9,8 @@
 
 ### Also, some depencies that are loaded are often 
 ### not used anymore but are still present.
+if (!grepl("src/messycode",getwd())){setwd("messycode")}
+
 library('gdata')
 source("sourced.R")
 ### Read data from some random file path
